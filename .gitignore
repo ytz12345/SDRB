@@ -1,5 +1,7 @@
-.idea/
+#.idea/
 out/
+
+# for eclipse:
 .settings/
 .classpath
 .project

@@ -1,13 +1,14 @@
 package db;
 
 import java.sql.*;
+import admin.DBadmin;
 
 /*连接、关闭数据库*/
 
 public class DBConnection {
     private static String driverName = "com.mysql.jdbc.Driver";//mysql数据库驱动程序
-    private static String userName = "root";//数据库用户名
-    private static String userPwd = "thatisall0330";//数据库密码
+    private static String userName = DBadmin.db_username;
+    private static String userPwd = DBadmin.db_password;
     private static String dbName = "test";//数据库名称
 
     public static Connection getDBConnection() {
