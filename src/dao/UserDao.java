@@ -15,7 +15,7 @@ public class UserDao {
         ResultSet rs = null;
         con = DBConnection.getDBConnection();
         int row = 0;
-        String sql = "insert into user(username,password) values(?,?)";
+        String sql = "insert into user(User_Name,User_Password) values(?,?)";
         try {
             pstmt = con.prepareStatement(sql);
             pstmt.setString(1, user.getUsername());
@@ -36,7 +36,7 @@ public class UserDao {
         ResultSet rs = null;
         con = DBConnection.getDBConnection();
         User user2 = null;
-        String sql = "select * from user where username=? and password=?";
+        String sql = "select * from user where User_Name=? and User_Password=?";
         try {
             pstmt = con.prepareStatement(sql);
             pstmt.setString(1, user.getUsername());
@@ -44,8 +44,8 @@ public class UserDao {
             rs = pstmt.executeQuery();
             if (rs.next()) {
                 user2 = new User();
-                user2.setUsername(rs.getString("username"));
-                user2.setPassword(rs.getString("password"));
+                user2.setUsername(rs.getString("user_Name"));
+                user2.setPassword(rs.getString("user_Password"));
             }
         }catch(Exception e) {
             e.printStackTrace();

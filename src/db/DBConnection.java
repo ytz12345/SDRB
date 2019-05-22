@@ -1,21 +1,22 @@
 package db;
 
+import java.util.*;
 import java.sql.*;
 import admin.DBadmin;
 
 /*连接、关闭数据库*/
 
 public class DBConnection {
-    private static String driverName = "com.mysql.jdbc.Driver";//mysql数据库驱动程序
+    private static String driverName = DBadmin.driverName;
     private static String userName = DBadmin.db_username;
     private static String userPwd = DBadmin.db_password;
-    private static String dbName = "test";//数据库名称
+    private static String dbName = DBadmin.db_name;
 
     public static Connection getDBConnection() {
         //获取数据库连接对象的方法
         String url1 = "jdbc:mysql://localhost:3306/"+dbName;
         String url2 = "?user="+userName+"&password="+userPwd;
-        String url3 = "&useUnicode=true&characterEncoding=utf-8";
+        String url3 = "&useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC";
         String url = url1+url2+url3; //形成数据库连接字
         Connection con = null;
         try {
@@ -24,6 +25,7 @@ public class DBConnection {
         }catch(Exception e) {
             e.printStackTrace();
         }
+        System.out.println("!!!");
         return con;
     }
 
