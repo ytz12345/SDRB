@@ -7,10 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3a55c4c-3519-422d-a635-6323c2c901a9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/dao/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/courses.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/courses.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/single-courses.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/single-courses.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/admin/DBadmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/admin/DBadmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/admin/DBadmin.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/admin/DBadmin.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -67,7 +66,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/action/LoginAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="228">
               <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -80,7 +79,7 @@
         <entry file="file://$PROJECT_DIR$/.idea/dataSources/d694d72d-9881-403a-813c-6810fedae302.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="209">
-              <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -88,17 +87,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2179">
-              <caret line="707" column="12" lean-forward="true" selection-start-line="707" selection-start-column="12" selection-end-line="707" selection-end-column="12" />
+            <state relative-caret-position="13433">
+              <caret line="708" column="12" selection-start-line="708" selection-start-column="12" selection-end-line="708" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" column="8" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+            <state relative-caret-position="57">
+              <caret line="3" column="22" lean-forward="true" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -106,7 +105,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/db/DBConnection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
+            <state relative-caret-position="304">
               <caret line="18" column="82" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="82" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -115,11 +114,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dao/UserDao.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="53">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -130,7 +129,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/courses.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
+            <state relative-caret-position="1938">
               <caret line="102" column="59" selection-start-line="102" selection-start-column="59" selection-end-line="102" selection-end-column="59" />
             </state>
           </provider>
@@ -139,7 +138,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/single-courses.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
+            <state relative-caret-position="3097">
               <caret line="163" column="169" selection-start-line="163" selection-start-column="169" selection-end-line="163" selection-end-column="169" />
             </state>
           </provider>
@@ -155,10 +154,6 @@
                 <element signature="e#334#335#0" expanded="true" />
                 <element signature="e#382#383#0" expanded="true" />
                 <element signature="e#424#425#0" expanded="true" />
-                <element signature="e#450#451#0" expanded="true" />
-                <element signature="e#486#487#0" expanded="true" />
-                <element signature="e#538#539#0" expanded="true" />
-                <element signature="e#588#589#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -167,8 +162,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/admin/DBadmin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" column="63" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="63" />
+            <state relative-caret-position="76">
+              <caret line="4" column="46" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -242,13 +237,13 @@
         <option value="$PROJECT_DIR$/src/action/LoginAction.java" />
         <option value="$PROJECT_DIR$/.idea/artifacts/SDRB.xml" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
-        <option value="$PROJECT_DIR$/src/admin/DBadmin.java" />
         <option value="$PROJECT_DIR$/src/db/DBConnection.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/web/courses.jsp" />
         <option value="$PROJECT_DIR$/web/single-courses.jsp" />
         <option value="$PROJECT_DIR$/src/model/User.java" />
         <option value="$PROJECT_DIR$/src/dao/UserDao.java" />
+        <option value="$PROJECT_DIR$/src/admin/DBadmin.java" />
       </list>
     </option>
   </component>
@@ -260,9 +255,9 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="23" />
-    <option name="width" value="1386" />
-    <option name="height" value="772" />
+    <option name="y" value="22" />
+    <option name="width" value="1387" />
+    <option name="height" value="773" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -272,6 +267,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -324,7 +320,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -444,7 +439,8 @@
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/SDRB_war_exploded" />
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="COMMON_VM_ARGUMENTS" value="-Dfile.encoding=UTF-8" />
-      <option name="UPDATING_POLICY" value="restart-server" />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
       <deployment>
         <artifact name="SDRB:war exploded">
           <settings>
@@ -550,17 +546,19 @@
       <workItem from="1558508599248" duration="1313000" />
       <workItem from="1558538953142" duration="29000" />
       <workItem from="1558539186293" duration="10569000" />
+      <workItem from="1558600739247" duration="263000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64547000" />
+    <option name="totallyTimeSpent" value="64810000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49561402" visible="true" weight="0.13464448" />
+      <window_info id="Learn" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49561402" visible="true" weight="0.13605899" />
       <window_info id="Structure" order="1" sideWeight="0.502193" side_tool="true" weight="0.2496318" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -568,10 +566,9 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" sideWeight="0.50438595" side_tool="true" weight="0.2533137" />
       <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Database Console" weight="0.32923076" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.76153845" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.76153845" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -584,13 +581,14 @@
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="bottom" id="Version Control" order="14" />
+      <window_info anchor="bottom" id="Database Console" order="15" weight="0.32923076" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Maven" order="3" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.21785174" />
+      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.21782842" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
@@ -674,7 +672,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/action/BaseAction.java" />
-    <entry file="file://$PROJECT_DIR$/../../for students/struts2 examples/example 2/src/struts2/action/LoginAction.java" />
+    <entry file="file://F:/for students/struts2 examples/example 2/src/struts2/action/LoginAction.java" />
     <entry file="file://$PROJECT_DIR$/web/header.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="627">
@@ -728,12 +726,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/struts.xml">
-      <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
         </state>
       </provider>
+      <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider" />
     </entry>
     <entry file="file://$PROJECT_DIR$/web/about.jsp">
       <provider selected="true" editor-type-id="text-editor">
@@ -749,13 +747,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/artifacts/SDRB.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="42" selection-start-line="1" selection-start-column="42" selection-end-line="1" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/artifacts/SDRB.xml" />
     <entry file="file://$PROJECT_DIR$/SDRB.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -791,19 +783,10 @@
     <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2179">
-          <caret line="707" column="12" lean-forward="true" selection-start-line="707" selection-start-column="12" selection-end-line="707" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d694d72d-9881-403a-813c-6810fedae302/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d694d72d-9881-403a-813c-6810fedae302/console.sql" />
     <entry file="das://d694d72d-9881-403a-813c-6810fedae302/schema/sdrb/table/user">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="4fb9fdc4-022e-46d3-95ee-c5f330f2c049">
+        <state>
           <filtering>
             <filter text="" />
           </filtering>
@@ -812,7 +795,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/action/LoginAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="228">
           <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -823,20 +806,20 @@
     <entry file="file://$PROJECT_DIR$/.idea/dataSources/d694d72d-9881-403a-813c-6810fedae302.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
-          <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/admin/DBadmin.java">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="63" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="63" />
+        <state relative-caret-position="13433">
+          <caret line="708" column="12" selection-start-line="708" selection-start-column="12" selection-end-line="708" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/db/DBConnection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
+        <state relative-caret-position="304">
           <caret line="18" column="82" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="82" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -844,23 +827,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="8" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/courses.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
+        <state relative-caret-position="1938">
           <caret line="102" column="59" selection-start-line="102" selection-start-column="59" selection-end-line="102" selection-end-column="59" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/single-courses.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
+        <state relative-caret-position="3097">
           <caret line="163" column="169" selection-start-line="163" selection-start-column="169" selection-end-line="163" selection-end-column="169" />
         </state>
       </provider>
@@ -885,10 +861,24 @@
     <entry file="file://$PROJECT_DIR$/src/dao/UserDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="53">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/admin/DBadmin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="46" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="22" lean-forward="true" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
         </state>
       </provider>
     </entry>
