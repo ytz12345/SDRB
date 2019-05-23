@@ -100,12 +100,12 @@
                         <div class="col-12 col-md-6 px-25">
                             <div class="course-content">
                                 <figure class="course-thumbnail">
-                                    <a href="#"><img src="images/1.jpg" alt=""></a>
+                                    <a href="single-courses.jsp"><img src="images/1.jpg" alt=""></a>
                                 </figure><!-- .course-thumbnail -->
 
                                 <div class="course-content-wrap">
                                     <header class="entry-header">
-                                        <h2 class="entry-title"><a href="#">The Complete Android Developer Course</a></h2>
+                                        <h2 class="entry-title"><a href="single-courses.jsp">The Complete Android Developer Course</a></h2>
 
                                         <div class="entry-meta flex flex-wrap align-items-center">
                                             <div class="course-author"><a href="#">Ms. Lara Croft </a></div>

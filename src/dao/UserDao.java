@@ -8,6 +8,8 @@ import model.User;
 /*进行数据库操作*/
 
 public class UserDao {
+    public static int count = 1000;
+
     public int save(User user) {
         //向数据库中插入一个用户的方法
         Connection con = null;
@@ -15,11 +17,14 @@ public class UserDao {
         ResultSet rs = null;
         con = DBConnection.getDBConnection();
         int row = 0;
-        String sql = "insert into user(User_Name,User_Password) values(?,?)";
+        String sql = "insert into user(User_Id,User_Name,User_Password,User_Identity) values(?,?,?,?)";
         try {
+            count ++;
             pstmt = con.prepareStatement(sql);
-            pstmt.setString(1, user.getUsername());
-            pstmt.setString(2, user.getPassword());
+            pstmt.setInt(1,count);
+            pstmt.setString(2, user.getUsername());
+            pstmt.setString(3, user.getPassword());
+            pstmt.setInt(4,count);
             row = pstmt.executeUpdate();
         }catch(Exception e) {
             e.printStackTrace();
