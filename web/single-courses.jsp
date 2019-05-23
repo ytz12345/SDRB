@@ -161,7 +161,7 @@
 
                                 <div class="entry-content">
                                     <ul class="p-0 m-0">
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">视频名称1</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
+                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title"><a href="single-chapter.jsp">视频名称1</a></span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
                                         <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">视频名称2</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
                                         <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">视频名称3</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
                                         <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">视频名称4</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
