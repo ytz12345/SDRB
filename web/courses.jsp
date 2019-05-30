@@ -94,10 +94,10 @@
         </div><!-- .row -->
 
         <div class="row">
-            <div class="col-12 col-lg-8">
+            <div class="col-12 col-lg-12">
                 <div class="featured-courses courses-wrap">
                     <div class="row mx-m-25">
-                        <div class="col-12 col-md-6 px-25">
+                        <div class="col-12 col-md-4 px-25">
                             <div class="course-content">
                                 <figure class="course-thumbnail">
                                     <a href="single-courses.jsp"><img src="images/1.jpg" alt=""></a>
@@ -133,7 +133,7 @@
                             </div><!-- .course-content -->
                         </div><!-- .col -->
 
-                        <div class="col-12 col-md-6 px-25">
+                        <div class="col-12 col-md-4 px-25">
                             <div class="course-content">
                                 <figure class="course-thumbnail">
                                     <a href="#"><img src="images/2.jpg" alt=""></a>
@@ -169,7 +169,7 @@
                             </div><!-- .course-content -->
                         </div><!-- .col -->
 
-                        <div class="col-12 col-md-6 px-25">
+                        <div class="col-12 col-md-4 px-25">
                             <div class="course-content">
                                 <figure class="course-thumbnail">
                                     <a href="#"><img src="images/3.jpg" alt=""></a>
@@ -205,7 +205,7 @@
                             </div><!-- .course-content -->
                         </div><!-- .col -->
 
-                        <div class="col-12 col-md-6 px-25">
+                        <div class="col-12 col-md-4 px-25">
                             <div class="course-content">
                                 <figure class="course-thumbnail">
                                     <a href="#"><img src="images/4.jpg" alt=""></a>
@@ -241,7 +241,7 @@
                             </div><!-- .course-content -->
                         </div><!-- .col -->
 
-                        <div class="col-12 col-md-6 px-25">
+                        <div class="col-12 col-md-4 px-25">
                             <div class="course-content">
                                 <figure class="course-thumbnail">
                                     <a href="#"><img src="images/5.jpg" alt=""></a>
@@ -277,7 +277,7 @@
                             </div><!-- .course-content -->
                         </div><!-- .col -->
 
-                        <div class="col-12 col-md-6 px-25">
+                        <div class="col-12 col-md-4 px-25">
                             <div class="course-content">
                                 <figure class="course-thumbnail">
                                     <a href="#"><img src="images/6.jpg" alt=""></a>
@@ -314,7 +314,7 @@
                         </div><!-- .col -->
                     </div><!-- .row -->
                 </div><!-- .featured-courses -->
-
+<!--
                 <div class="pagination flex flex-wrap justify-content-between align-items-center">
                     <div class="col-12 col-lg-4 order-2 order-lg-1 mt-3 mt-lg-0">
                         <ul class="flex flex-wrap align-items-center order-2 order-lg-1 p-0 m-0">
@@ -337,10 +337,10 @@
                                     <option>Show: 24</option>
                                 </select>
                             </form>
-                        </div><!-- .pagination-results -->
+                        </div>
                     </div>
-                </div><!-- .pagination -->
-            </div><!-- .col -->
+                </div>
+            </div>
 
             <div class="col-12 col-lg-4">
                 <div class="sidebar">
@@ -348,8 +348,8 @@
                         <form class="flex flex-wrap align-items-center">
                             <input type="search" placeholder="Search...">
                             <button type="submit" class="flex justify-content-center align-items-center"><i class="fa fa-search"></i></button>
-                        </form><!-- .flex -->
-                    </div><!-- .search-widget -->
+                        </form>
+                    </div>
 
                     <div class="cat-links">
                         <h2>Categories</h2>
@@ -362,7 +362,7 @@
                             <li><a href="#">Technology</a></li>
                             <li><a href="#">Web Development</a></li>
                         </ul>
-                    </div><!-- .cat-links -->
+                    </div>
 
                     <div class="latest-courses">
                         <h2>Latest Courses</h2>
@@ -375,7 +375,7 @@
                                     <h3><a href="#">The Complete Financial Analyst Training</a></h3>
 
                                     <div class="course-cost free-cost">Free</div>
-                                </div><!-- .content-wrap -->
+                                </div>
                             </li>
 
                             <li class="flex flex-wrap justify-content-between align-items-center">
@@ -386,7 +386,7 @@
                                         Masterclass</a></h3>
 
                                     <div class="course-cost free-cost">Free</div>
-                                </div><!-- .content-wrap -->
+                                </div>
                             </li>
 
                             <li class="flex flex-wrap justify-content-between align-items-center">
@@ -396,7 +396,7 @@
                                     <h3><a href="#">The Complete Digital Marketing Course</a></h3>
 
                                     <div class="course-cost">$24</div>
-                                </div><!-- .content-wrap -->
+                                </div>
                             </li>
 
                             <li class="flex flex-wrap justify-content-between align-items-center">
@@ -407,14 +407,14 @@
                                         MasterClass</a></h3>
 
                                     <div class="course-cost">$18</div>
-                                </div><!-- .content-wrap -->
+                                </div>
                             </li>
                         </ul>
-                    </div><!-- .latest-courses -->
+                    </div>
 
                     <div class="ads">
                         <img src="images/ads.jpg" alt="">
-                    </div><!-- .ads -->
+                    </div>
 
                     <div class="popular-tags">
                         <h2>Popular Tags</h2>
@@ -427,11 +427,12 @@
                             <li><a href="#">Wordpress Template</a></li>
                             <li><a href="#">startup</a></li>
                         </ul>
-                    </div><!-- .popular-tags -->
-                </div><!-- .sidebar -->
-            </div><!-- .col -->
-        </div><!-- .row -->
-    </div><!-- .container -->
+                    </div>
+                </div>
+            </div>
+    -->
+        </div>
+    </div>
 
     <%@ include file="footer.jsp" %>
 

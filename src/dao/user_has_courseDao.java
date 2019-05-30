@@ -3,28 +3,26 @@ package dao;
 import java.sql.*;
 
 import db.DBConnection;
-import model.User;
+import model.user_has_course;
 
 /*进行数据库操作*/
 
-public class UserDao {
+public class user_has_courseDao {
     public static int count = 1000;
 
-    public int save(User user) {
+    public int save(user_has_course user_has_course) {
         //向数据库中插入一个用户的方法
         Connection con = null;
         PreparedStatement pstmt = null;
         ResultSet rs = null;
         con = DBConnection.getDBConnection();
         int row = 0;
-        String sql = "insert into user(User_Name,User_Password,User_Identity,User_Intro) values(?,?,?,?)";
+        String sql = "insert into user_has_course(User_User_Name,Course_Course_Id) values(?,?)";
         try {
             count ++;
             pstmt = con.prepareStatement(sql);
-            pstmt.setString(1, user.getUser_Name());
-            pstmt.setString(2, user.getUser_Password());
-            pstmt.setInt(3,user.getUser_Identity());
-            pstmt.setString(4, user.getUser_Intro());
+            pstmt.setString(1, user_has_course.getUser_User_Name());
+            pstmt.setInt(2, user_has_course.getCourse_Course_Id());
             row = pstmt.executeUpdate();
         }catch(Exception e) {
             e.printStackTrace();
@@ -34,32 +32,30 @@ public class UserDao {
         return row;
     }
 
-    public User find(User user) {
+    public user_has_course find(user_has_course user_has_course) {
         //从数据库中查找一个用户，用于验证是否注册
         Connection con = null;
         PreparedStatement pstmt = null;
         ResultSet rs = null;
         con = DBConnection.getDBConnection();
-        User user2 = null;
-        String sql = "select * from user where User_Name=? and User_Password=?";
+        user_has_course user_has_course2 = null;
+        String sql = "select * from user_has_course where User_User_Name=? and Course_Course_Id=?";
         try {
             pstmt = con.prepareStatement(sql);
-            pstmt.setString(1, user.getUser_Name());
-            pstmt.setString(2, user.getUser_Password());
+            pstmt.setInt(1, user_has_course.getCourse_Course_Id());
+            pstmt.setString(2, user_has_course.getUser_User_Name());
             rs = pstmt.executeQuery();
             if (rs.next()) {
-                user2 = new User();
-                user2.setUser_Name(rs.getString("User_Name"));
-                user2.setUser_Password(rs.getString("User_Password"));
-                user2.setUser_Identity(rs.getInt("User_Identity"));
-                user2.setUser_Intro(rs.getString("User_Intro"));
+                user_has_course2 = new user_has_course();
+                user_has_course2.setCourse_Course_Id(rs.getInt("Course_Course_Id"));
+                user_has_course2.setUser_User_Name(rs.getString("User_User_Name"));
             }
         }catch(Exception e) {
             e.printStackTrace();
         }finally {
             DBConnection.closeDB(con, pstmt, rs);
         }
-        return user2;
+        return user_has_course2;
     }
 
 }
