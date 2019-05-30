@@ -1,6 +1,7 @@
 # .idea/
 out/
 .idea/workspace.xml
+.idea/dataSources
 src/admin/DBadmin.java
 
 # for eclipse:
