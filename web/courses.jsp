@@ -343,7 +343,7 @@
             </div><!-- .col -->
 
             <div class="col-12 col-lg-4">
-                <div class="sidebar">
+                <div class="user-sidebar">
                     <div class="search-widget">
                         <form class="flex flex-wrap align-items-center">
                             <input type="search" placeholder="Search...">
