@@ -2,6 +2,7 @@ package dao;
 
 import java.sql.*;
 
+import com.mysql.cj.log.NullLogger;
 import db.DBConnection;
 import model.user_has_course;
 
@@ -17,12 +18,13 @@ public class user_has_courseDao {
         ResultSet rs = null;
         con = DBConnection.getDBConnection();
         int row = 0;
-        String sql = "insert into user_has_course(User_User_Name,Course_Course_Id) values(?,?)";
+        String sql = "insert into user_has_course(User_User_id,Course_Course_Id, User_Teachorstudy) values(?,?,?)";
         try {
             count ++;
             pstmt = con.prepareStatement(sql);
-            pstmt.setString(1, user_has_course.getUser_User_Name());
+            pstmt.setInt(1, user_has_course.getCourse_Course_Id());
             pstmt.setInt(2, user_has_course.getCourse_Course_Id());
+            pstmt.setInt(3, user_has_course.getUser_Teachorstudy());
             row = pstmt.executeUpdate();
         }catch(Exception e) {
             e.printStackTrace();
@@ -39,16 +41,17 @@ public class user_has_courseDao {
         ResultSet rs = null;
         con = DBConnection.getDBConnection();
         user_has_course user_has_course2 = null;
-        String sql = "select * from user_has_course where User_User_Name=? and Course_Course_Id=?";
+        String sql = "select * from user_has_course where User_User_id=? and Course_Course_Id=?";
         try {
             pstmt = con.prepareStatement(sql);
             pstmt.setInt(1, user_has_course.getCourse_Course_Id());
-            pstmt.setString(2, user_has_course.getUser_User_Name());
+            pstmt.setInt(2, user_has_course.getUser_User_id());
             rs = pstmt.executeQuery();
             if (rs.next()) {
                 user_has_course2 = new user_has_course();
                 user_has_course2.setCourse_Course_Id(rs.getInt("Course_Course_Id"));
-                user_has_course2.setUser_User_Name(rs.getString("User_User_Name"));
+                user_has_course2.setUser_User_id(rs.getInt("User_User_id"));
+                user_has_course2.setUser_Teachorstudy(rs.getInt("User_Teachorstudy"));
             }
         }catch(Exception e) {
             e.printStackTrace();
@@ -58,6 +61,27 @@ public class user_has_courseDao {
         return user_has_course2;
     }
 
+    public int CoutNumber(int course_id){
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        int num = 0;
+        con = DBConnection.getDBConnection();
+        String sql = "SELECT COUNT(course_id) AS Cout_Course_Id FROM Orders WHERE Course_Course_Id=? and User_Teachorstudy=1";
+        try{
+            pstmt = con.prepareStatement(sql);
+            pstmt.setInt(1, course_id);
+            rs = pstmt.executeQuery();
+            if (rs.next()) {
+                num = rs.getInt(1);
+            }
+        }catch(Exception e) {
+            e.printStackTrace();
+        }finally {
+            DBConnection.closeDB(con, pstmt, rs);
+        }
+        return num;
+    }
 }
 
 

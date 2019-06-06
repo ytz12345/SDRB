@@ -38,8 +38,7 @@ public class CourseDao {
         return row;
     }
 
-    public Course find(Course Course) {
-        //从数据库中查找一个用户，用于验证是否注册
+    public Course find(int Course_Id) {
         Connection con = null;
         PreparedStatement pstmt = null;
         ResultSet rs = null;
@@ -48,7 +47,7 @@ public class CourseDao {
         String sql = "select * from Course where Course_Id=?";
         try {
             pstmt = con.prepareStatement(sql);
-            pstmt.setInt(1, Course.getCourse_Id());
+            pstmt.setInt(1, Course_Id);
             rs = pstmt.executeQuery();
             if (rs.next()) {
                 Course2 = new Course();
