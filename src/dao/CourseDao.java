@@ -4,6 +4,7 @@ import java.sql.*;
 
 import db.DBConnection;
 import model.Course;
+import java.util.ArrayList;
 
 /*进行数据库操作*/
 
@@ -67,6 +68,52 @@ public class CourseDao {
         return Course2;
     }
 
+    public ArrayList<Course> getAllCourse() {
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        con = DBConnection.getDBConnection();
+        String sql = "select * from Course";
+        ArrayList<Course> CourseArrayList = new ArrayList<Course>();
+        try {
+            pstmt = con.prepareStatement(sql);
+            rs = pstmt.executeQuery();
+            while (rs.next()) {
+                Course Course3 = new Course();
+                Course3.setCourse_Id(rs.getInt("Course_Id"));
+                Course3.setCourse_Name(rs.getString("Course_Name"));
+                Course3.setCourse_Pass(rs.getInt("Course_Pass"));
+                Course3.setCourse_Intro(rs.getString("Course_Intro"));
+                Course3.setCourse_Image(rs.getString("Course_Image"));
+                Course3.setCourse_Date(rs.getDate("Course_Date"));
+                Course3.setCourse_Teacher(rs.getString("Course_Teacher"));
+                CourseArrayList.add(Course3);// 把一个商品加入集合
+            }
+            return CourseArrayList; // 返回集合。
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            return null;
+        } finally {
+            // 释放数据集对象
+            if (rs != null) {
+                try {
+                    rs.close();
+                    rs = null;
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            }
+            // 释放语句对象
+            if (pstmt != null) {
+                try {
+                    pstmt.close();
+                    pstmt = null;
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            }
+        }
+    }
 }
 
 
