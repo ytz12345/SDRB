@@ -3,6 +3,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+    </script>
     <title>User Homepage</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -82,7 +84,7 @@
                 <div class="row">
                     <div class="col-12">
                         <header class="entry-header">
-                            <h1>Courses Online</h1>
+                            <h1>User Center</h1>
                         </header><!-- .entry-header -->
                     </div><!-- .col -->
                 </div><!-- .row -->
@@ -144,7 +146,7 @@
                                 <a class="nav-text" href="index.jsp" content="myMessage"><i class="icon-nav icon-msg"></i>消息<sup id="newMsg" style="display:none;">●</sup></a>
                             </li>
                             <li class="nav-item" data-step="6" data-highlightclass="" data-intro="在这里您可以进行密码管理,邮箱绑定,以及对基本资料信息进行维护。">
-                                <a class="nav-text" href="index.jsp" content="mySetting"><i class="icon-nav icon-set"></i>个人设置</a>
+                                <a class="nav-text" href="user-setting.jsp" content="mySetting"><i class="icon-nav icon-set"></i>个人设置</a>
                             </li>
                         </ul>
                     </div>
@@ -261,7 +263,6 @@
 
 
 
-
         <input type="hidden" id="currentMenu" value="myCourse">
         <input type="hidden" id="schoolcourseType" value="0">
         <input type="hidden" id="domainType" value="sys">
@@ -269,6 +270,10 @@
         <input type="hidden" id="searchType" value="0">
         <input type="hidden" id="showSecondMajor" value="false">
         <!-- sidebar start -->
+
+
+
+
         <div class="main">
             <div class="main-header">
                 <div class="btn-group btn-tabs" id="mycoursecenter">
@@ -300,7 +305,7 @@
                                     <div class="view-show">
 
                                         <div class="view-img" href="javascript:void(0)">
-                                            <img src="images/TGBLZG.jpg">
+                                            <img src="images/ZYGBZG.jpg">
                                             <a class="view-shadow" href="https://www.cnmooc.org/portal/session/index/11846.mooc" style="top: 0px; left: -982px;">
                                                 <div class="view-tips view-action">
                                                     <i class="icon-play"></i>去学习
@@ -378,24 +383,173 @@
                             </li>
 
                             <!-- 即将开始 -->
+                            <li class="soon-item hidden-course" ucid="1277078">
+                                <div class="view">
+                                    <div class="view-show">
+
+                                        <div class="view-img" href="javascript:void(0)">
+                                            <img src="images/ZYNCJZ.jpg">
+                                            <a class="view-shadow" href="https://www.cnmooc.org/portal/session/index/11846.mooc" style="top: 0px; left: -982px;">
+                                                <div class="view-tips view-action">
+                                                    <i class="icon-play"></i>去学习
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="view-intro">
+                                        <h3 class="view-title substr" style="width:400px;">
+
+                                            怎样怒斥记者
+
+
+                                            <span class="cview-time">2020春</span>
+                                        </h3>
+
+
+
+
+                                        <h4 class="view-subtitle">
+                                            <span class="show-tname substr" style="width:180px;"><a class="link-action" href="/portal/teacher/11846/524530.mooc" title="江主席"><img src="images/JZM.jpg" class="user-min">江泽民</a></span>
+                                            <span class="show-school substr"></span>
+                                        </h4>
+                                        <!-- 学期学习 -->
+
+                                        <div class="view-handle clearfix">
+                                            <!-- 学期学习 -->
+
+                                            <span class="view-tip"><i class="icon-clock01"></i>36周</span>
+                                            <span class="view-tip"><i class="icon-cycle01"></i>1小时/周</span>
+
+
+                                            <!-- 随到随学 -->
+
+
+                                            <div class="link-group">
+                                                <a class="link-action courseDetail" href="/portal/session/11846-study.mooc">课程详情</a>
+                                                <a class="link-action totalReport" href="/portal/session/to/studystatistics-11846.mooc">学习统计</a>
+
+                                            </div>
+                                        </div>
+
+                                        <!-- 学期学习 -->
+
+                                        <!-- 有成绩 -->
+
+
+                                        <!-- 无成绩 -->
+
+                                        <div class="view-progressbar pc-progressbar">
+                                            <div class="progressbar-ui">
+                                                <div class="progressbar-value">
+                                                    <span class="start-value">2020-01-11</span>
+                                                    <span class="end-value">2020-04-08</span>
+                                                </div>
+                                                <div class="progressbar-bg">
+                                                    <div class="progressbar-in" style="width: 58%;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                        <!-- 随到随学 -->
+
+
+
+                                        <i class="view-state-v normal" title="修学分课程"></i>
+
+
+                                        <!-- 证书 -->
+
+                                    </div>
+                                </div>
+                            </li>
 
                             <!-- 已结束 -->
+                            <li class="finished-item hidden-course" ucid="1277078">
+                                <div class="view">
+                                    <div class="view-show">
+
+                                        <div class="view-img" href="javascript:void(0)">
+                                            <img src="images/ZYCSBL.jpg">
+                                            <a class="view-shadow" href="https://www.cnmooc.org/portal/session/index/11846.mooc" style="top: 0px; left: -982px;">
+                                                <div class="view-tips view-action">
+                                                    <i class="icon-play"></i>去学习
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="view-intro">
+                                        <h3 class="view-title substr" style="width:400px;">
+
+                                            怎样长生不老
+
+
+                                            <span class="cview-time">2018秋</span>
+                                        </h3>
 
 
 
 
+                                        <h4 class="view-subtitle">
+                                            <span class="show-tname substr" style="width:180px;"><a class="link-action" href="/portal/teacher/11846/524530.mooc" title="江主席"><img src="images/JZM.jpg" class="user-min">江泽民</a></span>
+                                            <span class="show-school substr"></span>
+                                        </h4>
+                                        <!-- 学期学习 -->
+
+                                        <div class="view-handle clearfix">
+                                            <!-- 学期学习 -->
+
+                                            <span class="view-tip"><i class="icon-clock01"></i>24周</span>
+                                            <span class="view-tip"><i class="icon-cycle01"></i>1.5小时/周</span>
+
+
+                                            <!-- 随到随学 -->
+
+
+                                            <div class="link-group">
+                                                <a class="link-action courseDetail" href="/portal/session/11846-study.mooc">课程详情</a>
+                                                <a class="link-action totalReport" href="/portal/session/to/studystatistics-11846.mooc">学习统计</a>
+
+                                            </div>
+                                        </div>
+
+                                        <!-- 学期学习 -->
+
+                                        <!-- 有成绩 -->
+
+
+                                        <!-- 无成绩 -->
+
+                                        <div class="view-progressbar pc-progressbar">
+                                            <div class="progressbar-ui">
+                                                <div class="progressbar-value">
+                                                    <span class="start-value">2018-09-11</span>
+                                                    <span class="end-value">2019-03-16</span>
+                                                </div>
+                                                <div class="progressbar-bg">
+                                                    <div class="progressbar-in" style="width: 58%;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
 
 
 
+                                        <!-- 随到随学 -->
 
 
 
+                                        <i class="view-state-v normal" title="修学分课程"></i>
 
 
+                                        <!-- 证书 -->
+
+                                    </div>
+                                </div>
+                            </li>
 
 
-
-
+<!--
                             <div class="pagination" id="pageId">
                                 <ul class="clearfix">
                                     <li class="page-dropdown">
@@ -418,7 +572,7 @@
                                     </li>
                                 </ul>
                             </div>
-
+                    -->
 
                             <script>
                                 $(function () {
@@ -556,6 +710,29 @@
 <script type='text/javascript' src='js/masonry.pkgd.min.js'></script>
 <script type='text/javascript' src='js/jquery.collapsible.min.js'></script>
 <script type='text/javascript' src='js/custom.js'></script>
+<script>
+    $(".btn-item").click(function(){
+        $(this).addClass('current');
+        $(this).siblings().removeClass('current');
+        if (this.tabIndex == 1) {
+            $('.view-item').removeClass('hidden-course');
+            $('.soon-item').addClass('hidden-course');
+            $('.finished-item').addClass('hidden-course');
+        }
+        if (this.tabIndex == 2) {
+            $('.view-item').addClass('hidden-course');
+            $('.soon-item').removeClass('hidden-course');
+            $('.finished-item').addClass('hidden-course');
+        }
+        if (this.tabIndex == 3) {
+            $('.view-item').addClass('hidden-course');
+            $('.soon-item').addClass('hidden-course');
+            $('.finished-item').removeClass('hidden-course');
+        }
+    });
+</script>
+
+
 
 </body>
 </html>

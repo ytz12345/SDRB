@@ -1120,236 +1120,313 @@
     <table id="281" parent="5" name="user">
       <Collation>utf8_general_ci</Collation>
     </table>
-    <table id="282" parent="5" name="user_has_course">
+    <table id="282" parent="5" name="user_has_chapter">
       <Collation>utf8_general_ci</Collation>
     </table>
-    <column id="283" parent="278" name="Chapter_id">
+    <table id="283" parent="5" name="user_has_course">
+      <Collation>utf8_general_ci</Collation>
+    </table>
+    <column id="284" parent="278" name="Chapter_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="284" parent="278" name="Chapter_Num">
+    <column id="285" parent="278" name="Chapter_Num">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="285" parent="278" name="Chapter_Name">
+    <column id="286" parent="278" name="Chapter_Name">
       <Position>3</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="286" parent="278" name="Chapter_Video">
+    <column id="287" parent="278" name="Chapter_Video">
       <Position>4</Position>
       <DataType>varchar(200)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="287" parent="278" name="Chapter_PPT">
+    <column id="288" parent="278" name="Chapter_PPT">
       <Position>5</Position>
       <DataType>varchar(200)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="288" parent="278" name="Course_Course_Id">
+    <column id="289" parent="278" name="Course_Course_Id">
       <Position>6</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="289" parent="278" name="fk_Chapter_Course1_idx">
+    <column id="290" parent="278" name="Chapter_Intro">
+      <Position>7</Position>
+      <DataType>varchar(200)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="291" parent="278" name="fk_Chapter_Course1_idx">
       <ColNames>Course_Course_Id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="290" parent="278" name="PRIMARY">
+    <key id="292" parent="278" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>Chapter_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="291" parent="278" name="fk_Chapter_Course1">
+    <foreign-key id="293" parent="278" name="fk_Chapter_Course1">
       <ColNames>Course_Course_Id</ColNames>
       <RefSchemaName>sdrb</RefSchemaName>
       <RefTableName>course</RefTableName>
       <RefColNames>Course_Id</RefColNames>
     </foreign-key>
-    <column id="292" parent="279" name="Comment_id">
+    <column id="294" parent="279" name="Comment_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="293" parent="279" name="Comment_Content">
+    <column id="295" parent="279" name="Comment_Content">
       <Position>2</Position>
       <DataType>varchar(200)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="294" parent="279" name="Comment_Time">
+    <column id="296" parent="279" name="Comment_Time">
       <Position>3</Position>
-      <DataType>date|0s</DataType>
+      <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="295" parent="279" name="Comment_To">
+    <column id="297" parent="279" name="Comment_To">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="296" parent="279" name="Chapter_Chapter_id">
+    <column id="298" parent="279" name="Chapter_Chapter_id">
       <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="297" parent="279" name="User_User_Id">
+    <column id="299" parent="279" name="User_User_id">
       <Position>6</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="298" parent="279" name="fk_Comment_Chapter1_idx">
+    <index id="300" parent="279" name="fk_Comment_Chapter1_idx">
       <ColNames>Chapter_Chapter_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="299" parent="279" name="fk_Comment_User1_idx">
-      <ColNames>User_User_Id</ColNames>
+    <index id="301" parent="279" name="fk_Comment_User1_idx">
+      <ColNames>User_User_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="300" parent="279" name="PRIMARY">
+    <key id="302" parent="279" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>Comment_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="301" parent="279" name="fk_Comment_Chapter1">
+    <foreign-key id="303" parent="279" name="fk_Comment_Chapter1">
       <ColNames>Chapter_Chapter_id</ColNames>
       <RefSchemaName>sdrb</RefSchemaName>
       <RefTableName>chapter</RefTableName>
       <RefColNames>Chapter_id</RefColNames>
     </foreign-key>
-    <foreign-key id="302" parent="279" name="fk_Comment_User1">
-      <ColNames>User_User_Id</ColNames>
+    <foreign-key id="304" parent="279" name="fk_Comment_User1">
+      <ColNames>User_User_id</ColNames>
       <RefSchemaName>sdrb</RefSchemaName>
       <RefTableName>user</RefTableName>
-      <RefColNames>User_Id</RefColNames>
+      <RefColNames>User_id</RefColNames>
     </foreign-key>
-    <column id="303" parent="280" name="Course_Id">
+    <column id="305" parent="280" name="Course_Id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="304" parent="280" name="Course_Name">
+    <column id="306" parent="280" name="Course_Name">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="305" parent="280" name="Course_Pass">
+    <column id="307" parent="280" name="Course_Pass">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="306" parent="280" name="Course_Intro">
+    <column id="308" parent="280" name="Course_Intro">
       <Position>4</Position>
       <DataType>varchar(200)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="307" parent="280" name="idCourse_UNIQUE">
+    <column id="309" parent="280" name="Course_Image">
+      <Position>5</Position>
+      <DataType>varchar(200)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="310" parent="280" name="Course_Date">
+      <Position>6</Position>
+      <DataType>datetime|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="311" parent="280" name="Course_Teacher">
+      <Position>7</Position>
+      <DataType>varchar(45)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="312" parent="280" name="idCourse_UNIQUE">
       <ColNames>Course_Id</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="308" parent="280" name="PRIMARY">
+    <key id="313" parent="280" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>Course_Id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="309" parent="280" name="idCourse_UNIQUE">
+    <key id="314" parent="280" name="idCourse_UNIQUE">
       <ColNames>Course_Id</ColNames>
       <UnderlyingIndexName>idCourse_UNIQUE</UnderlyingIndexName>
     </key>
-    <column id="310" parent="281" name="User_Id">
+    <column id="315" parent="281" name="User_Name">
       <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="311" parent="281" name="User_Name">
+    <column id="316" parent="281" name="User_Password">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="312" parent="281" name="User_Password">
+    <column id="317" parent="281" name="User_Identity">
       <Position>3</Position>
-      <DataType>varchar(45)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="313" parent="281" name="User_Identity">
-      <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="314" parent="281" name="User_Intro">
-      <Position>5</Position>
+    <column id="318" parent="281" name="User_Intro">
+      <Position>4</Position>
       <DataType>varchar(200)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="315" parent="281" name="User_UNIQUE">
-      <ColNames>User_Id</ColNames>
+    <column id="319" parent="281" name="User_id">
+      <Position>5</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="320" parent="281" name="User_Name_UNIQUE">
+      <ColNames>User_Name</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="316" parent="281" name="PRIMARY">
+    <key id="321" parent="281" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>User_Id</ColNames>
+      <ColNames>User_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="317" parent="281" name="User_UNIQUE">
-      <ColNames>User_Id</ColNames>
-      <UnderlyingIndexName>User_UNIQUE</UnderlyingIndexName>
+    <key id="322" parent="281" name="User_Name_UNIQUE">
+      <ColNames>User_Name</ColNames>
+      <UnderlyingIndexName>User_Name_UNIQUE</UnderlyingIndexName>
     </key>
-    <column id="318" parent="282" name="User_User_Id">
+    <column id="323" parent="282" name="User_User_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="319" parent="282" name="Course_Course_Id">
+    <column id="324" parent="282" name="Chapter_Chapter_id">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="320" parent="282" name="fk_User_has_Course_User_idx">
-      <ColNames>User_User_Id</ColNames>
+    <column id="325" parent="282" name="User_has_Learned">
+      <Position>3</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="326" parent="282" name="fk_User_has_Chapter1_User1_idx">
+      <ColNames>User_User_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="321" parent="282" name="fk_User_has_Course_Course1_idx">
+    <index id="327" parent="282" name="fk_User_has_Chapter1_Chapter1_idx">
+      <ColNames>Chapter_Chapter_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="328" parent="282" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>User_User_id
+Chapter_Chapter_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="329" parent="282" name="fk_User_has_Chapter1_User1">
+      <ColNames>User_User_id</ColNames>
+      <RefSchemaName>sdrb</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>User_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="330" parent="282" name="fk_User_has_Chapter1_Chapter1">
+      <ColNames>Chapter_Chapter_id</ColNames>
+      <RefSchemaName>sdrb</RefSchemaName>
+      <RefTableName>chapter</RefTableName>
+      <RefColNames>Chapter_id</RefColNames>
+    </foreign-key>
+    <column id="331" parent="283" name="Course_Course_Id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="332" parent="283" name="User_Teachorstudy">
+      <Position>2</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="333" parent="283" name="User_User_id">
+      <Position>3</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="334" parent="283" name="fk_User_has_Course_Course1_idx">
       <ColNames>Course_Course_Id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="322" parent="282" name="PRIMARY">
+    <index id="335" parent="283" name="fk_User_has_Course_User1_idx">
+      <ColNames>User_User_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="336" parent="283" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>User_User_Id
-Course_Course_Id</ColNames>
+      <ColNames>Course_Course_Id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="323" parent="282" name="fk_User_has_Course_User">
-      <ColNames>User_User_Id</ColNames>
-      <RefSchemaName>sdrb</RefSchemaName>
-      <RefTableName>user</RefTableName>
-      <RefColNames>User_Id</RefColNames>
-    </foreign-key>
-    <foreign-key id="324" parent="282" name="fk_User_has_Course_Course1">
+    <foreign-key id="337" parent="283" name="fk_User_has_Course_Course1">
       <ColNames>Course_Course_Id</ColNames>
       <RefSchemaName>sdrb</RefSchemaName>
       <RefTableName>course</RefTableName>
       <RefColNames>Course_Id</RefColNames>
+    </foreign-key>
+    <foreign-key id="338" parent="283" name="fk_User_has_Course_User1">
+      <ColNames>User_User_id</ColNames>
+      <RefSchemaName>sdrb</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>User_id</RefColNames>
     </foreign-key>
   </database-model>
 </dataSource>
