@@ -1,6 +1,7 @@
 # .idea/
 out/
 src/admin/DBadmin.java
+.idea/workspace.xml
 
 # for eclipse:
 .settings/
