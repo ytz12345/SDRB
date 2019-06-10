@@ -38,7 +38,7 @@ public class ChapterDao {
         return row;
     }
 
-    public Chapter find(Chapter Chapter) {
+    public Chapter findChapter(int Chapter_id) {
         //从数据库中查找一个用户，用于验证是否注册
         Connection con = null;
         PreparedStatement pstmt = null;
@@ -48,7 +48,7 @@ public class ChapterDao {
         String sql = "select * from Chapter where Chapter_id=?";
         try {
             pstmt = con.prepareStatement(sql);
-            pstmt.setInt(1, Chapter.getChapter_id());
+            pstmt.setInt(1, Chapter_id);
             rs = pstmt.executeQuery();
             if (rs.next()) {
                 Chapter2 = new Chapter();

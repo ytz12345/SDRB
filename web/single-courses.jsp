@@ -160,7 +160,7 @@
                                 <%
                                     ChapterDao chapterDao = new ChapterDao();
                                     ArrayList<Chapter> ChapterArrayList = chapterDao.getSpecifcChapter(course_id);
-                                    if(ChapterArrayList!=null&&ChapterArrayList.size()>0)
+                                    if(ChapterArrayList != null && ChapterArrayList.size()>0)
                                     {
                                         for(int i = 0; i < ChapterArrayList.size(); i++)
                                         {
@@ -175,7 +175,7 @@
 
                                 <div class="entry-content">
                                     <ul class="p-0 m-0">
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title"><a href="single-chapter.jsp"><%=chapter.getChapter_Name()%></a></span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right"></span></li>
+                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title"><a href="single-chapter.jsp?chapter_id=<%=chapter.getChapter_id()%>"><%=chapter.getChapter_Name()%></a></span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right"></span></li>
                                     </ul>
                                 </div>
                                 <%
