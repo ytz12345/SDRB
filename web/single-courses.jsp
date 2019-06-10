@@ -1,3 +1,5 @@
+<%@ page import="dao.CourseDao" %>
+<%@ page import="model.Course" %>
 <%@ page language="java" contentType="text/html; charset=utf-8"
          pageEncoding="utf-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -67,13 +69,17 @@
                 </div><!-- .container -->
             </div><!-- .nav-bar -->
         </header><!-- .site-header -->
-
+        <%
+            int course_id = Integer.parseInt(request.getParameter("course_id"));
+            CourseDao courseDao = new CourseDao();
+            Course course = courseDao.find(course_id);
+        %>
         <div class="page-header-overlay">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
                         <header class="entry-header">
-                            <h1 class="entry-title">The Unreal Engine Developer Course Learn C++ & Make Games</h1>
+                            <h1 class="entry-title"><%=course.getCourse_Name()%></h1>
 
                             <div class="ratings flex justify-content-center align-items-center">
                                 <i class="fa fa-star"></i>
@@ -94,7 +100,7 @@
         <div class="row">
             <div class="col-12 offset-lg-1 col-lg-10">
                 <div class="featured-image">
-                    <img src="images/single-course-featured-img.jpg" alt="">
+                    <img src="<%=course.getCourse_Image()%>" alt="">
 
                     <div class="course-cost">Free</div>
                 </div>
@@ -111,7 +117,7 @@
 
                             <div class="author-wrap">
                                 <label class="m-0">Teacher</label>
-                                <div class="author-name"><a href="#">Ms. Lara Croft</a></div>
+                                <div class="author-name"><a href="#"><%=course.getCourse_Teacher()%></a></div>
                             </div><!-- .author-wrap -->
                         </div><!-- .course-author -->
 
@@ -134,11 +140,7 @@
                         <h2>What Will I Learn?</h2>
 
                         <ul class="p-0 m-0 green-ticked">
-                            <li>Learn C++, the games industry standard language.</li>
-                            <li>Develop strong and transferrable problem solving skills.</li>
-                            <li>Gain an excellent knowledge of modern game development.</li>
-                            <li>Learn how object oriented programming works in practice.</li>
-                            <li>Gain a more fundamental understanding of computer operation.</li>
+                            <li><%=course.getCourse_Intro()%></li>
                         </ul>
 
                     <div class="single-course-accordion-cont mt-3">
