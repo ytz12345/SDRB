@@ -15,7 +15,7 @@ public class RegisterAction {
         int flag = 0;
         User user2 = (userDao.find(user));
         if(user2 != null) {
-            forward = "erroe_user";//用户名已被占用标记值
+            forward = "error_user";//用户名已被占用标记值
         }else {
             flag = userDao.save(user);
             if(flag == 1) {

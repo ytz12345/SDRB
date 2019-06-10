@@ -26,6 +26,10 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/login.css">
 
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
     <script type="text/javascript">
         function isValidate(form) {
             var username=document.getElementById("username").value;
@@ -101,6 +105,8 @@
                                 <input class="register-input" type="password" name="user.password" id="userpassword" placeholder="Password">
                                 <label class="register-lable">确认密码：</label>
                                 <input class="register-input" type="password" name="userpass1" id="userpass1" placeholder="Password">
+                                <label class="radio-inline"><input type="radio" name="optradio" checked>Option 1</label>
+                                <label class="radio-inline"><input type="radio" name="optradio">Option 2</label>
                                 <input id="register-btn" type="submit" value="注册">
                                 <input id="reset-btn" type="reset" value="重置">
                             </form>
