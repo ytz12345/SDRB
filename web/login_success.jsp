@@ -7,7 +7,7 @@
     <title>登录成功</title>
 </head>
 <body>
-欢迎你，${user.username }, 登入成功!<br>
+欢迎你，, 登入成功!<br>
 进入主页面，请点击<a href="index.jsp">主页面</a>
 </body>
 </html>

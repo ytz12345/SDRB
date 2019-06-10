@@ -46,6 +46,7 @@ public class DBConnection {
         }catch(SQLException e) {
             e.printStackTrace();
         }
+        System.out.println("???");
     }
 
 }

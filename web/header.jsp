@@ -9,6 +9,23 @@
     <script src="https://?ile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function isValidate(form) {
+            var username=document.getElementById("username").value;
+            var userpass=document.getElementById("userpassword").value;
+            var userpass1=document.getElementById("userpass1").value;
+            user.Identity=$('input:radio[name="Identity"]:checked').val();
+            if(userpass != userpass1){
+                alert("两次输入的密码不一致，请重新输入！");
+                return false;
+            }else if(userpass.length<=0 || username.length<=0) {
+                alert("用户名以及密码不能为空，请重新输入！");
+                return false;
+            }else{
+                return true;
+            }
+
+        }</script>
 </head>
 <div class="top-header-bar">
         <div class="container-fluid">
@@ -48,9 +65,9 @@
                                                 <div id="form-login">
                                                     <form action="logincheck" method="post">
                                                         <label class="login-lable">用户名：</label>
-                                                        <input class="login-input" type="text" name="user.username" placeholder="Username">
+                                                        <input class="login-input" type="text" name="user.User_Name" placeholder="Username">
                                                         <label class="login-lable">密码：</label>
-                                                        <input class="login-input" type="password" name="user.password" placeholder="Password">
+                                                        <input class="login-input" type="password" name="user.User_Password" placeholder="Password">
                                                         <input id="login-btn" type="submit" value="登录">
                                                     </form>
                                                 </div><!-- #form-login -->
@@ -81,14 +98,14 @@
                                                 <div id="form-register">
                                                     <form action="register" name="register" method="post" onsubmit="return isValidate()" >
                                                         <label class="register-lable">用户名：</label>
-                                                        <input class="register-input" type="text" name="user.username" id="username" placeholder="Username">
+                                                        <input class="register-input" type="text" name="user.User_Name" id="username" placeholder="Username">
                                                         <label class="register-lable">设置密码：</label>
-                                                        <input class="register-input" type="password" name="user.password" id="userpassword" placeholder="Password">
+                                                        <input class="register-input" type="password" name="user.User_Password" id="userpassword" placeholder="Password">
                                                         <label class="register-lable">确认密码：</label>
                                                         <input class="register-input" type="password" name="userpass1" id="userpass1" placeholder="Password">
 
-                                                        <label class="radio-inline"><input type="radio" name="user.Identity" value="1" checked>Option 1</label>
-                                                        <label class="radio-inline"><input type="radio" name="user.Identity" value="2">Option 2</label>
+                                                        <label class="radio-inline"><input type="radio" name="user.User_Identity" value="1" checked>Option 1</label>
+                                                        <label class="radio-inline"><input type="radio" name="user.User_Identity" value="2">Option 2</label>
                                                         user.Identity=$('input:radio[name="Identity"]:checked').val();
                                                         <input id="register-btn" type="submit" value="注册">
                                                         <input id="reset-btn" type="reset" value="重置">
@@ -104,7 +121,7 @@
                         <s:else>
                             <ul class="flex justify-content-center align-items-center py-2 pt-md-0">
                                 <li>Weicome!</li>
-                                <li><a href="aboutMe.jsp"><S:property value="#session.user.username"/></a></li>
+                                <li><a href="aboutMe.jsp"><S:property value="#session.user.User_Name"/></a></li>
                             </ul>
                         </s:else>
                     </div><!-- .header-bar-menu -->

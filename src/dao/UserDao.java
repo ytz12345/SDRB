@@ -8,8 +8,6 @@ import model.User;
 /*进行数据库操作*/
 
 public class UserDao {
-    public static int count = 1000;
-
     public int save(User user) {
         //向数据库中插入一个用户的方法
         Connection con = null;
@@ -17,15 +15,13 @@ public class UserDao {
         ResultSet rs = null;
         con = DBConnection.getDBConnection();
         int row = 0;
-        String sql = "insert into user(User_id,User_Name,User_Password,User_Identity,User_Intro) values(?,?,?,?,?)";
+        String sql = "insert into user(User_Name,User_Password,User_Identity,User_Intro) values(?,?,?,?)";
         try {
-            count ++;
             pstmt = con.prepareStatement(sql);
-            pstmt.setInt(1, user.getUser_id());
-            pstmt.setString(2, user.getUser_Name());
-            pstmt.setString(3, user.getUser_Password());
-            pstmt.setInt(4,user.getUser_Identity());
-            pstmt.setString(5, user.getUser_Intro());
+            pstmt.setString(1, user.getUser_Name());
+            pstmt.setString(2, user.getUser_Password());
+            pstmt.setInt(3, user.getUser_Identity());
+            pstmt.setString(4, user.getUser_Intro());
             row = pstmt.executeUpdate();
         }catch(Exception e) {
             e.printStackTrace();
@@ -42,10 +38,11 @@ public class UserDao {
         ResultSet rs = null;
         con = DBConnection.getDBConnection();
         User user2 = null;
-        String sql = "select * from user where User_id=? and User_Password=?";
+        String sql = "select * from user where User_Name=? and User_Password=?";
+        System.out.println("///");
         try {
             pstmt = con.prepareStatement(sql);
-            pstmt.setInt(1, user.getUser_id());
+            pstmt.setString(1, user.getUser_Name());
             pstmt.setString(2, user.getUser_Password());
             rs = pstmt.executeQuery();
             if (rs.next()) {
@@ -63,26 +60,28 @@ public class UserDao {
         }
         return user2;
     }
-
-    public int CoutNumber(){
-        Connection con = null;
+    public boolean occupy(User user){
+        Connection con=null;
+                con = DBConnection.getDBConnection();
         PreparedStatement pstmt = null;
         ResultSet rs = null;
-        int num = 0;
-        con = DBConnection.getDBConnection();
-        String sql = "select * from user ";
+        String sql = "select * from user where User_Name=?";
+        System.out.println("///");
         try{
-            pstmt = con.prepareStatement(sql);
-            rs = pstmt.executeQuery();
-            while (rs.next()) {
-                num = rs.getInt("User_id");
-            }
+        pstmt = con.prepareStatement(sql);
+        pstmt.setString(1, user.getUser_Name());
+        rs = pstmt.executeQuery();
+        if (rs.next())
+            return true;
+        else
+            return false;
         }catch(Exception e) {
             e.printStackTrace();
         }finally {
             DBConnection.closeDB(con, pstmt, rs);
         }
-        return num;
+
+        return false;
     }
 }
 
