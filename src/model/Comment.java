@@ -1,11 +1,11 @@
 package model;
 
-import java.sql.Date;
+import java.sql.Timestamp;
 
 public class Comment {
     private int Comment_id;
     private String Comment_Content;
-    private Date Comment_Time;
+    private Timestamp Comment_Time;
     private int Comment_To;
     private int Chapter_Chapter_id;
     private int User_User_id;
@@ -14,7 +14,7 @@ public class Comment {
 
     }
 
-    public Comment(int Comment_id, String Comment_Content, Date Comment_Time, int Comment_To, int Chapter_Chapter_id, int User_User_id){
+    public Comment(int Comment_id, String Comment_Content, Timestamp Comment_Time, int Comment_To, int Chapter_Chapter_id, int User_User_id){
         this.Comment_id = Comment_id;
         this.Comment_Content = Comment_Content;
         this.Comment_Time = Comment_Time;
@@ -39,11 +39,11 @@ public class Comment {
         Comment_Content = comment_Content;
     }
 
-    public Date getComment_Time() {
+    public Timestamp getComment_Time() {
         return Comment_Time;
     }
 
-    public void setComment_Time(Date comment_Time) {
+    public void setComment_Time(Timestamp comment_Time) {
         Comment_Time = comment_Time;
     }
 

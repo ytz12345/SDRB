@@ -15,5 +15,10 @@
             <result name="success">/index.jsp</result>
             <result name="failure">/login_failure.jsp</result>
         </action>
+        <action name="leavecomment" class="action.LeaveCommentAction" method="LeaveComment">
+            <result name="success">/comment_success.jsp?chapter_id=${comment.chapter_Chapter_id}</result>
+            <result name="failure">/login_failure.jsp</result>
+            <result name="no_login">/no_login.jsp</result>
+        </action>
     </package>
 </struts>

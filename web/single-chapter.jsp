@@ -9,6 +9,9 @@
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="java.util.PriorityQueue"%>
 <%@ page import="java.util.Comparator"%>
+<%@ page import="java.sql.Timestamp"%>
+<%@ page import="java.util.Map"%>
+<%@ page import="com.opensymphony.xwork2.ActionContext"%>
 <%@ page language="java" contentType="text/html; charset=utf-8" autoFlush="false" buffer="256kb"
          pageEncoding="utf-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -87,7 +90,10 @@
                 </div><!-- .container -->
             </div><!-- .nav-bar -->
         </header><!-- .site-header -->
+        <input type="hidden" id="login_User_id" value="<S:property value="#session.user.User_id"/>">
         <%
+            ActionContext actionContext = ActionContext.getContext();
+            Map session2 = actionContext.getSession();
             int chapter_id = Integer.parseInt(request.getParameter("chapter_id"));
             ChapterDao chapterDao = new ChapterDao();
             Chapter chapter = chapterDao.findChapter(chapter_id);
@@ -189,8 +195,36 @@
 
                                         <p><%=comment.getComment_Content()%></p>
                                         <div class="reply">
-                                            <a href="#">like</a>
-                                            <a href="#">reply</a>
+                                            <div class="panel panel-default" style="display: inline-block;">
+                                                <div class="panel-heading">
+                                                    <h4 class="panel-title">
+                                                        <a data-toggle="collapse" data-parent="#accordion"
+                                                           href="#<%=comment.getComment_id()%>">
+                                                            reply
+                                                        </a>
+                                                    </h4>
+                                                </div>
+                                                <div id="<%=comment.getComment_id()%>" class="panel-collapse collapse in">
+                                                    <div class="panel-body">
+
+                                                        <div class="comments-form">
+                                                            <div class="comment-respond">
+                                                                <h3 class="comment-reply-title">Leave a Reply</h3>
+
+                                                                <form action="leavecomment" class="comment-form" method="post">
+                                                                    <textarea rows="6" name="comment.Comment_Content" id="commentcontent" placeholder="Messages"></textarea>
+                                                                    <input type="hidden" name="comment.Comment_Time" value="<%=new Timestamp(System.currentTimeMillis())%>">
+                                                                    <input type="hidden" name="comment.Comment_To" value="<%=comment.getComment_id()%>">
+                                                                    <input type="hidden" name="comment.Chapter_Chapter_id" value="<%=chapter_id%>">
+                                                                    <input type="hidden" name="comment.User_User_id" value="<S:property value="#session.user.User_id"/>">
+                                                                    <input type="submit" value="send comment">
+                                                                </form><!-- .comment-form -->
+                                                            </div><!-- .comment-respond -->
+                                                        </div><!-- .comments-form -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--<a href="#" style="background:red;color:#fff">delete</a>-->
                                         </div>
                                     </div>
 
@@ -232,10 +266,38 @@
 
                                                 <p><%=comment2.getComment_Content()%></p>
 
+
                                                 <div class="reply">
-                                                    <a href="#">like</a>
-                                                    <a href="#">reply</a>
+                                                    <div class="panel panel-default"  style="display: inline-block;">
+                                                        <div class="panel-heading">
+                                                            <h4 class="panel-title">
+                                                                <a data-toggle="collapse" data-parent="#accordion"
+                                                                   href="#<%=comment2.getComment_id()%>">reply
+                                                                </a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="<%=comment2.getComment_id()%>" class="panel-collapse collapse in">
+                                                            <div class="panel-body">
+                                                                <div class="comments-form">
+                                                                    <div class="comment-respond">
+                                                                        <h3 class="comment-reply-title">Leave a Reply</h3>
+
+                                                                        <form action="leavecomment" class="comment-form" method="post">
+                                                                            <textarea rows="6" name="comment.Comment_Content" id="commentcontent" placeholder="Messages"></textarea>
+                                                                            <input type="hidden" name="comment.Comment_Time" value="<%=new Timestamp(System.currentTimeMillis())%>">
+                                                                            <input type="hidden" name="comment.Comment_To" value="<%=comment2.getComment_id()%>">
+                                                                            <input type="hidden" name="comment.Chapter_Chapter_id" value="<%=chapter_id%>">
+                                                                            <input type="hidden" name="comment.User_User_id" value="<S:property value="#session.user.User_id"/>">
+                                                                            <input type="submit" value="send comment">
+                                                                        </form><!-- .comment-form -->
+                                                                    </div><!-- .comment-respond -->
+                                                                </div><!-- .comments-form -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--<a href="#" style="background:red;color:#fff">delete</a>-->
                                                 </div>
+
                                             </div>
 
                                             <div class="clearfix"></div>
@@ -250,35 +312,6 @@
                                     }
                                 }
                             %>
-
-                            <!-- <li class="comment">
-                                <article class="comment-body">
-                                    <figure class="comment-author-avatar">
-                                        <img src="images/c-3.png" alt="">
-                                    </figure>
-
-                                    <div class="comment-wrap">
-                                        <div class="comment-author">
-                                            <span class="comment-meta d-block">
-                                                <a href="#">27 Aug 2018</a>
-                                            </span>
-
-                                            <span class="fn">
-                                                <a href="#">Henry Ford</a>
-                                            </span>
-                                        </div>
-
-                                        <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi </p>
-
-                                        <div class="reply">
-                                            <a href="#">like</a>
-                                            <a href="#">reply</a>
-                                        </div>
-                                    </div>
-
-                                    <div class="clearfix"></div>
-                                </article>
-                            </li>.comment -->
                         </ol><!-- .comment-list -->
                     </div><!-- .post-comments -->
 
@@ -286,8 +319,12 @@
                         <div class="comment-respond">
                             <h3 class="comment-reply-title">Leave a comment</h3>
 
-                            <form class="comment-form">
-                                <textarea rows="4" placeholder="Messages"></textarea>
+                            <form action="leavecomment" class="comment-form" method="post">
+                                <textarea rows="6" name="comment.Comment_Content" id="commentcontent" placeholder="Messages"></textarea>
+                                <input type="hidden" name="comment.Comment_Time" value="<%=new Timestamp(System.currentTimeMillis())%>">
+                                <input type="hidden" name="comment.Comment_To" value="<%=0%>">
+                                <input type="hidden" name="comment.Chapter_Chapter_id" value="<%=chapter_id%>">
+                                <input type="hidden" name="comment.User_User_id" value="<S:property value="#session.user.User_id"/>">
                                 <input type="submit" value="send comment">
                             </form><!-- .comment-form -->
                         </div><!-- .comment-respond -->

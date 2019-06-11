@@ -4,14 +4,14 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-81">
-    <title>登录失败</title>
+    <title>没有登录</title>
 </head>
 <body>
 <h2 align="center">
     <font color="red">
-        对不起，你填写的账号和密码不正确!请
+        对不起，你还没有登录!请
     </font>
-    <a href="index.jsp">重新登录</a>
+    <a href="index.jsp">登录</a>
 </h2>
 </body>
 </html>
