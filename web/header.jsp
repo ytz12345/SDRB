@@ -104,9 +104,9 @@
                                                         <label class="register-lable">确认密码：</label>
                                                         <input class="register-input" type="password" name="userpass1" id="userpass1" placeholder="Password">
 
-                                                        <label class="radio-inline"><input type="radio" name="user.User_Identity" value="1" checked>Option 1</label>
-                                                        <label class="radio-inline"><input type="radio" name="user.User_Identity" value="2">Option 2</label>
-                                                        user.Identity=$('input:radio[name="Identity"]:checked').val();
+                                                        <label class="radio-inline"><input type="radio" name="user.User_Identity" value="1" checked>学生</label>
+                                                        <label class="radio-inline"><input type="radio" name="user.User_Identity" value="2">教师</label>
+
                                                         <input id="register-btn" type="submit" value="注册">
                                                         <input id="reset-btn" type="reset" value="重置">
                                                     </form>
