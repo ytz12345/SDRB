@@ -92,25 +92,28 @@ public class UserDao {
         return user2;
     }
 
-    public int CoutNumber(){
-        Connection con = null;
+    public boolean occupy(User user){
+        Connection con=null;
+        con = DBConnection.getDBConnection();
         PreparedStatement pstmt = null;
         ResultSet rs = null;
-        int num = 0;
-        con = DBConnection.getDBConnection();
-        String sql = "select * from user ";
+        String sql = "select * from user where User_Name=?";
+        System.out.println("///");
         try{
             pstmt = con.prepareStatement(sql);
+            pstmt.setString(1, user.getUser_Name());
             rs = pstmt.executeQuery();
-            while (rs.next()) {
-                num = rs.getInt("User_id");
-            }
+            if (rs.next())
+                return true;
+            else
+                return false;
         }catch(Exception e) {
             e.printStackTrace();
         }finally {
             DBConnection.closeDB(con, pstmt, rs);
         }
-        return num;
+
+        return false;
     }
 }
 

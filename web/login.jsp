@@ -52,12 +52,8 @@
                             </ul>
 
                             <div class="hamburger-menu d-lg-none">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div><!-- .hamburger-menu -->
 
+                            </div><!-- .hamburger-menu -->
                             <div class="header-bar-cart">
                                 <a href="#" class="flex justify-content-center align-items-center"><span aria-hidden="true" class="icon_bag_alt"></span></a>
                             </div><!-- .header-bar-search -->
@@ -91,7 +87,7 @@
     </div><!-- .hero-content-hero-content-overlay -->
 </div><!-- .hero-content -->
 
-    <%@ include file="footer.jsp" %>
+<%@ include file="footer.jsp" %>
 
 <script type='text/javascript' src='js/jquery.js'></script>
 <script type='text/javascript' src='js/swiper.min.js'></script>
