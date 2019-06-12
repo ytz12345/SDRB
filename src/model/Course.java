@@ -20,6 +20,7 @@ public class Course {
         this.Course_Name = Course_Name;
         this.Course_Pass = Course_Pass;
         this.Course_Intro = Course_Intro;
+        this.Course_Image = Course_Image;
         this.Course_Date = Course_Date;
         this.Course_Teacher = Course_Teacher;
     }

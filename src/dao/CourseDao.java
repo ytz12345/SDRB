@@ -5,30 +5,32 @@ import java.sql.*;
 import db.DBConnection;
 import model.Course;
 import java.util.ArrayList;
+import java.util.Date;
 
 /*进行数据库操作*/
 
 public class CourseDao {
-    public static int count = 1000;
 
-    public int save(Course Course) {
-        //向数据库中插入一个用户的方法
+    public int save(Course course, String imageUrl) {
+        //向数据库中插入一个课程的方法
         Connection con = null;
         PreparedStatement pstmt = null;
         ResultSet rs = null;
         con = DBConnection.getDBConnection();
         int row = 0;
-        String sql = "insert into Course(Course_Id, Course_Name, Course_Pass, Course_Intro, Course_Image, Course_Date, Course_Teacher) values(?,?,?,?,?,?,?)";
+        String sql = "insert into Course(Course_Name, Course_Pass, Course_Intro, Course_Image, Course_Date, Course_Teacher) values(?,?,?,?,?,?)";
         try {
-            count ++;
             pstmt = con.prepareStatement(sql);
-            pstmt.setInt(1, Course.getCourse_Id());
-            pstmt.setString(2, Course.getCourse_Name());
-            pstmt.setInt(3, Course.getCourse_Pass());
-            pstmt.setString(4, Course.getCourse_Intro());
-            pstmt.setString(5, Course.getCourse_Image());
-            pstmt.setDate(6, Course.getCourse_Date());
-            pstmt.setString(7, Course.getCourse_Teacher());
+            pstmt.setString(1, course.getCourse_Name());
+            pstmt.setInt(2, 0);
+            pstmt.setString(3, course.getCourse_Intro());
+            pstmt.setString(4, imageUrl);
+
+            Date date = new Date();//获得系统时间.
+            java.sql.Date sqlDate = new java.sql.Date(date.getTime());
+            pstmt.setDate(5, sqlDate);
+
+            pstmt.setString(6, course.getCourse_Teacher());
             row = pstmt.executeUpdate();
         }catch(Exception e) {
             e.printStackTrace();
@@ -37,6 +39,99 @@ public class CourseDao {
         }
         return row;
     }
+
+    public int modifyCourseImage(String newImage, int course_id){
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        con = DBConnection.getDBConnection();
+        int row = 0;
+        String sql = "update Course set Course_Image = " + newImage + "where Course_Id = " + course_id;
+        try {
+            pstmt = con.prepareStatement(sql);
+            row = pstmt.executeUpdate();
+        }catch(Exception e) {
+            e.printStackTrace();
+        }finally {
+            DBConnection.closeDB(con, pstmt, rs);
+        }
+        return row;
+    }
+
+    public int modifyCourseName(String newCourseName, int course_id){
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        con = DBConnection.getDBConnection();
+        int row = 0;
+        String sql = "update Course set Course_Name = " + newCourseName + "where Course_Id = " + course_id;
+        try {
+            pstmt = con.prepareStatement(sql);
+            row = pstmt.executeUpdate();
+        }catch(Exception e) {
+            e.printStackTrace();
+        }finally {
+            DBConnection.closeDB(con, pstmt, rs);
+        }
+        return row;
+    }
+
+    public int modifyCourseIntro(String newCourseIntro, int course_id){
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        con = DBConnection.getDBConnection();
+        int row = 0;
+        String sql = "update Course set Course_Intro = " + newCourseIntro + "where Course_Id = " + course_id;
+        try {
+            pstmt = con.prepareStatement(sql);
+            row = pstmt.executeUpdate();
+        }catch(Exception e) {
+            e.printStackTrace();
+        }finally {
+            DBConnection.closeDB(con, pstmt, rs);
+        }
+        return row;
+    }
+
+    public int passCourse(int course_id){
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        con = DBConnection.getDBConnection();
+        int row = 0;
+        String sql = "update Course set Course_Pass = 1 where Course_Id = " + course_id;
+        try {
+            pstmt = con.prepareStatement(sql);
+            row = pstmt.executeUpdate();
+        }catch(Exception e) {
+            e.printStackTrace();
+        }finally {
+            DBConnection.closeDB(con, pstmt, rs);
+        }
+        return row;
+    }
+
+    public int deleteCourse(int course_id){
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        con = DBConnection.getDBConnection();
+        int row = 0;
+        String sql = "delete from Course where Course_Id = " + course_id;
+        try {
+            pstmt = con.prepareStatement(sql);
+            row = pstmt.executeUpdate();
+        }catch(Exception e) {
+            e.printStackTrace();
+        }finally {
+            DBConnection.closeDB(con, pstmt, rs);
+        }
+        return row;
+    }
+
+
+
 
     public Course find(Course Course) {
         //从数据库中查找一个用户，用于验证是否注册
