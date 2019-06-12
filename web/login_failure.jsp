@@ -11,7 +11,7 @@
     <font color="red">
         对不起，你填写的账号和密码不正确!请
     </font>
-    <a href="login.jsp">重新登录</a>
+    <a href="index.jsp">重新登录</a>
 </h2>
 </body>
 </html>

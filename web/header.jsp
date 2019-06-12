@@ -139,7 +139,7 @@
                         <s:else>
                             <ul class="flex justify-content-center align-items-center py-2 pt-md-0">
                                 <li>Welcome!</li>
-                                <li><a href="user-setting.jsp"><S:property value="#session.user.User_Name"/></a></li>
+                                <li><a href=getcourselist?user_id=<S:property value="#session.user.User_id"/>></a><S:property value="#session.user.User_Name"/></li>
                             </ul>
                         </s:else>
                     </div><!-- .header-bar-menu -->

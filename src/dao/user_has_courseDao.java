@@ -4,14 +4,26 @@ import java.sql.*;
 
 import com.mysql.cj.log.NullLogger;
 import java.util.ArrayList;
+import java.util.List;
+
 import db.DBConnection;
 import model.Course;
+import model.User;
 import model.user_has_course;
 
 /*进行数据库操作*/
 
 public class user_has_courseDao {
     public static int count = 1000;
+
+    private int[] list;
+    public void setList(int[] list) {
+        this.list = list;
+    }
+
+    public int[] getList() {
+        return list;
+    }
 
     public int save(user_has_course user_has_course) {
         //向数据库中插入一个用户的方法
@@ -86,29 +98,36 @@ public class user_has_courseDao {
         return num;
     }
 
-    public int[] FindCourseIds(user_has_course user_has_course){
+    public static String FindCourseIds(int user_Id){
         //从数据库查找指定用户的课程并返回课程ID数组
         Connection con = null;
         PreparedStatement pstmt = null;
         ResultSet rs = null;
         int counter = 0;
         int courseId[] = new int[100];
+        String forward = null;
         con = DBConnection.getDBConnection();
-        String sql = "SELECT Course_Course_Id FROM user_has_course WHERE User_User_id==? and User_Teachorstudy=1";
+        String sql = "SELECT Course_Course_Id " +
+                "FROM user_has_course uhc,course co " +
+                "WHERE User_User_id==? " +
+                "and User_Teachorstudy=1 " +
+                "and uhc.Course_Course_Id==co.Course_Course_Id";
         try{
             pstmt = con.prepareStatement(sql);
-            pstmt.setInt(1, user_has_course.getUser_User_id());
+            pstmt.setInt(1, user_Id);
             rs = pstmt.executeQuery();
             while (rs.next()) {
                 courseId[counter]=rs.getInt("Course_Id");
                 counter++;
             }
+            forward = "success";
         }catch(Exception e) {
+            forward = "failure";
             e.printStackTrace();
         }finally {
             DBConnection.closeDB(con, pstmt, rs);
         }
-        return courseId;
+        return forward;
     }
 }
 

@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
          pageEncoding="utf-8"%>
 <%@ page import="dao.CourseDao" %>
+<%@ page import="dao.user_has_courseDao" %>
 <%@ page import="model.Course" %>
 <%@ page import="java.util.ArrayList" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -305,10 +306,11 @@
                             <%
                                 CourseDao courseDao = new CourseDao();
                                 ArrayList<Course> CourseArrayList = courseDao.getAllCourse();
-                                int[] temp_courseId =new int[100];
+                                user_has_courseDao uhc = new user_has_courseDao();
+                                /*int[] temp_courseId =new int[100];
                                 temp_courseId[0]=1;
                                 temp_courseId[1]=2;
-                                temp_courseId[2]=3;
+                                temp_courseId[2]=3;*/
                                 if(temp_courseId != null && CourseArrayList.size()>0)
                                 {
                                     for(int i = 0; i < temp_courseId.length && temp_courseId[i] != 0; i++)

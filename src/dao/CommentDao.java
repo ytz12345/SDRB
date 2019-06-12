@@ -20,16 +20,15 @@ public class CommentDao {
         ResultSet rs = null;
         con = DBConnection.getDBConnection();
         int row = 0;
-        String sql = "insert into Comment(Comment_Id, Comment_Content, Comment_Time, Comment_To, Chapter_Chapter_id, User_User_id) values(?,?,?,?,?,?)";
+        String sql = "insert into Comment(Comment_Content, Comment_Time, Comment_To, Chapter_Chapter_id, User_User_id) values(?,?,?,?,?)";
         try {
             count ++;
             pstmt = con.prepareStatement(sql);
-            pstmt.setInt(1, Comment.getComment_id());
-            pstmt.setString(2, Comment.getComment_Content());
-            pstmt.setDate(3, Comment.getComment_Time());
-            pstmt.setInt(4, Comment.getComment_To());
-            pstmt.setInt(5, Comment.getChapter_Chapter_id());
-            pstmt.setInt(6, Comment.getUser_User_id());
+            pstmt.setString(1, Comment.getComment_Content());
+            pstmt.setTimestamp(2, Comment.getComment_Time());
+            pstmt.setInt(3, Comment.getComment_To());
+            pstmt.setInt(4, Comment.getChapter_Chapter_id());
+            pstmt.setInt(5, Comment.getUser_User_id());
             row = pstmt.executeUpdate();
         }catch(Exception e) {
             e.printStackTrace();
@@ -55,7 +54,7 @@ public class CommentDao {
                 Comment2 = new Comment();
                 Comment2.setComment_id(rs.getInt("Comment_id"));
                 Comment2.setComment_Content(rs.getString("Comment_Content"));
-                Comment2.setComment_Time(rs.getDate("Comment_Time"));
+                Comment2.setComment_Time(rs.getTimestamp("Comment_Time"));
                 Comment2.setComment_To(rs.getInt("Comment_To"));
                 Comment2.setChapter_Chapter_id(rs.getInt("Chapter_Chapter_id"));
                 Comment2.setUser_User_id(rs.getInt("User_User_id"));
@@ -86,7 +85,7 @@ public class CommentDao {
                 Comment3.setComment_To(rs.getInt("Comment_To"));
                 Comment3.setChapter_Chapter_id(rs.getInt("Chapter_Chapter_id"));
                 Comment3.setUser_User_id(rs.getInt("User_User_id"));
-                Comment3.setComment_Time(rs.getDate("Comment_Time"));
+                Comment3.setComment_Time(rs.getTimestamp("Comment_Time"));
                 CommentArrayList.add(Comment3);// 把一个商品加入集合
             }
             return CommentArrayList; // 返回集合。
@@ -133,7 +132,7 @@ public class CommentDao {
                 Comment3.setComment_To(rs.getInt("Comment_To"));
                 Comment3.setChapter_Chapter_id(rs.getInt("Chapter_Chapter_id"));
                 Comment3.setUser_User_id(rs.getInt("User_User_id"));
-                Comment3.setComment_Time(rs.getDate("Comment_Time"));
+                Comment3.setComment_Time(rs.getTimestamp("Comment_Time"));
                 CommentArrayList.add(Comment3);// 把一个商品加入集合
             }
             return CommentArrayList; // 返回集合。
