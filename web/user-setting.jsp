@@ -326,8 +326,8 @@
                             <label class="input-label">
                                 真实姓名
                             </label>
-                            <span class="input-cr">习近平</span>
-                            <input id="userName" type="hidden" value="习近平">
+                            <span class="input-cr">张瑞年</span>
+                            <input id="userName" type="hidden" value="张瑞年">
                         </div>
                         <div class="input-group">
                             <label class="input-label">
@@ -340,8 +340,8 @@
                             <label class="input-label">
                                 所在学校
                             </label>
-                            <span class="input-cr">清华带学</span>
-                            <input id="schoolName" type="hidden" value="清华带学" class="ui-autocomplete-input" autocomplete="off">
+                            <span class="input-cr">北京锤雷大学</span>
+                            <input id="schoolName" type="hidden" value="北京锤雷大学" class="ui-autocomplete-input" autocomplete="off">
                             <input id="schoolId" type="hidden" value="102">
                         </div>
 
@@ -648,7 +648,7 @@
                         <label class="input-label">
                             昵称
                         </label>
-                        <input id="nickName" type="text" class="input-text" value="刁远凸" maxlength="50">
+                        <input id="nickName" type="text" class="input-text" value="张瑞年" maxlength="50">
                     </div>
                     <div class="input-group">
                         <label class="input-label">
