@@ -102,7 +102,7 @@
                     <div class="row mx-m-25">
                         <%
                             CourseDao courseDao = new CourseDao();
-                            String selectedCourse = request.getParameter("str").toString();
+                            String selectedCourse = request.getParameter("str");
                             System.out.println(selectedCourse);
                             ArrayList<Course> CourseArrayList = courseDao.getSelectedCourse(selectedCourse);
                             System.out.println("s " + CourseArrayList.size());
