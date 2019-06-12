@@ -34,5 +34,9 @@
             <result name="success">/admin-user.jsp</result>
             <result name="failure">/admin-login.jsp</result>
         </action>
+        <action name="getcourselist" class="action.FindCoursesAction" method="FindC">
+            <result name="success">/user-homepage.jsp</result>
+            <result name="failure">/user-homepage.jsp</result>
+        </action>
     </package>
 </struts>

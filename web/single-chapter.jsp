@@ -129,7 +129,8 @@
         <div class="row">
             <div class="col-12 offset-lg-1 col-lg-10">
                 <div class="featured-image">
-                    <img src="images/single-post.jpg" alt="">
+                    <video src="images\POO.mp4" width="940" height="530" controls="controls">
+                    </video>
                     <!-- 修改为视频 -->
                 </div><!-- .featured-image -->
             </div><!-- .col -->
@@ -167,7 +168,7 @@
                     <div class="post-comments">
                         <h3 class="comments-title"><span class="comments-number"><%=CommentArrayList.size()%> Comments</span></h3>
 
-                        <ol class="comment-list">
+                        <ol class="comment-courseList">
                             <%
                                 if(CommentArrayList != null && CommentArrayList.size()>0)
                                 {
@@ -335,7 +336,7 @@
                                     }
                                 }
                             %>
-                        </ol><!-- .comment-list -->
+                        </ol><!-- .comment-courseList -->
                     </div><!-- .post-comments -->
 
                     <div class="comments-form">

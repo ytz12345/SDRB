@@ -20,7 +20,6 @@ public class CTRL {
     public void setList(List<User> list) {
         this.list = list;
     }
-
     public List<User> getList() {
         return list;
     }

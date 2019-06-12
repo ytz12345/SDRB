@@ -148,7 +148,30 @@
                             }
                         %>
                     </div>
-                </div>
+                </div><!-- .pagination -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-lg-4">
+                <div class="user-sidebar">
+                    <div class="search-widget">
+                        <form class="flex flex-wrap align-items-center">
+                            <input type="search" placeholder="Search...">
+                            <button type="submit" class="flex justify-content-center align-items-center"><i class="fa fa-search"></i></button>
+                        </form><!-- .flex -->
+                    </div><!-- .search-widget -->
+
+                    <div class="cat-links">
+                        <h2>Categories</h2>
+
+                        <ul class="p-0 m-0">
+                            <li><a href="#">Business</a></li>
+                            <li><a href="#">Design</a></li>
+                            <li><a href="#">Marketing</a></li>
+                            <li><a href="#">MBA Courses</a></li>
+                            <li><a href="#">Technology</a></li>
+                            <li><a href="#">Web Development</a></li>
+                        </ul>
+                    </div><!-- .cat-links -->
 
         </div>
     </div>
