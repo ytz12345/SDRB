@@ -4,6 +4,7 @@
 <%@ page import="dao.user_has_courseDao" %>
 <%@ page import="model.Course" %>
 <%@ page import="java.util.ArrayList" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -121,7 +122,7 @@
             <div class="panel">
                 <div class="panel-body">
                     <div class="sidebar-nav">
-                        <ul class="nav-list">
+                        <ul class="nav-courseList">
 
                             <!-- 我的课程 -->
                             <li class="nav-item open-up navItem" data-step="1" data-highlightclass="" data-intro="欢迎进入我的课程，这里汇集了您所有参加和收藏的课程。">
@@ -299,31 +300,17 @@
                 <div class="main-tab">
                     <div class="tab-view">
 
-                        <ul class="view-list">
+                        <ul class="view-courseList">
 
                             <!-- 正在进行 -->
 
-                            <%
-                                CourseDao courseDao = new CourseDao();
-                                ArrayList<Course> CourseArrayList = courseDao.getAllCourse();
-                                user_has_courseDao uhc = new user_has_courseDao();
-                                /*int[] temp_courseId =new int[100];
-                                temp_courseId[0]=1;
-                                temp_courseId[1]=2;
-                                temp_courseId[2]=3;*/
-                                if(temp_courseId != null && CourseArrayList.size()>0)
-                                {
-                                    for(int i = 0; i < temp_courseId.length && temp_courseId[i] != 0; i++)
-                                    {
-                                        Course course = CourseArrayList.get(temp_courseId[i]);
-                            %>
+                            <s:iterator value="courseList" status="status">
 
-                            <li class="view-item" ucid="1277078">
+                                <%--<li class="view-item" ucid="1277078">
                                 <div class="view">
                                     <div class="view-show">
-
                                         <div class="view-img" href="javascript:void(0)">
-                                            <img src="<%=course.getCourse_Image()%>">
+                                            <img src="<s:property value="Course_Image"/>">
                                             <a class="view-shadow" href="https://www.cnmooc.org/portal/session/index/11846.mooc" style="top: 0px; left: -982px;">
                                                 <div class="view-tips view-action">
                                                     <i class="icon-play"></i>去学习
@@ -334,7 +321,7 @@
                                     <div class="view-intro">
                                         <h3 class="view-title substr" style="width:400px;">
 
-                                            <%=course.getCourse_Name()%>
+                                            <s:property value="Course_Name"/>
 
 
                                             <span class="cview-time">2019春</span>
@@ -344,7 +331,7 @@
 
 
                                         <h4 class="view-subtitle">
-                                            <span class="show-tname substr" style="width:180px;"><a class="link-action" href="/portal/teacher/11846/524530.mooc" title="江主席"><img src="images/JZM.jpg" class="user-min"><%=course.getCourse_Teacher()%></a></span>
+                                            <span class="show-tname substr" style="width:180px;"><a class="link-action" href="/portal/teacher/11846/524530.mooc" title="江主席"><img src="images/JZM.jpg" class="user-min"><s:property value="Course_Teacher"/></a></span>
                                             <span class="show-school substr"></span>
                                         </h4>
                                         <!-- 学期学习 -->
@@ -352,7 +339,7 @@
                                         <div class="view-handle clearfix">
                                             <!-- 学期学习 -->
 
-                                            <span class="view-tip"><%=course.getCourse_Intro()%></span>
+                                            <span class="view-tip"><s:property value="Course_Intro"/></span>
 
 
                                             <!-- 随到随学 -->
@@ -374,7 +361,7 @@
                                         <div class="view-progressbar pc-progressbar">
                                             <div class="progressbar-ui">
                                                 <div class="progressbar-value">
-                                                    <span class="start-value"><%=course.getCourse_Date()%></span>
+                                                    <span class="start-value"><s:property value="Course_Date"/></span>
                                                 </div>
                                                 <div class="progressbar-bg">
                                                     <div class="progressbar-in" style="width: 58%;"></div>
@@ -395,11 +382,11 @@
 
                                     </div>
                                 </div>
-                            </li>
-                           <%
-                                    }
-                                }
-                            %>
+                            </li>--%>
+
+                                <li><s:property value="Course_Id"/></li>
+                            </s:iterator>
+
 
                             <!-- 即将开始 -->
                             <li class="soon-item hidden-course" ucid="1277078">

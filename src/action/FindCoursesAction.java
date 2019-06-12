@@ -1,21 +1,12 @@
 package action;
-import com.opensymphony.xwork2.ActionSupport;
-import db.DBConnection;
-import org.apache.struts2.interceptor.SessionAware;
 import dao.UserDao;
 import dao.user_has_courseDao;
 import model.User;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-
 public class FindCoursesAction {
     private User user;
     private UserDao userDao = new UserDao();
+    private user_has_courseDao user_has_courseDao=new user_has_courseDao();
     private int[] list;
     private int[] list1 = new int[100];
 
@@ -28,19 +19,19 @@ public class FindCoursesAction {
     }
 
 
-    private int user_id = 0;
+    public int u2_id = 0;
 
-    public int getUser_id_id() {
-        return user_id;
+    public int getU2_id() {
+        return u2_id;
     }
 
-    public void setUser_id_id(int u_id) {
-        this.user_id = user_id;
+    public void setU2_id(int u2_id) {
+        this.u2_id = u2_id;
     }
 
-    public String FindC() throws Exception {
+    public String FindC(){
         //从数据库查找指定用户的课程并返回课程ID数组
-        user_has_courseDao.FindCourseIds(user_id);
+        user_has_courseDao.FindCourseIds(u2_id);
         return "success";
     }
 }

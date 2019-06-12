@@ -2,13 +2,11 @@ package dao;
 
 import java.sql.*;
 
-import com.mysql.cj.log.NullLogger;
 import java.util.ArrayList;
 import java.util.List;
 
 import db.DBConnection;
 import model.Course;
-import model.User;
 import model.user_has_course;
 
 /*进行数据库操作*/
@@ -16,13 +14,15 @@ import model.user_has_course;
 public class user_has_courseDao {
     public static int count = 1000;
 
-    private int[] list;
-    public void setList(int[] list) {
-        this.list = list;
+    public List<Course> courseList;
+    public List<Course> courseList1 =new ArrayList<Course>();
+
+    public void setCourseList(List<Course> courseList) {
+        this.courseList = courseList;
     }
 
-    public int[] getList() {
-        return list;
+    public List<Course> getCourseList() {
+        return courseList;
     }
 
     public int save(user_has_course user_has_course) {
@@ -98,35 +98,41 @@ public class user_has_courseDao {
         return num;
     }
 
-    public static String FindCourseIds(int user_Id){
+    public String FindCourseIds(int u2_id){
         //从数据库查找指定用户的课程并返回课程ID数组
         Connection con = null;
         PreparedStatement pstmt = null;
         ResultSet rs = null;
-        int counter = 0;
-        int courseId[] = new int[100];
+        Course temp_course = null;
         String forward = null;
         con = DBConnection.getDBConnection();
-        String sql = "SELECT Course_Course_Id " +
-                "FROM user_has_course uhc,course co " +
-                "WHERE User_User_id==? " +
-                "and User_Teachorstudy=1 " +
-                "and uhc.Course_Course_Id==co.Course_Course_Id";
+        String sql = "SELECT course.* FROM user_has_course,course WHERE User_User_id =? and user_has_course.Course_Course_Id=course.Course_Id and User_Teachorstudy=1";
         try{
             pstmt = con.prepareStatement(sql);
-            pstmt.setInt(1, user_Id);
+            pstmt.setInt(1, u2_id);
             rs = pstmt.executeQuery();
             while (rs.next()) {
-                courseId[counter]=rs.getInt("Course_Id");
-                counter++;
+                temp_course = new Course();
+                temp_course.setCourse_Id(rs.getInt("Course_Id"));
+                temp_course.setCourse_Name(rs.getString("Course_Name"));
+                temp_course.setCourse_Pass(rs.getInt("Course_Pass"));
+                temp_course.setCourse_Intro(rs.getString("Course_Intro"));
+                temp_course.setCourse_Image(rs.getString("Course_Image"));
+                temp_course.setCourse_Date(rs.getDate("Course_Date"));
+                temp_course.setCourse_Teacher(rs.getString("Course_Teacher"));
+                courseList1.add(temp_course);
             }
             forward = "success";
+            System.out.println("success");
         }catch(Exception e) {
             forward = "failure";
             e.printStackTrace();
         }finally {
             DBConnection.closeDB(con, pstmt, rs);
         }
+        System.out.println("printing user courseList ... ");
+        this.setCourseList(courseList1);
+        System.out.println(courseList);
         return forward;
     }
 }
