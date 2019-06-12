@@ -6,7 +6,35 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e3a55c4c-3519-422d-a635-6323c2c901a9" name="Default Changelist" comment="Merge branch 'develop_0' of github.com:DaBaoSjY/SDRB into dev-test&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/admin/DBadmin.java&#10;#&#9;src/dao/UserDao.java&#10;#&#9;src/model/User.java&#10;#&#9;web/WEB-INF/classes/admin/DBadmin.class&#10;#&#9;web/WEB-INF/classes/dao/UserDao.class" />
+    <list default="true" id="e3a55c4c-3519-422d-a635-6323c2c901a9" name="Default Changelist" comment="Merge branch 'develop_0' of github.com:DaBaoSjY/SDRB into dev-test&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/admin/DBadmin.java&#10;#&#9;src/dao/UserDao.java&#10;#&#9;src/model/User.java&#10;#&#9;web/WEB-INF/classes/admin/DBadmin.class&#10;#&#9;web/WEB-INF/classes/dao/UserDao.class">
+      <change afterPath="$PROJECT_DIR$/src/action/DeleteCommentAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/action/LeaveCommentAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/admin/DBadmin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/comment_failure.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/comment_success.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/delete-comment.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/delete_success.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/no_login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Struts_2_2_5_14_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Struts_2_2_5_14_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/ChapterDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/ChapterDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/CommentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/CommentDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/struts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/struts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/admin/DBadmin.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/admin/DBadmin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/dao/ChapterDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/dao/ChapterDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/dao/CommentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/dao/CommentDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/dao/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/model/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/model/Comment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/struts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/struts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/login_failure.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/login_failure.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/single-chapter.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/single-chapter.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/single-courses.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/single-courses.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/style.css" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +84,7 @@
         <entry file="file://$PROJECT_DIR$/src/action/LoginAction.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="133">
-              <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+              <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -80,7 +108,7 @@
         <entry file="file://$PROJECT_DIR$/src/struts.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="129">
-              <caret line="18" column="59" lean-forward="true" selection-start-line="18" selection-start-column="59" selection-end-line="18" selection-end-column="59" />
+              <caret line="26" column="59" selection-start-line="26" selection-start-column="59" selection-end-line="26" selection-end-column="59" />
             </state>
           </provider>
           <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider" />
@@ -90,7 +118,7 @@
         <entry file="file://$PROJECT_DIR$/src/action/AdminLoginAction.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="76">
-              <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+              <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#763#764#0" expanded="true" />
@@ -104,7 +132,7 @@
         <entry file="file://$PROJECT_DIR$/web/header.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="361">
-              <caret line="46" column="114" lean-forward="true" selection-start-line="46" selection-start-column="114" selection-end-line="46" selection-end-column="114" />
+              <caret line="46" column="114" selection-start-line="46" selection-start-column="114" selection-end-line="46" selection-end-column="114" />
               <folding>
                 <element signature="n#div#1;n#ul#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" />
                 <element signature="n#s:else#0;n#jsp:root#0;n#!!top" />
@@ -117,7 +145,7 @@
         <entry file="file://$PROJECT_DIR$/web/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="4350">
-              <caret line="542" column="54" lean-forward="true" selection-start-line="542" selection-start-column="54" selection-end-line="542" selection-end-column="57" />
+              <caret line="542" column="54" selection-start-line="542" selection-start-column="54" selection-end-line="542" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -126,7 +154,7 @@
         <entry file="file://$PROJECT_DIR$/web/admin-user.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-133">
-              <caret line="121" column="31" lean-forward="true" selection-start-line="121" selection-start-column="31" selection-end-line="121" selection-end-column="31" />
+              <caret line="121" column="31" selection-start-line="121" selection-start-column="31" selection-end-line="121" selection-end-column="31" />
               <folding>
                 <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
@@ -139,8 +167,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/courses.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="285">
+              <caret line="15" column="44" lean-forward="true" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -582,13 +610,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83403000" />
+    <option name="totallyTimeSpent" value="83646000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49561402" visible="true" weight="0.24262735" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49561402" visible="true" weight="0.24262735" />
       <window_info id="Structure" order="1" sideWeight="0.502193" side_tool="true" weight="0.2496318" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -599,7 +627,7 @@
       <window_info id="Learn" order="8" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.16997167" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6997319" visible="true" weight="0.31728044" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6997319" visible="true" weight="0.31728044" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -938,7 +966,7 @@
     <entry file="file://$PROJECT_DIR$/src/action/LoginAction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
-          <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -948,7 +976,7 @@
     <entry file="file://$PROJECT_DIR$/src/struts.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="129">
-          <caret line="18" column="59" lean-forward="true" selection-start-line="18" selection-start-column="59" selection-end-line="18" selection-end-column="59" />
+          <caret line="26" column="59" selection-start-line="26" selection-start-column="59" selection-end-line="26" selection-end-column="59" />
         </state>
       </provider>
       <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider" />
@@ -965,7 +993,7 @@
     <entry file="file://$PROJECT_DIR$/src/action/AdminLoginAction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
-          <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#763#764#0" expanded="true" />
@@ -994,14 +1022,14 @@
     <entry file="file://$PROJECT_DIR$/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4350">
-          <caret line="542" column="54" lean-forward="true" selection-start-line="542" selection-start-column="54" selection-end-line="542" selection-end-column="57" />
+          <caret line="542" column="54" selection-start-line="542" selection-start-column="54" selection-end-line="542" selection-end-column="57" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/header.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
-          <caret line="46" column="114" lean-forward="true" selection-start-line="46" selection-start-column="114" selection-end-line="46" selection-end-column="114" />
+          <caret line="46" column="114" selection-start-line="46" selection-start-column="114" selection-end-line="46" selection-end-column="114" />
           <folding>
             <element signature="n#div#1;n#ul#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" />
             <element signature="n#s:else#0;n#jsp:root#0;n#!!top" />
@@ -1012,7 +1040,7 @@
     <entry file="file://$PROJECT_DIR$/web/admin-user.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-133">
-          <caret line="121" column="31" lean-forward="true" selection-start-line="121" selection-start-column="31" selection-end-line="121" selection-end-column="31" />
+          <caret line="121" column="31" selection-start-line="121" selection-start-column="31" selection-end-line="121" selection-end-column="31" />
           <folding>
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
@@ -1023,8 +1051,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/courses.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="285">
+          <caret line="15" column="44" lean-forward="true" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
         </state>
       </provider>
     </entry>

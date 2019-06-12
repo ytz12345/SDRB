@@ -27,6 +27,8 @@ public class UserDao {
             DBConnection.closeDB(con, pstmt, rs);
         }
     }
+    public static int count = 1000;
+
     public int save(User user) {
         //向数据库中插入一个用户的方法
         Connection con = null;
@@ -79,21 +81,50 @@ public class UserDao {
         }
         return user2;
     }
+
+    public User findUser(int user_id) {
+        //从数据库中查找一个用户，用于验证是否注册
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        con = DBConnection.getDBConnection();
+        User user2 = null;
+        String sql = "select * from user where User_id=?";
+        try {
+            pstmt = con.prepareStatement(sql);
+            pstmt.setInt(1, user_id);
+            rs = pstmt.executeQuery();
+            if (rs.next()) {
+                user2 = new User();
+                user2.setUser_id(rs.getInt("User_id"));
+                user2.setUser_Name(rs.getString("User_Name"));
+                user2.setUser_Password(rs.getString("User_Password"));
+                user2.setUser_Identity(rs.getInt("User_Identity"));
+                user2.setUser_Intro(rs.getString("User_Intro"));
+            }
+        }catch(Exception e) {
+            e.printStackTrace();
+        }finally {
+            DBConnection.closeDB(con, pstmt, rs);
+        }
+        return user2;
+    }
+
     public boolean occupy(User user){
         Connection con=null;
-                con = DBConnection.getDBConnection();
+        con = DBConnection.getDBConnection();
         PreparedStatement pstmt = null;
         ResultSet rs = null;
         String sql = "select * from user where User_Name=?";
         System.out.println("///");
         try{
-        pstmt = con.prepareStatement(sql);
-        pstmt.setString(1, user.getUser_Name());
-        rs = pstmt.executeQuery();
-        if (rs.next())
-            return true;
-        else
-            return false;
+            pstmt = con.prepareStatement(sql);
+            pstmt.setString(1, user.getUser_Name());
+            rs = pstmt.executeQuery();
+            if (rs.next())
+                return true;
+            else
+                return false;
         }catch(Exception e) {
             e.printStackTrace();
         }finally {

@@ -64,18 +64,23 @@
                                             <div class="modal-body">
                                                 <div id="form-login">
                                                     <form action="logincheck" method="post">
+
                                                         <label class="login-lable">用户名：</label>
-                                                        <input class="login-input" type="text" name="user.User_Name" placeholder="Username">
+                                                        <div class="input-group input-group-sm">
+                                                            <input type="text" class="form-control" name="user.User_Name" placeholder="Username">
+                                                        </div>
+                                                        <br />
                                                         <label class="login-lable">密码：</label>
-                                                        <input class="login-input" type="password" name="user.User_Password" placeholder="Password">
-                                                        <input id="login-btn" type="submit" value="登录">
+                                                        <div class="input-group input-group-sm">
+                                                            <input type="password" class="form-control" name="user.User_Password" placeholder="Password">
+                                                        </div>
+                                                        <br />
+                                                        <div class="modal-footer">
+                                                            <input class="btn btn-primary" id="login-btn" type="submit" value="登录">
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                                                        </div>
                                                     </form>
                                                 </div><!-- #form-login -->
-                                            </div>
-
-                                            <!-- 模态框底部 -->
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
                                             </div>
 
                                         </div>
@@ -98,17 +103,30 @@
                                                 <div id="form-register">
                                                     <form action="register" name="register" method="post" onsubmit="return isValidate()" >
                                                         <label class="register-lable">用户名：</label>
-                                                        <input class="register-input" type="text" name="user.User_Name" id="username" placeholder="Username">
+                                                        <div class="input-group input-group-sm">
+                                                            <input type="text" class="form-control" name="user.User_Name" id="username" placeholder="Username">
+                                                        </div>
+                                                        <br />
                                                         <label class="register-lable">设置密码：</label>
-                                                        <input class="register-input" type="password" name="user.User_Password" id="userpassword" placeholder="Password">
+                                                        <div class="input-group input-group-sm">
+                                                            <input type="password" class="form-control" name="user.User_Password" id="userpassword" placeholder="Password">
+                                                        </div>
+                                                        <br />
                                                         <label class="register-lable">确认密码：</label>
-                                                        <input class="register-input" type="password" name="userpass1" id="userpass1" placeholder="Password">
+                                                        <div class="input-group input-group-sm">
+                                                            <input type="password" class="form-control" name="userpass1" id="userpass1" placeholder="Password">
+                                                        </div>
+                                                        <br />
 
-                                                        <label class="radio-inline"><input type="radio" name="user.User_Identity" value="1" checked>学生</label>
+                                                        <label class="radio-inline"><input type="radio" name="user.User_Identity" value="1" checked>学生&nbsp&nbsp&nbsp</label>
                                                         <label class="radio-inline"><input type="radio" name="user.User_Identity" value="2">教师</label>
 
-                                                        <input id="register-btn" type="submit" value="注册">
-                                                        <input id="reset-btn" type="reset" value="重置">
+                                                        <div class="modal-footer">
+                                                            <input class="btn btn-primary" id="register-btn" type="submit" value="注册">
+
+                                                            <input class="btn btn-secondary" id="reset-btn" type="reset" value="重置">
+                                                        </div>
+
                                                     </form>
                                                 </div><!-- #form-login -->
                                             </div><!-- .hero-content-wrap -->
