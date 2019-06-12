@@ -95,6 +95,10 @@
             ActionContext actionContext = ActionContext.getContext();
             Map session2 = actionContext.getSession();
             int chapter_id = Integer.parseInt(request.getParameter("chapter_id"));
+            String login = request.getParameter("user_id");
+            int login_id = 0;
+            if(login != "")login_id = Integer.parseInt(request.getParameter("user_id"));
+            System.out.println(login_id);
             ChapterDao chapterDao = new ChapterDao();
             Chapter chapter = chapterDao.findChapter(chapter_id);
             CourseDao courseDao = new CourseDao();
@@ -217,6 +221,7 @@
                                                                     <input type="hidden" name="comment.Comment_To" value="<%=comment.getComment_id()%>">
                                                                     <input type="hidden" name="comment.Chapter_Chapter_id" value="<%=chapter_id%>">
                                                                     <input type="hidden" name="comment.User_User_id" value="<S:property value="#session.user.User_id"/>">
+                                                                    <input type="hidden" name="login_id" value="<%=login_id%>">
                                                                     <input type="submit" value="send comment">
                                                                 </form><!-- .comment-form -->
                                                             </div><!-- .comment-respond -->
@@ -224,7 +229,18 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!--<a href="#" style="background:red;color:#fff">delete</a>-->
+                                            <%
+                                                int adminJudge = 0;
+                                                if(login_id != 0){
+                                                    User LoginUser = userDao.findUser(login_id);
+                                                    if(LoginUser.getUser_Identity() == 0) adminJudge = 1;
+                                                }
+                                                if(comment.getUser_User_id() == login_id || adminJudge == 1){
+                                            %>
+                                            <a href="delete-comment.jsp?comment_id=<%=comment.getComment_id()%>&user_id=<%=login_id%>" style="background:red;color:#fff">delete</a>
+                                            <%
+                                                }
+                                            %>
                                         </div>
                                     </div>
 
@@ -288,6 +304,7 @@
                                                                             <input type="hidden" name="comment.Comment_To" value="<%=comment2.getComment_id()%>">
                                                                             <input type="hidden" name="comment.Chapter_Chapter_id" value="<%=chapter_id%>">
                                                                             <input type="hidden" name="comment.User_User_id" value="<S:property value="#session.user.User_id"/>">
+                                                                            <input type="hidden" name="login_id" value="<%=login_id%>">
                                                                             <input type="submit" value="send comment">
                                                                         </form><!-- .comment-form -->
                                                                     </div><!-- .comment-respond -->
@@ -295,7 +312,13 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <!--<a href="#" style="background:red;color:#fff">delete</a>-->
+                                                    <%
+                                                        if(comment2.getUser_User_id() == login_id || adminJudge == 1){
+                                                    %>
+                                                    <a href="delete-comment.jsp?comment_id=<%=comment2.getComment_id()%>&user_id=<%=login_id%>" style="background:red;color:#fff">delete</a>
+                                                    <%
+                                                        }
+                                                    %>
                                                 </div>
 
                                             </div>
@@ -325,6 +348,7 @@
                                 <input type="hidden" name="comment.Comment_To" value="<%=0%>">
                                 <input type="hidden" name="comment.Chapter_Chapter_id" value="<%=chapter_id%>">
                                 <input type="hidden" name="comment.User_User_id" value="<S:property value="#session.user.User_id"/>">
+                                <input type="hidden" name="login_id" value="<%=login_id%>">
                                 <input type="submit" value="send comment">
                             </form><!-- .comment-form -->
                         </div><!-- .comment-respond -->

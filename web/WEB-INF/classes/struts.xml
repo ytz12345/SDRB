@@ -16,9 +16,12 @@
             <result name="failure">/login_failure.jsp</result>
         </action>
         <action name="leavecomment" class="action.LeaveCommentAction" method="LeaveComment">
-            <result name="success">/comment_success.jsp?chapter_id=${comment.chapter_Chapter_id}</result>
-            <result name="failure">/login_failure.jsp</result>
+            <result name="success">/comment_success.jsp?chapter_id=${comment.chapter_Chapter_id}&amp;user_id=${login_id}</result>
+            <result name="failure">/comment_failure.jsp?chapter_id=${comment.chapter_Chapter_id}&amp;user_id=${login_id}</result>
             <result name="no_login">/no_login.jsp</result>
+        </action>
+        <action name="deletecomment" class="action.DeleteCommentAction" method="DeleteComment">
+            <result name="success">/delete_success.jsp?chapter_id=${comment_chapter_id}&amp;user_id=${login_id}</result>
         </action>
         <action name="disp" class="action.CTRL" method="userdisplay">
             <result name="success">/admin-user.jsp</result>
