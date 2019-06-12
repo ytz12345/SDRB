@@ -30,5 +30,9 @@
         <action name="del" class="action.CTRL" method="userdelete">
             <result name="success">/admin-user.jsp</result>
         </action>
+        <action name="adlogin" class="action.AdminLoginAction" method="execute">
+            <result name="success">/admin-user.jsp</result>
+            <result name="failure">/admin-login.jsp</result>
+        </action>
     </package>
 </struts>
