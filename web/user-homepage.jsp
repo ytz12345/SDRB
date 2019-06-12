@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
          pageEncoding="utf-8"%>
+<%@ page import="dao.CourseDao" %>
+<%@ page import="model.Course" %>
+<%@ page import="java.util.ArrayList" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -299,13 +302,26 @@
 
                             <!-- 正在进行 -->
 
+                            <%
+                                CourseDao courseDao = new CourseDao();
+                                ArrayList<Course> CourseArrayList = courseDao.getAllCourse();
+                                int[] temp_courseId =new int[100];
+                                temp_courseId[0]=1;
+                                temp_courseId[1]=2;
+                                temp_courseId[2]=3;
+                                if(temp_courseId != null && CourseArrayList.size()>0)
+                                {
+                                    for(int i = 0; i < temp_courseId.length && temp_courseId[i] != 0; i++)
+                                    {
+                                        Course course = CourseArrayList.get(temp_courseId[i]);
+                            %>
 
                             <li class="view-item" ucid="1277078">
                                 <div class="view">
                                     <div class="view-show">
 
                                         <div class="view-img" href="javascript:void(0)">
-                                            <img src="images/ZYGBZG.jpg">
+                                            <img src="<%=course.getCourse_Image()%>">
                                             <a class="view-shadow" href="https://www.cnmooc.org/portal/session/index/11846.mooc" style="top: 0px; left: -982px;">
                                                 <div class="view-tips view-action">
                                                     <i class="icon-play"></i>去学习
@@ -316,7 +332,7 @@
                                     <div class="view-intro">
                                         <h3 class="view-title substr" style="width:400px;">
 
-                                            怎样改变中国
+                                            <%=course.getCourse_Name()%>
 
 
                                             <span class="cview-time">2019春</span>
@@ -326,7 +342,7 @@
 
 
                                         <h4 class="view-subtitle">
-                                            <span class="show-tname substr" style="width:180px;"><a class="link-action" href="/portal/teacher/11846/524530.mooc" title="江主席"><img src="images/JZM.jpg" class="user-min">江泽民</a></span>
+                                            <span class="show-tname substr" style="width:180px;"><a class="link-action" href="/portal/teacher/11846/524530.mooc" title="江主席"><img src="images/JZM.jpg" class="user-min"><%=course.getCourse_Teacher()%></a></span>
                                             <span class="show-school substr"></span>
                                         </h4>
                                         <!-- 学期学习 -->
@@ -358,8 +374,7 @@
                                         <div class="view-progressbar pc-progressbar">
                                             <div class="progressbar-ui">
                                                 <div class="progressbar-value">
-                                                    <span class="start-value">2019-02-25</span>
-                                                    <span class="end-value">2019-07-28</span>
+                                                    <span class="start-value"><%=course.getCourse_Date()%></span>
                                                 </div>
                                                 <div class="progressbar-bg">
                                                     <div class="progressbar-in" style="width: 58%;"></div>
@@ -381,6 +396,10 @@
                                     </div>
                                 </div>
                             </li>
+                           <%
+                                    }
+                                }
+                            %>
 
                             <!-- 即将开始 -->
                             <li class="soon-item hidden-course" ucid="1277078">
