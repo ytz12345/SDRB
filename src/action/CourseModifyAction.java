@@ -13,7 +13,7 @@ public class CourseModifyAction extends ActionSupport {
     private Course course;
     private CourseDao courseDao = new CourseDao();
 
-    private int course_id = 0;//课程ID
+    private int modify_id = 0;//课程ID
 
     private File newCourseImage;//新的封面
     private String newCourseImageContentType;
@@ -33,7 +33,7 @@ public class CourseModifyAction extends ActionSupport {
         String forward = "error";//数据库存数据时出错标记值
         int flag = 0;
 
-        flag = courseDao.modifyCourseImage(courseImageUrl,course_id);
+        flag = courseDao.modifyCourseImage(courseImageUrl,modify_id);
         if(flag == 1){
             forward = "success";
         }
@@ -42,11 +42,11 @@ public class CourseModifyAction extends ActionSupport {
     }
 
     private String newCourseName;//新的课程名
-    private String courseNameModify() throws Exception {
+    public String courseNameModify() throws Exception {
         String forward = "error";//数据库存数据时出错标记值
         int flag = 0;
 
-        flag = courseDao.modifyCourseName(newCourseName,course_id);
+        flag = courseDao.modifyCourseName(newCourseName,modify_id);
         if(flag == 1){
             forward = "success";
         }
@@ -55,11 +55,11 @@ public class CourseModifyAction extends ActionSupport {
     }
 
     private String newCourseIntro;//新的课程介绍
-    private String courseIntroModify() throws Exception {
+    public String courseIntroModify() throws Exception {
         String forward = "error";//数据库存数据时出错标记值
         int flag = 0;
 
-        flag = courseDao.modifyCourseIntro(newCourseIntro,course_id);
+        flag = courseDao.modifyCourseIntro(newCourseIntro,modify_id);
         if(flag == 1){
             forward = "success";
         }
@@ -75,14 +75,13 @@ public class CourseModifyAction extends ActionSupport {
         this.course = course;
     }
 
-    public int getCourseId() {
-        return course_id;
+    public int getModify_id() {
+        return modify_id;
     }
 
-    public void setCourseId(int course_id) {
-        this.course_id = course_id;
+    public void setModify_id(int modify_id) {
+        this.modify_id = modify_id;
     }
-
 
     public File getNewCourseImage() {
         return newCourseImage;

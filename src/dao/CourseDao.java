@@ -46,9 +46,11 @@ public class CourseDao {
         ResultSet rs = null;
         con = DBConnection.getDBConnection();
         int row = 0;
-        String sql = "update Course set Course_Image = " + newImage + "where Course_Id = " + course_id;
+        String sql = "update Course set Course_Image = ? where Course_Id = ?";
         try {
             pstmt = con.prepareStatement(sql);
+            pstmt.setString(1, newImage);
+            pstmt.setInt(2, course_id);
             row = pstmt.executeUpdate();
         }catch(Exception e) {
             e.printStackTrace();
@@ -64,9 +66,11 @@ public class CourseDao {
         ResultSet rs = null;
         con = DBConnection.getDBConnection();
         int row = 0;
-        String sql = "update Course set Course_Name = " + newCourseName + "where Course_Id = " + course_id;
+        String sql = "update Course set Course_Name = ? where Course_Id = ?";
         try {
             pstmt = con.prepareStatement(sql);
+            pstmt.setString(1, newCourseName);
+            pstmt.setInt(2, course_id);
             row = pstmt.executeUpdate();
         }catch(Exception e) {
             e.printStackTrace();
@@ -82,9 +86,11 @@ public class CourseDao {
         ResultSet rs = null;
         con = DBConnection.getDBConnection();
         int row = 0;
-        String sql = "update Course set Course_Intro = " + newCourseIntro + "where Course_Id = " + course_id;
+        String sql = "update Course set Course_Intro = ? where Course_Id = ?";
         try {
             pstmt = con.prepareStatement(sql);
+            pstmt.setString(1, newCourseIntro);
+            pstmt.setInt(2, course_id);
             row = pstmt.executeUpdate();
         }catch(Exception e) {
             e.printStackTrace();
