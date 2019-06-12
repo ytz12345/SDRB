@@ -1,3 +1,8 @@
+<%@ page import="dao.CourseDao" %>
+<%@ page import="dao.ChapterDao" %>
+<%@ page import="model.Course" %>
+<%@ page import="model.Chapter" %>
+<%@ page import="java.util.ArrayList" %>
 <%@ page language="java" contentType="text/html; charset=utf-8"
          pageEncoding="utf-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -67,13 +72,17 @@
                 </div><!-- .container -->
             </div><!-- .nav-bar -->
         </header><!-- .site-header -->
-
+        <%
+            int course_id = Integer.parseInt(request.getParameter("course_id"));
+            CourseDao courseDao = new CourseDao();
+            Course course = courseDao.find(course_id);
+        %>
         <div class="page-header-overlay">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
                         <header class="entry-header">
-                            <h1 class="entry-title">The Unreal Engine Developer Course Learn C++ & Make Games</h1>
+                            <h1 class="entry-title"><%=course.getCourse_Name()%></h1>
 
                             <div class="ratings flex justify-content-center align-items-center">
                                 <i class="fa fa-star"></i>
@@ -94,7 +103,7 @@
         <div class="row">
             <div class="col-12 offset-lg-1 col-lg-10">
                 <div class="featured-image">
-                    <img src="images/single-course-featured-img.jpg" alt="">
+                    <img src="<%=course.getCourse_Image()%>" alt="">
 
                     <div class="course-cost">Free</div>
                 </div>
@@ -111,7 +120,7 @@
 
                             <div class="author-wrap">
                                 <label class="m-0">Teacher</label>
-                                <div class="author-name"><a href="#">Ms. Lara Croft</a></div>
+                                <div class="author-name"><a href="#"><%=course.getCourse_Teacher()%></a></div>
                             </div><!-- .author-wrap -->
                         </div><!-- .course-author -->
 
@@ -134,11 +143,7 @@
                         <h2>What Will I Learn?</h2>
 
                         <ul class="p-0 m-0 green-ticked">
-                            <li>Learn C++, the games industry standard language.</li>
-                            <li>Develop strong and transferrable problem solving skills.</li>
-                            <li>Gain an excellent knowledge of modern game development.</li>
-                            <li>Learn how object oriented programming works in practice.</li>
-                            <li>Gain a more fundamental understanding of computer operation.</li>
+                            <li><%=course.getCourse_Intro()%></li>
                         </ul>
 
                     <div class="single-course-accordion-cont mt-3">
@@ -147,200 +152,37 @@
 
                             <div class="number-of-lectures">12 Lectures</div>
 
-                            <div class="total-lectures-time">10:10:10</div>
-                        </header><!-- .entry-header -->
+<%--                            <div class="total-lectures-time">10:10:10</div>--%>
+                        </header>
 
                         <div class="entry-contents">
                             <div class="accordion-wrap type-accordion">
+                                <%
+                                    ChapterDao chapterDao = new ChapterDao();
+                                    ArrayList<Chapter> ChapterArrayList = chapterDao.getSpecifcChapter(course_id);
+                                    if(ChapterArrayList != null && ChapterArrayList.size()>0)
+                                    {
+                                        for(int i = 0; i < ChapterArrayList.size(); i++)
+                                        {
+                                            Chapter chapter = ChapterArrayList.get(i);
+                                %>
                                 <h3 class="entry-title flex flex-wrap justify-content-between align-items-lg-center active">
                                     <span class="arrow-r"><i class="fa fa-plus"></i><i class="fa fa-minus"></i></span>
-                                    <span class="lecture-group-title">章节1</span>
-                                    <span class="number-of-lectures">包含视频数</span>
-                                    <span class="total-lectures-time">视频总时长</span>
+                                    <span class="lecture-group-title">章节<%=chapter.getChapter_Num()%></span>
+                                    <span class="number-of-lectures"></span>
+                                    <span class="total-lectures-time"></span>
                                 </h3>
 
                                 <div class="entry-content">
                                     <ul class="p-0 m-0">
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title"><a href="single-chapter.jsp">视频名称1</a></span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">视频名称2</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">视频名称3</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">视频名称4</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
+                                        <li class="flex flex-column flex-lg-row align-items-lg-center">
+                                            <span class="lecture-title"><a href="single-chapter.jsp?chapter_id=<%=chapter.getChapter_id()%>&user_id=<S:property value="#session.user.User_id"/>"><%=chapter.getChapter_Name()%></a></span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right"></span></li>
                                     </ul>
                                 </div>
-
-                                <h3 class="entry-title flex flex-wrap justify-content-between align-items-lg-center active">
-                                    <span class="arrow-r"><i class="fa fa-plus"></i><i class="fa fa-minus"></i></span>
-                                    <span class="lecture-group-title">章节2</span>
-                                    <span class="number-of-lectures">包含视频数</span>
-                                    <span class="total-lectures-time">视频总时长</span>
-                                </h3>
-
-                                <div class="entry-content">
-                                    <ul class="p-0 m-0">
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">视频名称1</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">视频名称2</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">视频名称3</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">视频名称4</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
-                                    </ul>
-                                </div>
-                                <h3 class="entry-title flex flex-wrap justify-content-between align-items-lg-center active">
-                                    <span class="arrow-r"><i class="fa fa-plus"></i><i class="fa fa-minus"></i></span>
-                                    <span class="lecture-group-title">章节3</span>
-                                    <span class="number-of-lectures">包含视频数</span>
-                                    <span class="total-lectures-time">视频总时长</span>
-                                </h3>
-
-                                <div class="entry-content">
-                                    <ul class="p-0 m-0">
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">视频名称1</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">视频名称2</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">视频名称3</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">视频名称4</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
-                                    </ul>
-                                </div>
-                                <h3 class="entry-title flex flex-wrap justify-content-between align-items-lg-center active">
-                                    <span class="arrow-r"><i class="fa fa-plus"></i><i class="fa fa-minus"></i></span>
-                                    <span class="lecture-group-title">章节4</span>
-                                    <span class="number-of-lectures">包含视频数</span>
-                                    <span class="total-lectures-time">视频总时长</span>
-                                </h3>
-
-                                <div class="entry-content">
-                                    <ul class="p-0 m-0">
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">视频名称1</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">视频名称2</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">视频名称3</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">视频名称4</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
-                                    </ul>
-                                </div>
-
-                                <h3 class="entry-title flex flex-wrap justify-content-between align-items-lg-center active">
-                                    <span class="arrow-r"><i class="fa fa-plus"></i><i class="fa fa-minus"></i></span>
-                                    <span class="lecture-group-title">章节5</span>
-                                    <span class="number-of-lectures">包含视频数</span>
-                                    <span class="total-lectures-time">视频总时长</span>
-                                </h3>
-
-                                <div class="entry-content">
-                                    <ul class="p-0 m-0">
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">视频名称1</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">视频名称2</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">视频名称3</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">视频名称4</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
-                                    </ul>
-                                </div>
-
-                                <h3 class="entry-title flex flex-wrap justify-content-between align-items-lg-center active">
-                                    <span class="arrow-r"><i class="fa fa-plus"></i><i class="fa fa-minus"></i></span>
-                                    <span class="lecture-group-title">章节6</span>
-                                    <span class="number-of-lectures">包含视频数</span>
-                                    <span class="total-lectures-time">视频总时长</span>
-                                </h3>
-
-                                <div class="entry-content">
-                                    <ul class="p-0 m-0">
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">视频名称1</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">视频名称2</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">视频名称3</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">视频名称4</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
-                                    </ul>
-                                </div>
-
-                                <h3 class="entry-title flex flex-wrap justify-content-between align-items-lg-center active">
-                                    <span class="arrow-r"><i class="fa fa-plus"></i><i class="fa fa-minus"></i></span>
-                                    <span class="lecture-group-title">章节7</span>
-                                    <span class="number-of-lectures">包含视频数</span>
-                                    <span class="total-lectures-time">视频总时长</span>
-                                </h3>
-
-                                <div class="entry-content">
-                                    <ul class="p-0 m-0">
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">视频名称1</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">视频名称2</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">视频名称3</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">视频名称4</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
-                                    </ul>
-                                </div>
-
-                                <h3 class="entry-title flex flex-wrap justify-content-between align-items-lg-center active">
-                                    <span class="arrow-r"><i class="fa fa-plus"></i><i class="fa fa-minus"></i></span>
-                                    <span class="lecture-group-title">章节8</span>
-                                    <span class="number-of-lectures">包含视频数</span>
-                                    <span class="total-lectures-time">视频总时长</span>
-                                </h3>
-
-                                <div class="entry-content">
-                                    <ul class="p-0 m-0">
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">视频名称1</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">视频名称2</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">视频名称3</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">视频名称4</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
-                                    </ul>
-                                </div>
-
-                                <h3 class="entry-title flex flex-wrap justify-content-between align-items-lg-center active">
-                                    <span class="arrow-r"><i class="fa fa-plus"></i><i class="fa fa-minus"></i></span>
-                                    <span class="lecture-group-title">章节9</span>
-                                    <span class="number-of-lectures">包含视频数</span>
-                                    <span class="total-lectures-time">视频总时长</span>
-                                </h3>
-
-                                <div class="entry-content">
-                                    <ul class="p-0 m-0">
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">视频名称1</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">视频名称2</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">视频名称3</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">视频名称4</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
-                                    </ul>
-                                </div>
-
-                                <h3 class="entry-title flex flex-wrap justify-content-between align-items-lg-center active">
-                                    <span class="arrow-r"><i class="fa fa-plus"></i><i class="fa fa-minus"></i></span>
-                                    <span class="lecture-group-title">章节10</span>
-                                    <span class="number-of-lectures">包含视频数</span>
-                                    <span class="total-lectures-time">视频总时长</span>
-                                </h3>
-
-                                <div class="entry-content">
-                                    <ul class="p-0 m-0">
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">视频名称1</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">视频名称2</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">视频名称3</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">视频名称4</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
-                                    </ul>
-                                </div>
-
-                                <h3 class="entry-title flex flex-wrap justify-content-between align-items-lg-center active">
-                                    <span class="arrow-r"><i class="fa fa-plus"></i><i class="fa fa-minus"></i></span>
-                                    <span class="lecture-group-title">章节11</span>
-                                    <span class="number-of-lectures">包含视频数</span>
-                                    <span class="total-lectures-time">视频总时长</span>
-                                </h3>
-
-                                <div class="entry-content">
-                                    <ul class="p-0 m-0">
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">视频名称1</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">视频名称2</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">视频名称3</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">视频名称4</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
-                                    </ul>
-                                </div>
-
-                                <h3 class="entry-title flex flex-wrap justify-content-between align-items-lg-center active">
-                                    <span class="arrow-r"><i class="fa fa-plus"></i><i class="fa fa-minus"></i></span>
-                                    <span class="lecture-group-title">章节12</span>
-                                    <span class="number-of-lectures">包含视频数</span>
-                                    <span class="total-lectures-time">视频总时长</span>
-                                </h3>
-
-                                <div class="entry-content">
-                                    <ul class="p-0 m-0">
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">视频名称1</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">视频名称2</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">视频名称3</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">视频名称4</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">时长</span></li>
-                                    </ul>
-                                </div>
+                                <%
+                                        }
+                                    }
+                                %>
                             </div>
                         </div><!-- .entry-contents -->
                     </div><!-- .single-course-accordion-cont  -->
