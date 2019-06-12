@@ -5,15 +5,11 @@ import dao.CommentDao;
 
 public class LeaveCommentAction {
     private Comment comment;
+    private int login_id;
     private CommentDao commentDao = new CommentDao();
 
     public String LeaveComment()throws Exception{
         System.out.println("尝试留言");
-        System.out.println(comment.getUser_User_id());
-        System.out.println(comment.getComment_Content());
-        System.out.println(comment.getChapter_Chapter_id());
-        System.out.println(comment.getComment_To());
-        System.out.println(comment.getComment_Time());
         String forward = "failure";//数据库存数据时出错标记值
         if(comment.getUser_User_id()==0) forward = "no_login";
         int flag = 0;
@@ -30,5 +26,13 @@ public class LeaveCommentAction {
 
     public void setComment(Comment comment) {
         this.comment = comment;
+    }
+
+    public int getLogin_id() {
+        return login_id;
+    }
+
+    public void setLogin_id(int login_id) {
+        this.login_id = login_id;
     }
 }
