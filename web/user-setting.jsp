@@ -59,7 +59,7 @@
                                 <ul class="flex flex-column flex-lg-row justify-content-lg-end align-content-center">
                                     <li><a href="index.jsp">Home</a></li>
                                     <li><a href="about.jsp">About</a></li>
-                                    <li class="current-menu-item"><a href="courses.jsp">Courses</a></li>
+                                    <li><a href="courses.jsp">Courses</a></li>
                                     <li><a href="https://weibo.com/u/5966988917?is_all=1">weibo</a></li>
                                 </ul>
 
@@ -110,7 +110,7 @@
                             <h3 class="model-title substr" title="张瑞年"><s:property value="#session.user.User_Name"></s:property>
 
                         </h3>
-                        <div class="model-intro" title="北京邮电大学"><s:property value="#session.user.User_id"></s:property></div>
+                        <div class="model-intro" title="北京邮电大学"><s:property value="#session.user.User_Intro"></s:property></div>
 
                     </div>
                 </div>
@@ -125,12 +125,12 @@
                                 <a class="nav-text" href="user-homepage.jsp"><i class="icon-nav icon-course"></i>我的课程</a>
                                 <ul class="sub-nav">
                                     <li class="nav-item">
-                                        <a class="sub-nav-text" content="myCourse" href="/portal/myCourseIndex/1.mooc">学习的课程</a>
+                                        <a class="sub-nav-text" content="myCourse" href="#">学习的课程</a>
                                     </li>
                                     <!-- 管理的课程 -->
 
                                     <li class="nav-item">
-                                        <a class="sub-nav-text" href="/portal/favorate/course-1.mooc" content="favoriteCourse">收藏的课程</a>
+                                        <a class="sub-nav-text" href="#" content="favoriteCourse">收藏的课程</a>
                                     </li>
 
                                 </ul>
@@ -141,13 +141,13 @@
 
                             <!-- 我的笔记 -->
                             <li class="nav-item" data-step="4" data-highlightclass="" data-intro="在课程学习的过程中您可以随时记录学习心得或疑惑,点击这里可以管理自己的课程笔记。">
-                                <a class="nav-text" href="/note/padlist-1.mooc" content="myNote"><i class="icon-nav icon-notes"></i>我的笔记</a>
+                                <a class="nav-text" href="#" content="myNote"><i class="icon-nav icon-notes"></i>我的笔记</a>
                             </li>
                             <li class="nav-item" data-step="5" data-highlightclass="" data-intro="系统和授课教师会通过站内消息向您发送重要通知，您要及时关注这里的消息哦！">
-                                <a class="nav-text" href="/message/list-1.mooc" content="myMessage"><i class="icon-nav icon-msg"></i>消息<sup id="newMsg" style="display:none;">●</sup></a>
+                                <a class="nav-text" href="#" content="myMessage"><i class="icon-nav icon-msg"></i>消息<sup id="newMsg" style="display:none;">●</sup></a>
                             </li>
                             <li class="nav-item open-up navItem" data-step="6" data-highlightclass="" data-intro="在这里您可以进行密码管理,邮箱绑定,以及对基本资料信息进行维护。">
-                                <a class="nav-text current" href="/portal/setting.mooc" content="mySetting"><i class="icon-nav icon-set"></i>个人设置</a>
+                                <a class="nav-text current" href="user-setting.jsp" content="mySetting"><i class="icon-nav icon-set"></i>个人设置</a>
                             </li>
                         </ul>
                     </div>

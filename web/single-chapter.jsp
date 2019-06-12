@@ -119,7 +119,8 @@
         <div class="row">
             <div class="col-12 offset-lg-1 col-lg-10">
                 <div class="featured-image">
-                    <img src="images/single-post.jpg" alt="">
+                    <video src="images\POO.mp4" width="940" height="530" controls="controls">
+                    </video>
                     <!-- 修改为视频 -->
                 </div><!-- .featured-image -->
             </div><!-- .col -->
