@@ -306,7 +306,7 @@
 
                             <s:iterator value="courseList" status="status">
 
-                                <%--<li class="view-item" ucid="1277078">
+                                <li class="view-item" ucid="1277078">
                                 <div class="view">
                                     <div class="view-show">
                                         <div class="view-img" href="javascript:void(0)">
@@ -382,12 +382,9 @@
 
                                     </div>
                                 </div>
-                            </li>--%>
+                            </li>
 
-                                <li><s:property value="Course_Id"/></li>
                             </s:iterator>
-
-
                             <!-- 即将开始 -->
                             <li class="soon-item hidden-course" ucid="1277078">
                                 <div class="view">
