@@ -8,7 +8,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-    <title>Hello World</title>
+    <title>课程管理</title>
 
     <!-- Required meta tags -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -31,6 +31,36 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#course-img-modify").change(function () {
+                var fil = this.files;
+                console.log(fil.length);
+                for (var i = 0; i < fil.length; i++) {
+                    console.log(fil[i]);
+                    console.log('--------------------------');
+                    reads(fil[i]);
+                }
+            });
+        });
+
+        function reads(fil){
+            var reader = new FileReader();
+            reader.readAsDataURL(fil);
+            reader.onload = function(){
+                $('#c-img').attr('src',reader.result);
+            };
+        }
+
+        function resetImg(){
+            $('#c-img').attr('src','#');
+        }
+    </script>
 </head>
 <body class="single-courses-page">
     <div class="page-header">
@@ -85,13 +115,52 @@
                             <h1 class="entry-title"><%=course.getCourse_Name()%></h1>
 
                             <div class="ratings flex justify-content-center align-items-center">
+                            <s:if test="#session.user.User_Identity == 1">
+
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star-o"></i>
                                 <span>(4 votes)</span>
-                            </div><!-- .ratings -->
+
+                            </s:if>
+                            <s:else>
+                                <a href="#" data-toggle="modal" data-target="#modifyCourseName"><span style="color: white">更改课程名</span></a>
+                            </s:else>
+                    </div><!-- .ratings/admin -->
+                            <!-- 课程名修改框 -->
+                            <div class="modal fade" style="margin-top: 10%" id="modifyCourseName">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+
+                                        <!-- 模态框头部 -->
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">修改课程名</h4>
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+
+                                        <!-- 模态框主体 -->
+                                        <div class="modal-body">
+                                            <form action="modifyCourseName?modify_id=1" method="post" role="form">
+                                                <div class="form-group">
+                                                    <input name="newCourseName" type="text" class="form-control" placeholder="输入新的课程名">
+                                                </div>
+                                                <div class="form-group">
+                                                    <button class='col-sm-2' type="submit" class="btn btn-default" style="background-color: #19c880; color: white;">更改</button>
+                                                    <button class='col-sm-2' type="reset" class="btn btn-default" style="background-color: white; color: #19c880">重置</button>
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                        <!-- 模态框底部 -->
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
                         </header><!-- .entry-header -->
                     </div><!-- .col -->
                 </div><!-- .row -->
@@ -124,23 +193,64 @@
                             </div><!-- .author-wrap -->
                         </div><!-- .course-author -->
 
-                        <div class="course-cats mt-3">
-                            <label class="m-0">Categories</label>
-                            <div class="author-name"><a href="#">Web design</a></div>
-                        </div><!-- .course-cats -->
-
                         <div class="course-students mt-3">
                             <label class="m-0">Student</label>
                             <div class="author-name"><a href="#">26 (REGISTERED)</a></div>
                         </div><!-- .course-students -->
 
                         <div class="buy-course mt-3">
-                            <a class="btn" href="#">ADD to cart</a>
-                        </div><!-- .buy-course -->
+                            <s:if test="#session.user.User_Identity == 1">
+                                <a class="btn" href="#">ADD to cart</a>
+                            </s:if>
+                            <s:else>
+                                <a class="btn" href="#" data-toggle="modal" data-target="#modifyCourseImage">更改封面</a>
+                            </s:else>
+                        </div><!-- .buy-course/admin -->
+                        <!-- 封面更改-模态框 -->
+                        <div class="modal fade" style="margin-top: 10%" id="modifyCourseImage">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+
+                                    <!-- 模态框头部 -->
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">修改课程封面</h4>
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+
+                                    <!-- 模态框主体 -->
+                                    <div class="modal-body">
+                                        <form action="modifyCourseImage?modify_id=1" method="post" role="form" enctype="multipart/form-data" >
+                                            <div class="form-group">
+                                                <input type="file" name="newCourseImage" id="course-img-modify"/>
+                                            </div>
+                                            <div class="form-group">
+                                                <img class="col-sm-6" id="c-img" src="#">
+                                            </div>
+                                            <div class="form-group">
+                                                <button class='col-sm-2' type="submit" class="btn btn-default" style="background-color: #19c880; color: white;">更改</button>
+                                                <button class='col-sm-2' type="reset" onclick="resetImg()" class="btn btn-default" style="background-color: white; color: #19c880">重置</button>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                    <!-- 模态框底部 -->
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
                     </div><!-- .course-info -->
 
                     <div class="single-course-cont-section">
-                        <h2>What Will I Learn?</h2>
+                        <s:if test="#session.user.User_Identity == 1">
+                            <h2>What Will I Learn?</h2>
+                            </s:if>
+                            <s:else>
+                            <a href="#" data-toggle="modal" data-target="#modifyCourseIntro"><h2>课程介绍</h2></a>
+                            </s:else>
 
                         <ul class="p-0 m-0 green-ticked">
                             <li><%=course.getCourse_Intro()%></li>
@@ -148,12 +258,67 @@
 
                     <div class="single-course-accordion-cont mt-3">
                         <header class="entry-header flex flex-wrap justify-content-between align-items-center">
+                            <s:if test="#session.user.User_Identity == 1">
                             <h2>Curriculum For This Course</h2>
 
                             <div class="number-of-lectures">12 Lectures</div>
+                            </s:if>
+                            <s:else>
+                                <h2>章节管理</h2>
+                                <div>
+                                    <a href="#" data-toggle="modal" data-target="#addChapter"><span>添加章节</span></a>
+                                </div>
+                            </s:else>
 
 <%--                            <div class="total-lectures-time">10:10:10</div>--%>
+
                         </header>
+                        <div class="modal fade" style="margin-top: 8%" id="addChapter">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+
+                                    <!-- 模态框头部 -->
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">添加章节</h4>
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+
+                                    <!-- 模态框主体 -->
+                                    <div class="modal-body">
+                                        <form action="#" method="post" enctype="multipart/form-data" role="form">
+                                            <div class="form-group">
+                                                <label class="col-sm-4 control-label">章节名称</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" name="#" class="form-control" placeholder="请输入课程名称">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-4 control-label" style="padding-top: 15px">视频</label>
+                                                <div class="col-sm-6">
+                                                    <input type="file" name="#"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-4 control-label" style="padding-top: 15px">课件</label>
+                                                <div class="col-sm-6">
+                                                    <input type="file" name="#"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <button class='col-sm-2' type="submit" class="btn btn-default" style="background-color: #19c880; color: white;">添加</button>
+                                                <button class='col-sm-2' type="reset" class="btn btn-default" style="background-color: white; color: #19c880">重置</button>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                    <!-- 模态框底部 -->
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
 
                         <div class="entry-contents">
                             <div class="accordion-wrap type-accordion">
@@ -186,7 +351,38 @@
                             </div>
                         </div><!-- .entry-contents -->
                     </div><!-- .single-course-accordion-cont  -->
+                            <!-- 课程介绍修改框 -->
+                            <div class="modal fade" style="margin-top: 15%" id="modifyCourseIntro">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
 
+                                        <!-- 模态框头部 -->
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">修改课程介绍</h4>
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+
+                                        <!-- 模态框主体 -->
+                                        <div class="modal-body">
+                                            <form action="modifyCourseIntro?modify_id=1" method="post" role="form">
+                                                <div class="form-group">
+                                                    <textarea name="newCourseIntro" class="form-control" rows="3" placeholder="输入新的课程介绍"></textarea>
+                                                </div>
+                                                <div class="form-group">
+                                                    <button class='col-sm-2' type="submit" class="btn btn-default" style="background-color: #19c880; color: white;">更改</button>
+                                                    <button class='col-sm-2' type="reset" class="btn btn-default" style="background-color: white; color: #19c880">重置</button>
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                        <!-- 模态框底部 -->
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
     <%@ include file="footer.jsp" %>
 
     <script type='text/javascript' src='js/jquery.js'></script>
