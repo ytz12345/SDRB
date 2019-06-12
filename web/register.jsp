@@ -1,3 +1,4 @@
+<%@ page import="dao.UserDao" %>
 <%@ page language="java" contentType="text/html; charset=utf-8"
          pageEncoding="utf-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -25,6 +26,10 @@
     <!-- Styles -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/login.css">
+
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
 
     <script type="text/javascript">
         function isValidate(form) {
@@ -95,12 +100,19 @@
                         <div id="form-register">
                             <form action="register" name="register" method="post" onsubmit="return isValidate()" >
                                 <h2 id="register-heading">请注册</h2>
+                                <%
+                                    UserDao userDao = new UserDao();
+                                    int number = userDao.CoutNumber() + 1;
+                                %>
+                                <input type="hidden" name="user.userid" value="<%=number%>" id="userid">
                                 <label class="register-lable">用户名：</label>
                                 <input class="register-input" type="text" name="user.username" id="username" placeholder="Username">
                                 <label class="register-lable">设置密码：</label>
                                 <input class="register-input" type="password" name="user.password" id="userpassword" placeholder="Password">
                                 <label class="register-lable">确认密码：</label>
                                 <input class="register-input" type="password" name="userpass1" id="userpass1" placeholder="Password">
+                                <label class="radio-inline"><input type="radio" name="optradio" checked>Option 1</label>
+                                <label class="radio-inline"><input type="radio" name="optradio">Option 2</label>
                                 <input id="register-btn" type="submit" value="注册">
                                 <input id="reset-btn" type="reset" value="重置">
                             </form>

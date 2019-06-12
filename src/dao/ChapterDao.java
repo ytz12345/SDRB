@@ -1,9 +1,11 @@
 package dao;
 
 import java.sql.*;
+import java.util.ArrayList;
 
 import db.DBConnection;
 import model.Chapter;
+import model.Course;
 
 /*进行数据库操作*/
 
@@ -36,7 +38,7 @@ public class ChapterDao {
         return row;
     }
 
-    public Chapter find(Chapter Chapter) {
+    public Chapter findChapter(int Chapter_id) {
         //从数据库中查找一个用户，用于验证是否注册
         Connection con = null;
         PreparedStatement pstmt = null;
@@ -46,7 +48,7 @@ public class ChapterDao {
         String sql = "select * from Chapter where Chapter_id=?";
         try {
             pstmt = con.prepareStatement(sql);
-            pstmt.setInt(1, Chapter.getChapter_id());
+            pstmt.setInt(1, Chapter_id);
             rs = pstmt.executeQuery();
             if (rs.next()) {
                 Chapter2 = new Chapter();
@@ -65,6 +67,53 @@ public class ChapterDao {
         return Chapter2;
     }
 
+    public ArrayList<Chapter> getSpecifcChapter(int course_id) {    //获得制定课程的所有章节
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        con = DBConnection.getDBConnection();
+        String sql = "select * from Chapter where Course_Course_Id = ? order by Chapter_Num";
+        ArrayList<Chapter> ChapterArrayList = new ArrayList<Chapter>();
+        try {
+            pstmt = con.prepareStatement(sql);
+            pstmt.setInt(1, course_id);
+            rs = pstmt.executeQuery();
+            while (rs.next()) {
+                Chapter Chapter3 = new Chapter();
+                Chapter3.setChapter_id(rs.getInt("Chapter_Id"));
+                Chapter3.setChapter_Name(rs.getString("Chapter_Name"));
+                Chapter3.setChapter_Num(rs.getInt("Chapter_Num"));
+                Chapter3.setChapter_PPT(rs.getString("Chapter_PPT"));
+                Chapter3.setChapter_Video(rs.getString("Chapter_Video"));
+                Chapter3.setChapter_Intro(rs.getString("Chapter_Intro"));
+                Chapter3.setCourse_Course_Id(rs.getInt("Course_Course_Id"));
+                ChapterArrayList.add(Chapter3);// 把一个商品加入集合
+            }
+            return ChapterArrayList; // 返回集合。
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            return null;
+        } finally {
+            // 释放数据集对象
+            if (rs != null) {
+                try {
+                    rs.close();
+                    rs = null;
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            }
+            // 释放语句对象
+            if (pstmt != null) {
+                try {
+                    pstmt.close();
+                    pstmt = null;
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            }
+        }
+    }
 }
 
 

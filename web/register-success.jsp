@@ -7,7 +7,7 @@
     <title>注册成功页面</title>
 </head>
 <body>
-恭喜，${user.username },你已成功注册！<br>
+恭喜，,你已成功注册！<br>
 点击<a href="login.jsp">登录</a>
 </body>
 </html>

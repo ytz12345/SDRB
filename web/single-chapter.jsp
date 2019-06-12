@@ -1,4 +1,18 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"
+<%@ page import="dao.ChapterDao" %>
+<%@ page import="model.Chapter" %>
+<%@ page import="dao.CourseDao" %>
+<%@ page import="model.Course" %>
+<%@ page import="dao.CommentDao" %>
+<%@ page import="model.Comment" %>
+<%@ page import="dao.UserDao" %>
+<%@ page import="model.User" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.PriorityQueue"%>
+<%@ page import="java.util.Comparator"%>
+<%@ page import="java.sql.Timestamp"%>
+<%@ page import="java.util.Map"%>
+<%@ page import="com.opensymphony.xwork2.ActionContext"%>
+<%@ page language="java" contentType="text/html; charset=utf-8" autoFlush="false" buffer="256kb"
          pageEncoding="utf-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -28,6 +42,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="single-blog-post">
+    <%
+        class CmpComent implements Comparator<Comment>
+        {
+            @Override
+            public int compare(Comment c1, Comment c2) {
+                return (int) (c1.getComment_Time().getTime() - c2.getComment_Time().getTime());
+            }
+        };
+    %>
     <div class="page-header">
         <header class="site-header">
 
@@ -67,18 +90,29 @@
                 </div><!-- .container -->
             </div><!-- .nav-bar -->
         </header><!-- .site-header -->
-
+        <input type="hidden" id="login_User_id" value="<S:property value="#session.user.User_id"/>">
+        <%
+            ActionContext actionContext = ActionContext.getContext();
+            Map session2 = actionContext.getSession();
+            int chapter_id = Integer.parseInt(request.getParameter("chapter_id"));
+            ChapterDao chapterDao = new ChapterDao();
+            Chapter chapter = chapterDao.findChapter(chapter_id);
+            CourseDao courseDao = new CourseDao();
+            Course course = courseDao.find(chapter.getCourse_Course_Id());
+            CommentDao commentDao =  new CommentDao();
+            ArrayList<Comment> CommentArrayList = commentDao.getChapterComment(chapter_id);
+        %>
         <div class="page-header-overlay">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
                         <header class="entry-header">
-                            <h1 class="entry-title">此处显示该章节名称</h1>
+                            <h1 class="entry-title"><%=chapter.getChapter_Name()%></h1>
 
                             <div class="entry-meta flex justify-content-center align-items-center">
-                                <div class="post-author"><a href="#">教师名</a></div>
+                                <div class="post-author"><a href="#"><%=course.getCourse_Teacher()%></a></div>
 
-                                <div class="post-comments"><a href="#">评论数</a></div>
+                                <div class="post-comments"><a href="#">评论数：<%=CommentArrayList.size()%></a></div>
                             </div><!-- .entry-meta -->
                         </header><!-- .entry-header -->
                     </div><!-- .col -->
@@ -101,6 +135,7 @@
             <div class="col-12 offset-lg-1 col-lg-1"></div><!-- .col -->
 
             <div class="col-12 col-lg-8">
+
                 <div class="author-box">
                     <div class="author-info flex flex-wrap">
                         <div class="author-avatar">
@@ -111,111 +146,172 @@
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                                 <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
                             </ul>
-                        </div><!-- .author-avatar -->
+                        </div>
 
                         <div class="author-details">
                             <h3 class="author-name">Ms. Lara Croft <span>Admin</span></h3>
 
                             <div class="entry-content mt-3">
                                 <p>Hi! I'm Colt. I'm a developer with a serious love for teaching. I've spent the last few years teaching people to program at 2 different immersive bootcamps where I've helped hundreds of people become web developers and change their lives. My graduates work at companies like Google, Salesforce, and Square.</p>
-                            </div><!-- .entry-content -->
-                        </div><!-- .author-details -->
-                    </div><!-- .author-info -->
-                </div><!-- .author-box -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
 
                 <div class="post-comments-wrap">
                     <div class="post-comments">
-                        <h3 class="comments-title"><span class="comments-number">02 Comments</span></h3>
+                        <h3 class="comments-title"><span class="comments-number"><%=CommentArrayList.size()%> Comments</span></h3>
 
                         <ol class="comment-list">
+                            <%
+                                if(CommentArrayList != null && CommentArrayList.size()>0)
+                                {
+                                    UserDao userDao = new UserDao();
+                                    for(int i = 0; i < CommentArrayList.size(); i++)
+                                    {
+                                        PriorityQueue<Comment> CommentQueue = new PriorityQueue<Comment>(10, new CmpComent());
+                                        Comment comment = CommentArrayList.get(i);
+                                        User user = userDao.findUser(comment.getUser_User_id());
+                                        if(comment.getComment_To() == 0)
+                                        {
+                            %>
                             <li class="comment">
                                 <article class="comment-body">
                                     <figure class="comment-author-avatar">
                                         <img src="images/c-1.png" alt="">
-                                    </figure><!-- .comment-author-avatar -->
+                                    </figure>
 
                                     <div class="comment-wrap">
                                         <div class="comment-author">
                                             <span class="comment-meta d-block">
-                                                <a href="#">27 Aug 2018</a>
-                                            </span><!-- .comment-meta -->
+                                                <a href="#"><%=comment.getComment_Time()%></a>
+                                            </span>
 
                                             <span class="fn">
-                                                <a href="#">Chris Hadfield</a>
-                                            </span><!-- .fn -->
-                                        </div><!-- .comment-author -->
+                                                <a href="#"><%=user.getUser_Name()%></a>
+                                            </span>
+                                        </div>
 
-                                        <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi</p>
-
+                                        <p><%=comment.getComment_Content()%></p>
                                         <div class="reply">
-                                            <a href="#">like</a>
-                                            <a href="#">reply</a>
-                                        </div><!-- .reply -->
-                                    </div><!-- .comment-wrap -->
+                                            <div class="panel panel-default" style="display: inline-block;">
+                                                <div class="panel-heading">
+                                                    <h4 class="panel-title">
+                                                        <a data-toggle="collapse" data-parent="#accordion"
+                                                           href="#<%=comment.getComment_id()%>">
+                                                            reply
+                                                        </a>
+                                                    </h4>
+                                                </div>
+                                                <div id="<%=comment.getComment_id()%>" class="panel-collapse collapse in">
+                                                    <div class="panel-body">
+
+                                                        <div class="comments-form">
+                                                            <div class="comment-respond">
+                                                                <h3 class="comment-reply-title">Leave a Reply</h3>
+
+                                                                <form action="leavecomment" class="comment-form" method="post">
+                                                                    <textarea rows="6" name="comment.Comment_Content" id="commentcontent" placeholder="Messages"></textarea>
+                                                                    <input type="hidden" name="comment.Comment_Time" value="<%=new Timestamp(System.currentTimeMillis())%>">
+                                                                    <input type="hidden" name="comment.Comment_To" value="<%=comment.getComment_id()%>">
+                                                                    <input type="hidden" name="comment.Chapter_Chapter_id" value="<%=chapter_id%>">
+                                                                    <input type="hidden" name="comment.User_User_id" value="<S:property value="#session.user.User_id"/>">
+                                                                    <input type="submit" value="send comment">
+                                                                </form><!-- .comment-form -->
+                                                            </div><!-- .comment-respond -->
+                                                        </div><!-- .comments-form -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--<a href="#" style="background:red;color:#fff">delete</a>-->
+                                        </div>
+                                    </div>
 
                                     <div class="clearfix"></div>
-                                </article><!-- .comment-body -->
-
+                                </article>
+                                        <%
+                                            CommentQueue.offer(comment);
+                                            while(!CommentQueue.isEmpty())
+                                            {
+                                                Comment comment2 = CommentQueue.poll();
+                                                CommentDao commentDao1 = new CommentDao();
+                                                ArrayList<Comment> CommentArrayListReply = commentDao1.getCommentReply(comment2.getComment_id());
+                                                if(CommentArrayListReply != null && CommentArrayListReply.size() > 0)
+                                                {
+                                                    for(int j = 0; j < CommentArrayListReply.size(); j ++)  CommentQueue.offer(CommentArrayListReply.get(j));
+                                                }
+                                                if(comment2 != comment)
+                                                {
+                                                    User user2 = userDao.findUser(comment2.getUser_User_id());
+                                                    User previousUser = userDao.findUser(commentDao.find(comment2.getComment_To()).getUser_User_id()); //回复的User
+                                        %>
                                 <ol class="children">
                                     <li class="comment">
                                         <article class="comment-body">
                                             <figure class="comment-author-avatar">
-                                                <img src="images/c-2.png" alt="">
-                                            </figure><!-- .comment-author-avatar -->
+                                                <img src="images/c-1.png" alt="">
+                                            </figure>
 
                                             <div class="comment-wrap">
                                                 <div class="comment-author">
                                                     <span class="comment-meta d-block">
-                                                        <a href="#">27 Aug 2018</a>
-                                                    </span><!-- .comment-meta -->
+                                                        <a href="#"><%=comment2.getComment_Time()%></a>
+                                                    </span>
 
                                                     <span class="fn">
-                                                        <a href="#">Albert Einstein</a>
-                                                    </span><!-- .fn -->
-                                                </div><!-- .comment-author -->
+                                                        <a href="#"><%=user2.getUser_Name()%></a><a>    Reply To    </a><a href="#"><%=previousUser.getUser_Name()%></a>
+                                                    </span>
+                                                </div>
 
-                                                <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi </p>
+                                                <p><%=comment2.getComment_Content()%></p>
+
 
                                                 <div class="reply">
-                                                    <a href="#">like</a>
-                                                    <a href="#">reply</a>
-                                                </div><!-- .reply -->
-                                            </div><!-- .comment-wrap -->
+                                                    <div class="panel panel-default"  style="display: inline-block;">
+                                                        <div class="panel-heading">
+                                                            <h4 class="panel-title">
+                                                                <a data-toggle="collapse" data-parent="#accordion"
+                                                                   href="#<%=comment2.getComment_id()%>">reply
+                                                                </a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="<%=comment2.getComment_id()%>" class="panel-collapse collapse in">
+                                                            <div class="panel-body">
+                                                                <div class="comments-form">
+                                                                    <div class="comment-respond">
+                                                                        <h3 class="comment-reply-title">Leave a Reply</h3>
+
+                                                                        <form action="leavecomment" class="comment-form" method="post">
+                                                                            <textarea rows="6" name="comment.Comment_Content" id="commentcontent" placeholder="Messages"></textarea>
+                                                                            <input type="hidden" name="comment.Comment_Time" value="<%=new Timestamp(System.currentTimeMillis())%>">
+                                                                            <input type="hidden" name="comment.Comment_To" value="<%=comment2.getComment_id()%>">
+                                                                            <input type="hidden" name="comment.Chapter_Chapter_id" value="<%=chapter_id%>">
+                                                                            <input type="hidden" name="comment.User_User_id" value="<S:property value="#session.user.User_id"/>">
+                                                                            <input type="submit" value="send comment">
+                                                                        </form><!-- .comment-form -->
+                                                                    </div><!-- .comment-respond -->
+                                                                </div><!-- .comments-form -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--<a href="#" style="background:red;color:#fff">delete</a>-->
+                                                </div>
+
+                                            </div>
 
                                             <div class="clearfix"></div>
-                                        </article><!-- .comment-body -->
-                                    </li><!-- .comment -->
-                                </ol><!-- .children -->
-                            </li><!-- .comment -->
-
-                            <li class="comment">
-                                <article class="comment-body">
-                                    <figure class="comment-author-avatar">
-                                        <img src="images/c-3.png" alt="">
-                                    </figure><!-- .comment-author-avatar -->
-
-                                    <div class="comment-wrap">
-                                        <div class="comment-author">
-                                            <span class="comment-meta d-block">
-                                                <a href="#">27 Aug 2018</a>
-                                            </span><!-- .comment-meta -->
-
-                                            <span class="fn">
-                                                <a href="#">Henry Ford</a>
-                                            </span><!-- .comment-autho -->
-                                        </div><!-- .comment-author -->
-
-                                        <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi </p>
-
-                                        <div class="reply">
-                                            <a href="#">like</a>
-                                            <a href="#">reply</a>
-                                        </div><!-- .reply -->
-                                    </div><!-- .comment-wrap -->
-
-                                    <div class="clearfix"></div>
-                                </article><!-- .comment-body -->
-                            </li><!-- .comment -->
+                                        </article>
+                                    </li>
+                                </ol>
+                            </li>
+                            <%
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            %>
                         </ol><!-- .comment-list -->
                     </div><!-- .post-comments -->
 
@@ -223,8 +319,12 @@
                         <div class="comment-respond">
                             <h3 class="comment-reply-title">Leave a comment</h3>
 
-                            <form class="comment-form">
-                                <textarea rows="4" placeholder="Messages"></textarea>
+                            <form action="leavecomment" class="comment-form" method="post">
+                                <textarea rows="6" name="comment.Comment_Content" id="commentcontent" placeholder="Messages"></textarea>
+                                <input type="hidden" name="comment.Comment_Time" value="<%=new Timestamp(System.currentTimeMillis())%>">
+                                <input type="hidden" name="comment.Comment_To" value="<%=0%>">
+                                <input type="hidden" name="comment.Chapter_Chapter_id" value="<%=chapter_id%>">
+                                <input type="hidden" name="comment.User_User_id" value="<S:property value="#session.user.User_id"/>">
                                 <input type="submit" value="send comment">
                             </form><!-- .comment-form -->
                         </div><!-- .comment-respond -->

@@ -6,18 +6,20 @@ public class Chapter {
     private String Chapter_Name;
     private String Chapter_Video;
     private String Chapter_PPT;
+    private String Chapter_Intro;
     private int Course_Course_Id;
 
     public Chapter(){
 
     }
 
-    public Chapter(int Chapter_id, int Chapter_Num, String Chapter_Name, String Chapter_Video, String Chapter_PPT, int Course_Course_Id){
+    public Chapter(int Chapter_id, int Chapter_Num, String Chapter_Name, String Chapter_Video, String Chapter_PPT, String Chapter_Intro, int Course_Course_Id){
         this.Chapter_id = Chapter_id;
         this.Chapter_Num = Chapter_Num;
         this.Chapter_Name = Chapter_Name;
         this.Chapter_Video = Chapter_Video;
         this.Chapter_PPT = Chapter_PPT;
+        this.Chapter_Intro = Chapter_Intro;
         this.Course_Course_Id = Course_Course_Id;
     }
 
@@ -59,6 +61,14 @@ public class Chapter {
 
     public void setChapter_PPT(String chapter_PPT) {
         Chapter_PPT = chapter_PPT;
+    }
+
+    public String getChapter_Intro() {
+        return Chapter_Intro;
+    }
+
+    public void setChapter_Intro(String chapter_Intro) {
+        Chapter_Intro = chapter_Intro;
     }
 
     public int getCourse_Course_Id() {

@@ -1,7 +1,7 @@
 package model;
 
 public class User {
-
+    private int User_id;
     private String User_Name;
     private String User_Password;
     private int User_Identity;
@@ -11,11 +11,20 @@ public class User {
 
     }
 
-    public User(String User_Name, String User_Password, int User_Identity, String User_Intro){
+    public User(int User_id, String User_Name, String User_Password, int User_Identity, String User_Intro){
+        this.User_id = User_id;
         this.User_Name = User_Name;
         this.User_Password = User_Password;
         this.User_Identity = User_Identity;
         this.User_Intro = User_Intro;
+    }
+
+    public int getUser_id() {
+        return User_id;
+    }
+
+    public void setUser_id(int user_id) {
+        this.User_id = user_id;
     }
 
     public String getUser_Name(){

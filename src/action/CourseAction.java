@@ -33,7 +33,7 @@ public class CourseAction extends ActionSupport {
 
         String forward = "error";//数据库存数据时出错标记值
         int flag = 0;
-        Course course2 = (courseDao.find(course));
+        Course course2 = (courseDao.find(course_id));
         if(course2 != null) {
             forward = "erroe_user";//课程名已被占用标记值
         }else {
