@@ -67,6 +67,25 @@ public class CommentDao {
         return Comment2;
     }
 
+    public void delete(int comment_id){
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        con = DBConnection.getDBConnection();
+        int row = 0;
+        String sql = "delete from comment where Comment_id=?";
+        try {
+            pstmt = con.prepareStatement(sql);
+            pstmt.setInt(1, comment_id);
+            row = pstmt.executeUpdate();
+            System.out.println("删除执行");
+        }catch(Exception e) {
+            e.printStackTrace();
+        }finally {
+            DBConnection.closeDB(con, pstmt, rs);
+        }
+    }
+
     public ArrayList<Comment> getChapterComment(int chapter_id) {
         Connection con = null;
         PreparedStatement pstmt = null;
