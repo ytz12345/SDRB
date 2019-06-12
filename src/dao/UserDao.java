@@ -8,6 +8,25 @@ import model.User;
 /*进行数据库操作*/
 
 public class UserDao {
+
+    public void delete(int user_id){
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        con = DBConnection.getDBConnection();
+        int row = 0;
+        String sql = "delete from user where User_id=?";
+        try {
+            pstmt = con.prepareStatement(sql);
+            pstmt.setInt(1, user_id);
+            row = pstmt.executeUpdate();
+            System.out.println("删除执行");
+        }catch(Exception e) {
+            e.printStackTrace();
+        }finally {
+            DBConnection.closeDB(con, pstmt, rs);
+        }
+    }
     public int save(User user) {
         //向数据库中插入一个用户的方法
         Connection con = null;

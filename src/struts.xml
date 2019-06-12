@@ -15,5 +15,12 @@
             <result name="success">/index.jsp</result>
             <result name="failure">/login_failure.jsp</result>
         </action>
+        <action name="disp" class="action.CTRL" method="userdisplay">
+            <result name="success">/admin-user.jsp</result>
+            <result name="failure">/login_failure.jsp</result>
+        </action>
+        <action name="del" class="action.CTRL" method="userdelete">
+            <result name="success">/admin-user.jsp</result>
+        </action>
     </package>
 </struts>
