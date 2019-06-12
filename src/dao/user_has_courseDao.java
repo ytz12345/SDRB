@@ -3,7 +3,9 @@ package dao;
 import java.sql.*;
 
 import com.mysql.cj.log.NullLogger;
+import java.util.ArrayList;
 import db.DBConnection;
+import model.Course;
 import model.user_has_course;
 
 /*进行数据库操作*/
@@ -61,16 +63,17 @@ public class user_has_courseDao {
         return user_has_course2;
     }
 
-    public int CoutNumber(int course_id){
+    public int CountNumber(user_has_course user_has_course){
+        //从数据库查找指定用户选择的课程数量
         Connection con = null;
         PreparedStatement pstmt = null;
         ResultSet rs = null;
         int num = 0;
         con = DBConnection.getDBConnection();
-        String sql = "SELECT COUNT(course_id) AS Cout_Course_Id FROM Orders WHERE Course_Course_Id=? and User_Teachorstudy=1";
+        String sql = "SELECT COUNT(Course_Course_Id) FROM user_has_course WHERE User_User_id=? and User_Teachorstudy=1";
         try{
             pstmt = con.prepareStatement(sql);
-            pstmt.setInt(1, course_id);
+            pstmt.setInt(1, user_has_course.getUser_User_id());
             rs = pstmt.executeQuery();
             if (rs.next()) {
                 num = rs.getInt(1);
@@ -81,6 +84,31 @@ public class user_has_courseDao {
             DBConnection.closeDB(con, pstmt, rs);
         }
         return num;
+    }
+
+    public int[] FindCourseIds(user_has_course user_has_course){
+        //从数据库查找指定用户的课程并返回课程ID数组
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        int counter = 0;
+        int courseId[] = new int[100];
+        con = DBConnection.getDBConnection();
+        String sql = "SELECT Course_Course_Id FROM user_has_course WHERE User_User_id==? and User_Teachorstudy=1";
+        try{
+            pstmt = con.prepareStatement(sql);
+            pstmt.setInt(1, user_has_course.getUser_User_id());
+            rs = pstmt.executeQuery();
+            while (rs.next()) {
+                courseId[counter]=rs.getInt("Course_Id");
+                counter++;
+            }
+        }catch(Exception e) {
+            e.printStackTrace();
+        }finally {
+            DBConnection.closeDB(con, pstmt, rs);
+        }
+        return courseId;
     }
 }
 

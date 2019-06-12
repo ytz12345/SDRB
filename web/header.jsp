@@ -138,8 +138,8 @@
                         </s:if>
                         <s:else>
                             <ul class="flex justify-content-center align-items-center py-2 pt-md-0">
-                                <li>Weicome!</li>
-                                <li><a href="aboutMe.jsp"><S:property value="#session.user.User_Name"/></a></li>
+                                <li>Welcome!</li>
+                                <li><a href="user-setting.jsp"><S:property value="#session.user.User_Name"/></a></li>
                             </ul>
                         </s:else>
                     </div><!-- .header-bar-menu -->

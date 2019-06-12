@@ -106,11 +106,10 @@
                             <img src="images/XJP.jpg" class="user-max">
                         </a>
 
-                        <h3 class="model-title substr" title="张瑞年">习近平
+                        <h3 class="model-title substr" title="张瑞年"><s:property value="#session.user.User_Name"></s:property>
 
                         </h3>
-                        <div class="model-intro" title="北京邮电大学">清华带学</div>
-
+                        <div class="model-intro" title="北京邮电大学"><s:property value="#session.user.User_id"></s:property></div>
 
                     </div>
                 </div>
@@ -299,6 +298,7 @@
                         <ul class="view-list">
 
                             <!-- 正在进行 -->
+
 
                             <li class="view-item" ucid="1277078">
                                 <div class="view">

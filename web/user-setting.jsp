@@ -107,11 +107,10 @@
                             <img src="images/XJP.jpg" class="user-max">
                         </a>
 
-                        <h3 class="model-title substr" title="张瑞年">习近平
+                            <h3 class="model-title substr" title="张瑞年"><s:property value="#session.user.User_Name"></s:property>
 
                         </h3>
-                        <div class="model-intro" title="北京邮电大学">清华带学</div>
-
+                        <div class="model-intro" title="北京邮电大学"><s:property value="#session.user.User_id"></s:property></div>
 
                     </div>
                 </div>
@@ -309,7 +308,7 @@
 
                         <div class="input-group">
                             <label class="input-label">ID</label>
-                            <span class="input-cr">6232884097</span>
+                            <span class="input-cr"><s:property value="#session.user.User_id"></s:property></span>
                         </div>
 
 
@@ -319,7 +318,7 @@
                             <label class="input-label">
                                 登录名
                             </label>
-                            <span class="input-cr">1145141919@qq.com</span>
+                            <span class="input-cr"><s:property value="#session.user.User_Name"></s:property></span>
 
                             <input id="loginName" type="hidden" value="1145141919@qq.com">
                         </div>
@@ -334,7 +333,7 @@
                             <label class="input-label">
                                 学号
                             </label>
-                            <span class="input-cr">1145141919</span>
+                            <span class="input-cr"><s:property value="#session.user.User_id"></s:property></span>
                             <input id="studentNo" type="hidden" value="1145141919">
                         </div>
                         <div class="input-group">
