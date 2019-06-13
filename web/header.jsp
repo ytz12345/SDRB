@@ -32,7 +32,7 @@
             <div class="row">
                 <div class="col-12 col-lg-6 d-none d-md-flex flex-wrap justify-content-center justify-content-lg-start mb-3 mb-lg-0">
                     <div class="header-bar-email d-flex align-items-center">
-                        <i class="fa fa-envelope"></i><a href="#">446549158@qq.com</a>
+                        <a href="admin-login.jsp"><i class="fa fa-apple"></i></a>
                     </div><!-- .header-bar-email -->
 
                     <div class="header-bar-text lg-flex align-items-center">

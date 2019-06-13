@@ -69,6 +69,9 @@ public class CTRL {
     }
 
     public String userdelete(){
+        userDao.delete1(u_id);
+        userDao.delete2(u_id);
+        userDao.delete3(u_id);
         userDao.delete(u_id);
         return "success";
     }

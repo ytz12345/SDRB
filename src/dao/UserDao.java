@@ -16,6 +16,64 @@ public class UserDao {
         con = DBConnection.getDBConnection();
         int row = 0;
         String sql = "delete from user where User_id=?";
+
+        try {
+            pstmt = con.prepareStatement(sql);
+            pstmt.setInt(1, user_id);
+            row = pstmt.executeUpdate();
+            System.out.println("删除执行");
+        }catch(Exception e) {
+            e.printStackTrace();
+        }finally {
+            DBConnection.closeDB(con, pstmt, rs);
+        }
+    }
+    public void delete1(int user_id){
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        con = DBConnection.getDBConnection();
+        int row = 0;
+        String sql = "delete from user_has_course where User_User_id=?";
+
+        try {
+            pstmt = con.prepareStatement(sql);
+            pstmt.setInt(1, user_id);
+            row = pstmt.executeUpdate();
+            System.out.println("删除执行");
+        }catch(Exception e) {
+            e.printStackTrace();
+        }finally {
+            DBConnection.closeDB(con, pstmt, rs);
+        }
+    }
+    public void delete2(int user_id){
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        con = DBConnection.getDBConnection();
+        int row = 0;
+        String sql = "delete from user_has_chapter where User_User_id=?";
+
+        try {
+            pstmt = con.prepareStatement(sql);
+            pstmt.setInt(1, user_id);
+            row = pstmt.executeUpdate();
+            System.out.println("删除执行");
+        }catch(Exception e) {
+            e.printStackTrace();
+        }finally {
+            DBConnection.closeDB(con, pstmt, rs);
+        }
+    }
+    public void delete3(int user_id){
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        con = DBConnection.getDBConnection();
+        int row = 0;
+        String sql = "delete from comment where User_User_id=?";
+
         try {
             pstmt = con.prepareStatement(sql);
             pstmt.setInt(1, user_id);
