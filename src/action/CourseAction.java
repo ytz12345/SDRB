@@ -20,6 +20,8 @@ public class CourseAction extends ActionSupport {
     private String courseImageContentType;
     private String courseImageFileName;
 
+    private int teacher_id = 0;
+
     public String courseCreate() throws Exception {
         //得到上传文件在服务器的路径加文件名
         //String target = ServletActionContext.getServletContext().getRealPath("/upload"+ courseImageFileName);
@@ -34,10 +36,13 @@ public class CourseAction extends ActionSupport {
         }
 
         String forward = "error";//数据库存数据时出错标记值
-        int flag = 0;
+        int flag1 = 0;
+        int flag2 = 0;
 
-        flag = courseDao.save(course, courseImageUrl);
-            if(flag == 1) {
+        String imageData = "/SDRB_war_exploded/upload/images/" + courseImageFileName;
+        flag1 = courseDao.save(course, imageData);
+        flag2 = courseDao.teacherHasCourse(course,teacher_id);
+            if(flag1 + flag2 == 2) {
                 forward = "success";//成功注册标记值
             }
 
@@ -101,6 +106,14 @@ public class CourseAction extends ActionSupport {
             forward = "success";
         }
         return forward;
+    }
+
+    public int getTeacher_id() {
+        return teacher_id;
+    }
+
+    public void setTeacher_id(int teacher_id) {
+        this.teacher_id = teacher_id;
     }
 
     public void setC_id(int c_id) {

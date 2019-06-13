@@ -8,7 +8,7 @@
 </head>
 <body>
 恭喜，,你已成功注册！<br>
-点击<a href="login.jsp">登录</a>
+点击<a href="index.jsp">登录</a>
 </body>
 </html>
 

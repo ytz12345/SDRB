@@ -38,7 +38,8 @@ public class ChapterAction extends ActionSupport {
         String forward = "failure";
         int flag = 0;
 
-        flag = chapterDao.save(chapter, chapterUrl, add_id);
+        String videoData = "/SDRB_war_exploded/upload/videos/" + chapterVideoFileName;
+        flag = chapterDao.save(chapter, videoData, add_id);
         if(flag == 1) {
             this.setCur_id(add_id);
             forward = "success";//成功注册标记值
