@@ -62,5 +62,25 @@
             <result name="success">/single-courses.jsp</result>
             <result name="failure">/admin-login.jsp</result>
         </action>
+
+        <action name="displayCourses" class="action.CourseAction" method="coursesDisplay">
+            <result name="success">/admin-course.jsp</result>
+            <result name="failure">/admin-login.jsp</result>
+        </action>
+
+        <action name="coursePass" class="action.CourseAction" method="coursePass">
+            <result name="success">/admin-course.jsp</result>
+            <result name="failure">/admin-login.jsp</result>
+        </action>
+
+        <action name="courseDelete" class="action.CourseAction" method="courseDelete">
+            <result name="success">/admin-course.jsp</result>
+            <result name="failure">/admin-login.jsp</result>
+        </action>
+
+        <action name="courseDontPass" class="action.CourseAction" method="courseDontPass">
+            <result name="success">/admin-course.jsp</result>
+            <result name="failure">/admin-login.jsp</result>
+        </action>
     </package>
 </struts>

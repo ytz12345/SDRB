@@ -6,6 +6,9 @@ import db.DBConnection;
 import model.Course;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 /*进行数据库操作*/
 
@@ -38,6 +41,41 @@ public class CourseDao {
             DBConnection.closeDB(con, pstmt, rs);
         }
         return row;
+    }
+
+    public List<Course> displayCourses() {
+        //用户登录Action方法
+        List<Course> list1=new ArrayList<Course>();
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        con = DBConnection.getDBConnection();
+        Course course2 = null;
+        String sql = "select * from course";
+        String forward = null;
+        try {
+            pstmt = con.prepareStatement(sql);
+            rs = pstmt.executeQuery();
+            while (rs.next()) {
+                course2 = new Course();
+                course2.setCourse_Id(rs.getInt("Course_Id"));
+                course2.setCourse_Name(rs.getString("Course_Name"));
+                course2.setCourse_Teacher(rs.getString("Course_Teacher"));
+                course2.setCourse_Pass(rs.getInt("Course_Pass"));
+                course2.setCourse_Intro(rs.getString("Course_Intro"));
+                list1.add(course2);
+            }
+            forward="success";
+            System.out.println("success");
+        }catch(Exception e) {
+            forward = "failure";
+            e.printStackTrace();
+        }finally {
+            DBConnection.closeDB(con, pstmt, rs);
+        }
+        //注入
+
+        return list1;
     }
 
     public int modifyCourseImage(String newImage, int course_id){
@@ -106,9 +144,29 @@ public class CourseDao {
         ResultSet rs = null;
         con = DBConnection.getDBConnection();
         int row = 0;
-        String sql = "update Course set Course_Pass = 1 where Course_Id = " + course_id;
+        String sql = "update Course set Course_Pass = 1 where Course_Id = ?";
         try {
             pstmt = con.prepareStatement(sql);
+            pstmt.setInt(1, course_id);
+            row = pstmt.executeUpdate();
+        }catch(Exception e) {
+            e.printStackTrace();
+        }finally {
+            DBConnection.closeDB(con, pstmt, rs);
+        }
+        return row;
+    }
+
+    public int dontPassCourse(int course_id){
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        con = DBConnection.getDBConnection();
+        int row = 0;
+        String sql = "update Course set Course_Pass = 2 where Course_Id = ?";
+        try {
+            pstmt = con.prepareStatement(sql);
+            pstmt.setInt(1, course_id);
             row = pstmt.executeUpdate();
         }catch(Exception e) {
             e.printStackTrace();
@@ -124,9 +182,10 @@ public class CourseDao {
         ResultSet rs = null;
         con = DBConnection.getDBConnection();
         int row = 0;
-        String sql = "delete from Course where Course_Id = " + course_id;
+        String sql = "delete from Course where Course_Id = ?";
         try {
             pstmt = con.prepareStatement(sql);
+            pstmt.setInt(1, course_id);
             row = pstmt.executeUpdate();
         }catch(Exception e) {
             e.printStackTrace();

@@ -8,12 +8,14 @@ import dao.CourseDao;
 import model.Course;
 import admin.DBadmin;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /*课程创建Action*/
 
 public class CourseAction extends ActionSupport {
     private Course course;
     private CourseDao courseDao = new CourseDao();
-    private int course_id = 0;//用以获取当前课程ID
     private File courseImage;
     private String courseImageContentType;
     private String courseImageFileName;
@@ -33,46 +35,80 @@ public class CourseAction extends ActionSupport {
 
         String forward = "error";//数据库存数据时出错标记值
         int flag = 0;
-        Course course2 = (courseDao.find(course_id));
-        if(course2 != null) {
-            forward = "erroe_user";//课程名已被占用标记值
-        }else {
-            flag = courseDao.save(course, courseImageUrl);
+
+        flag = courseDao.save(course, courseImageUrl);
             if(flag == 1) {
                 forward = "success";//成功注册标记值
             }
+
+            return forward;
+    }
+
+    public List<Course> coursesList;
+    public void setList(List<Course> list) {
+        this.coursesList = list;
+    }
+    public List<Course> getList() {
+        return coursesList;
+    }
+
+    public String coursesDisplay() throws Exception {
+        String forward = "failure";
+
+        List<Course> templist=new ArrayList<Course>();
+
+        try {
+            templist = courseDao.displayCourses();
+            this.setList(templist);
+            forward = "success";
+        }
+        catch(Exception e){
+            e.printStackTrace();
         }
         return forward;
     }
 
-    private String coursePass() throws Exception {
-        String forward = "error";
+    private int c_id = 0;
+
+    public String coursePass() throws Exception {
+        String forward = "failure";
         int flag = 0;
 
-        flag = courseDao.passCourse(course_id);
+        flag = courseDao.passCourse(c_id);
         if(flag == 1){
             forward = "success";
         }
         return forward;
     }
 
-    private String courseDelete() throws Exception {
-        String forward = "error";
+    public String courseDontPass() throws Exception {
+        String forward = "failure";
         int flag = 0;
 
-        flag = courseDao.deleteCourse(course_id);
+        flag = courseDao.dontPassCourse(c_id);
         if(flag == 1){
             forward = "success";
         }
         return forward;
     }
 
-    public int getCourseId() {
-        return course_id;
+    public String courseDelete() throws Exception {
+        String forward = "failure";
+        int flag = 0;
+
+        flag = courseDao.deleteCourse(c_id);
+        if(flag == 1){
+            forward = "success";
+        }
+        return forward;
     }
 
-    public void setCourseId(int course_id) {
-        this.course_id = course_id;
+    public void setC_id(int c_id) {
+        this.c_id = c_id;
+    }
+
+    public int getC_id() {
+        return c_id;
     }
 
     public Course getCourse() {

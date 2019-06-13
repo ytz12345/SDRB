@@ -7,13 +7,11 @@ import dao.CourseDao;
 import model.Course;
 import admin.DBadmin;
 
-/*课程创建Action*/
+/*课程修改Action*/
 
 public class CourseModifyAction extends ActionSupport {
     private Course course;
     private CourseDao courseDao = new CourseDao();
-
-    private int modify_id = 0;//课程ID
 
     private File newCourseImage;//新的封面
     private String newCourseImageContentType;
@@ -30,7 +28,7 @@ public class CourseModifyAction extends ActionSupport {
             e.printStackTrace();
         }
 
-        String forward = "error";//数据库存数据时出错标记值
+        String forward = "failure";//数据库存数据时出错标记值
         int flag = 0;
 
         flag = courseDao.modifyCourseImage(courseImageUrl,modify_id);
@@ -41,9 +39,11 @@ public class CourseModifyAction extends ActionSupport {
         return forward;
     }
 
+    private int modify_id = 0;//课程ID
+
     private String newCourseName;//新的课程名
     public String courseNameModify() throws Exception {
-        String forward = "error";//数据库存数据时出错标记值
+        String forward = "failure";//数据库存数据时出错标记值
         int flag = 0;
 
         flag = courseDao.modifyCourseName(newCourseName,modify_id);
@@ -56,7 +56,7 @@ public class CourseModifyAction extends ActionSupport {
 
     private String newCourseIntro;//新的课程介绍
     public String courseIntroModify() throws Exception {
-        String forward = "error";//数据库存数据时出错标记值
+        String forward = "failure";//数据库存数据时出错标记值
         int flag = 0;
 
         flag = courseDao.modifyCourseIntro(newCourseIntro,modify_id);
@@ -75,12 +75,12 @@ public class CourseModifyAction extends ActionSupport {
         this.course = course;
     }
 
-    public int getModify_id() {
-        return modify_id;
-    }
-
     public void setModify_id(int modify_id) {
         this.modify_id = modify_id;
+    }
+
+    public int getModify_id() {
+        return modify_id;
     }
 
     public File getNewCourseImage() {

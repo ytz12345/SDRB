@@ -32,6 +32,9 @@
     <!-- Styles -->
     <link rel="stylesheet" href="style.css">
 
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
     <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
@@ -142,7 +145,7 @@
 
                                     <!-- 模态框主体 -->
                                     <div class="modal-body">
-                                        <form action="modifyCourseName?modify_id=1" method="post" role="form">
+                                        <form action="modifyCourseName?modify_id=<%=course.getCourse_Id()%>" method="post" role="form">
                                             <div class="form-group">
                                                 <input name="newCourseName" type="text" class="form-control" placeholder="输入新的课程名">
                                             </div>
@@ -219,7 +222,7 @@
 
                                 <!-- 模态框主体 -->
                                 <div class="modal-body">
-                                    <form action="modifyCourseImage?modify_id=1" method="post" role="form" enctype="multipart/form-data" >
+                                    <form action="modifyCourseImage?modify_id=<%=course.getCourse_Id()%>" method="post" role="form" enctype="multipart/form-data" >
                                         <div class="form-group">
                                             <input type="file" name="newCourseImage" id="course-img-modify"/>
                                         </div>
@@ -364,7 +367,7 @@
 
                                 <!-- 模态框主体 -->
                                 <div class="modal-body">
-                                    <form action="modifyCourseIntro?modify_id=1" method="post" role="form">
+                                    <form action="modifyCourseIntro?modify_id=<%=course.getCourse_Id()%>" method="post" role="form">
                                         <div class="form-group">
                                             <textarea name="newCourseIntro" class="form-control" rows="3" placeholder="输入新的课程介绍"></textarea>
                                         </div>

@@ -298,8 +298,7 @@
         <div class="page-breadcrumb">
             <div class="row">
                 <div class="col-12 d-flex no-block align-items-center">
-                    <h4 class="page-title">用户管理</h4>
-                    <a href=disp>refresh</a>
+                    <a href="displayCourses" style="color: black"><h4 class="page-title">课程管理</h4></a>
                     <div class="ml-auto text-right">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
@@ -326,50 +325,58 @@
 
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">用户列表</h5>
+                            <h5 class="card-title">课程列表</h5>
                             <div class="table-responsive">
-                                <table id="zero_config" class="table table-striped table-bordered">
+                                <table id="courses_config" class="table table-striped table-bordered">
                                     <thead>
                                     <tr>
-                                        <th>User_id</th>
-                                        <th>User_name</th>
-                                        <th>User_Password</th>
-                                        <th>User_Identity</th>
-                                        <th>User_Intro</th>
-                                        <th>Operation </th>
+                                        <th>课程ID</th>
+                                        <th>课程名</th>
+                                        <th>课程状态</th>
+                                        <th>教师</th>
+                                        <th>课程介绍</th>
+                                        <th>操作</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <s:iterator value="list" var="ulist" status="status">
+                                    <s:iterator value="coursesList" var="clist" status="status">
                                         <tr>
-                                            <td><s:property value="User_id"/></td>
-                                            <td><s:property value="User_Name"/></td>
-                                            <td><s:property value="User_Passward"/></td>
+                                            <td><s:property value="Course_Id"/></td>
+                                            <td><s:property value="Course_Name"/></td>
 
-                                            <s:if test="#ulist.User_Identity == 0">
-                                                <td>管理员</td>
+                                            <s:if test="#clist.Course_pass == 0">
+                                                <td>待审核</td>
                                             </s:if>
-                                            <s:elseif test="#ulist.User_Identity == 1">
-                                                <td>学生</td>
+                                            <s:elseif test="#clist.Course_pass == 1">
+                                                <td>已通过</td>
                                             </s:elseif>
                                             <s:else>
-                                                <td>老师</td>
+                                                <td>未通过</td>
                                             </s:else>
 
-                                            <td><s:property value="User_Intro"/></td>
-                                            <td><a href=del?u_id=<s:property value="User_id"/>>Delete</a></td>
+                                            <td><s:property value="Course_Teacher"/></td>
+                                            <td><s:property value="Course_Intro"/></td>
+
+                                            <s:if test="#clist.Course_pass == 0">
+                                                <td>
+                                                    <a href="coursePass?c_id=<s:property value="Course_Id"/>">通过</a>
+                                                    <a href="courseDontPass?c_id=<s:property value="Course_Id"/>" style="margin-left: 5px">拒绝</a>
+                                                </td>
+                                            </s:if>
+                                            <s:elseif test="#clist.Course_pass == 1">
+                                                <td><a href="courseDelete?c_id=<s:property value="Course_Id"/>">下架</a></td>
+                                            </s:elseif>
+                                            <s:else>
+                                                <td><a href="courseDelete?c_id=<s:property value="Course_Id"/>">删除</a></td>
+                                            </s:else>
+
                                         </tr>
                                     </s:iterator>
 
                                     </tbody>
                                     <tfoot>
                                     <tr>
-                                        <th>User_id</th>
-                                        <th>User_name</th>
-                                        <th>User_Password</th>
-                                        <th>User_Identity</th>
-                                        <th>User_Intro</th>
-                                        <th>Operation </th>
+
                                     </tr>
                                     </tfoot>
                                 </table>
@@ -426,7 +433,7 @@
     /****************************************
      *       Basic Table                   *
      ****************************************/
-    $('#zero_config').DataTable();
+    $('#courses_config').DataTable();
 </script>
 
 </body>
