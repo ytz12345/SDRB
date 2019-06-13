@@ -261,16 +261,15 @@
 
                     <div class="single-course-accordion-cont mt-3">
                         <header class="entry-header flex flex-wrap justify-content-between align-items-center">
-                            <s:if test="#session.user.User_Identity == 1">
-                                <h2>Curriculum For This Course</h2>
-
-                                <div class="number-of-lectures">12 Lectures</div>
-                            </s:if>
-                            <s:else>
+                            <s:if test="#session.user.User_Identity == 2">
                                 <h2>章节管理</h2>
                                 <div>
                                     <a href="#" data-toggle="modal" data-target="#addChapter"><span>添加章节</span></a>
                                 </div>
+                            </s:if>
+                            <s:else>
+                                <h2>Curriculum For This Course</h2>
+                                <div class="number-of-lectures">12 Lectures</div>
                             </s:else>
 
                             <%--                            <div class="total-lectures-time">10:10:10</div>--%>

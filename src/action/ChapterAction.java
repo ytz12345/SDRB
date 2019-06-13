@@ -20,7 +20,7 @@ public class ChapterAction extends ActionSupport {
     private String chapterVideoContentType;
     private String chapterVideoFileName;
 
-    private int add_id;
+    private int add_id = 0;
 
     public String chapterAdd() throws Exception {
         //得到上传文件在服务器的路径加文件名
