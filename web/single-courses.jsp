@@ -118,18 +118,18 @@
                         <h1 class="entry-title"><%=course.getCourse_Name()%></h1>
 
                         <div class="ratings flex justify-content-center align-items-center">
-                            <s:if test="#session.user.User_Identity == 1">
+                            <s:if test="#session.user.User_Identity == 2">
 
+                                <a href="#" data-toggle="modal" data-target="#modifyCourseName"><span style="color: white">更改课程名</span></a>
+
+                            </s:if>
+                            <s:else>
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star-o"></i>
                                 <span>(4 votes)</span>
-
-                            </s:if>
-                            <s:else>
-                                <a href="#" data-toggle="modal" data-target="#modifyCourseName"><span style="color: white">更改课程名</span></a>
                             </s:else>
                         </div><!-- .ratings/admin -->
                         <!-- 课程名修改框 -->
@@ -202,11 +202,11 @@
                     </div><!-- .course-students -->
 
                     <div class="buy-course mt-3">
-                        <s:if test="#session.user.User_Identity == 1">
-                            <a class="btn" href="#">ADD to cart</a>
+                        <s:if test="#session.user.User_Identity == 2">
+                            <a class="btn" href="#" data-toggle="modal" data-target="#modifyCourseImage">更改封面</a>
                         </s:if>
                         <s:else>
-                            <a class="btn" href="#" data-toggle="modal" data-target="#modifyCourseImage">更改封面</a>
+                            <a class="btn" href="#">ADD to cart</a>
                         </s:else>
                     </div><!-- .buy-course/admin -->
                     <!-- 封面更改-模态框 -->
@@ -248,11 +248,11 @@
                 </div><!-- .course-info -->
 
                 <div class="single-course-cont-section">
-                    <s:if test="#session.user.User_Identity == 1">
-                    <h2>What Will I Learn?</h2>
+                    <s:if test="#session.user.User_Identity == 2">
+                        <a href="#" data-toggle="modal" data-target="#modifyCourseIntro"><h2>课程介绍</h2></a>
                     </s:if>
                     <s:else>
-                    <a href="#" data-toggle="modal" data-target="#modifyCourseIntro"><h2>课程介绍</h2></a>
+                        <h2>What Will I Learn?</h2>
                     </s:else>
 
                     <ul class="p-0 m-0 green-ticked">
@@ -261,16 +261,15 @@
 
                     <div class="single-course-accordion-cont mt-3">
                         <header class="entry-header flex flex-wrap justify-content-between align-items-center">
-                            <s:if test="#session.user.User_Identity == 1">
-                                <h2>Curriculum For This Course</h2>
-
-                                <div class="number-of-lectures">12 Lectures</div>
-                            </s:if>
-                            <s:else>
+                            <s:if test="#session.user.User_Identity == 2">
                                 <h2>章节管理</h2>
                                 <div>
                                     <a href="#" data-toggle="modal" data-target="#addChapter"><span>添加章节</span></a>
                                 </div>
+                            </s:if>
+                            <s:else>
+                                <h2>Curriculum For This Course</h2>
+                                <div class="number-of-lectures">12 Lectures</div>
                             </s:else>
 
                             <%--                            <div class="total-lectures-time">10:10:10</div>--%>

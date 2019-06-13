@@ -31,7 +31,8 @@ public class CourseModifyAction extends ActionSupport {
         String forward = "failure";//数据库存数据时出错标记值
         int flag = 0;
 
-        flag = courseDao.modifyCourseImage(courseImageUrl,modify_id);
+        String imageData = "/SDRB_war_exploded/upload/images/" + newCourseImageFileName;
+        flag = courseDao.modifyCourseImage(imageData,modify_id);
         if(flag == 1){
             this.setCurrent_id(modify_id);
             forward = "success";

@@ -20,7 +20,7 @@ public class ChapterAction extends ActionSupport {
     private String chapterVideoContentType;
     private String chapterVideoFileName;
 
-    private int add_id;
+    private int add_id = 0;
 
     public String chapterAdd() throws Exception {
         //得到上传文件在服务器的路径加文件名
@@ -38,7 +38,8 @@ public class ChapterAction extends ActionSupport {
         String forward = "failure";
         int flag = 0;
 
-        flag = chapterDao.save(chapter, chapterUrl, add_id);
+        String videoData = "/SDRB_war_exploded/upload/videos/" + chapterVideoFileName;
+        flag = chapterDao.save(chapter, videoData, add_id);
         if(flag == 1) {
             this.setCur_id(add_id);
             forward = "success";//成功注册标记值

@@ -43,6 +43,28 @@ public class CourseDao {
         return row;
     }
 
+    public int teacherHasCourse(Course course, int teacher_id){
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        con = DBConnection.getDBConnection();
+        int row = 0;
+        String sql = "insert into user_has_course(Course_Course_Id, User_Teachorstudy, User_User_id) values(?,?,?)";
+        try {
+            pstmt = con.prepareStatement(sql);
+            pstmt.setInt(1, course.getCourse_Id());
+            pstmt.setInt(2, 1);
+            pstmt.setInt(3, teacher_id);
+            row = pstmt.executeUpdate();
+        }catch(Exception e) {
+            e.printStackTrace();
+        }finally {
+            DBConnection.closeDB(con, pstmt, rs);
+        }
+        return row;
+
+    }
+
     public List<Course> displayCourses() {
         //用户登录Action方法
         List<Course> list1=new ArrayList<Course>();

@@ -7,7 +7,7 @@
     <title>注册失败页面</title>
 </head>
 <body>
-对不起，您注册的用户已存在，点击这<a href="register.jsp">重新注册</a>
+对不起，您注册的用户已存在，点击这<a href="index.jsp">重新注册</a>
 </body>
 </html>
 
