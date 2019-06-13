@@ -232,7 +232,7 @@ public class CourseDao {
         PreparedStatement pstmt = null;
         ResultSet rs = null;
         con = DBConnection.getDBConnection();
-        String sql = "select * from Course";
+        String sql = "select * from Course where Course_Pass=1";
         ArrayList<Course> CourseArrayList = new ArrayList<Course>();
         try {
             pstmt = con.prepareStatement(sql);
@@ -279,7 +279,7 @@ public class CourseDao {
         PreparedStatement pstmt = null;
         ResultSet rs = null;
         con = DBConnection.getDBConnection();
-        String sql = "select * from Course where Course_Name like ?";
+        String sql = "select * from Course where Course_Name like ? and Course_Pass=1";
         ArrayList<Course> CourseArrayList = new ArrayList<Course>();
         try {
             pstmt = con.prepareStatement(sql);

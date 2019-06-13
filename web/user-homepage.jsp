@@ -386,7 +386,7 @@
 
                             </s:iterator>
                             <!-- 即将开始 -->
-                            <li class="soon-item hidden-course" ucid="1277078">
+                            <%--<li class="soon-item hidden-course" ucid="1277078">
                                 <div class="view">
                                     <div class="view-show">
 
@@ -402,7 +402,7 @@
                                     <div class="view-intro">
                                         <h3 class="view-title substr" style="width:400px;">
 
-                                            怎样怒斥记者
+
 
 
                                             <span class="cview-time">2020春</span>
@@ -466,10 +466,10 @@
 
                                     </div>
                                 </div>
-                            </li>
+                            </li>--%>
 
                             <!-- 已结束 -->
-                            <li class="finished-item hidden-course" ucid="1277078">
+                            <%--<li class="finished-item hidden-course" ucid="1277078">
                                 <div class="view">
                                     <div class="view-show">
 
@@ -549,7 +549,7 @@
 
                                     </div>
                                 </div>
-                            </li>
+                            </li>--%>
 
 
                             <!--

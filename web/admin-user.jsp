@@ -298,8 +298,7 @@
         <div class="page-breadcrumb">
             <div class="row">
                 <div class="col-12 d-flex no-block align-items-center">
-                    <h4 class="page-title">用户管理</h4>
-                    <a href=disp>refresh</a>
+                    <a href=disp style="color: black"><h4 class="page-title">用户管理</h4></a>
                     <div class="ml-auto text-right">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
