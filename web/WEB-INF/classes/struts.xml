@@ -5,6 +5,7 @@
         "http://struts.apache.org/dtds/struts-2.5.dtd">
 
 <struts>
+    <constant name="struts.multipart.maxSize" value="104857600"></constant>
     <package name="default" namespace="/" extends="struts-default">
         <action name="register" class="action.RegisterAction" method="userRegister">
             <result name="success" >/register-success.jsp</result>
@@ -49,17 +50,17 @@
         </action>
 
         <action name="modifyCourseName" class="action.CourseModifyAction" method="courseNameModify">
-            <result name="success">/single-courses.jsp</result>
+            <result name="success" type="redirect">/single-courses.jsp?course_id=${current_id}</result>
             <result name="failure">/admin-login.jsp</result>
         </action>
 
         <action name="modifyCourseIntro" class="action.CourseModifyAction" method="courseIntroModify">
-            <result name="success">/single-courses.jsp</result>
+            <result name="success" type="redirect">/single-courses.jsp?course_id=${current_id}</result>
             <result name="failure">/admin-login.jsp</result>
         </action>
 
         <action name="modifyCourseImage" class="action.CourseModifyAction" method="courseImageModify">
-            <result name="success">/single-courses.jsp</result>
+            <result name="success" type="redirect">/single-courses.jsp?course_id=${current_id}</result>
             <result name="failure">/admin-login.jsp</result>
         </action>
 
@@ -80,6 +81,14 @@
 
         <action name="courseDontPass" class="action.CourseAction" method="courseDontPass">
             <result name="success">/admin-course.jsp</result>
+            <result name="failure">/admin-login.jsp</result>
+        </action>
+
+        <action name="addChapter" class="action.ChapterAction" method="chapterAdd">
+            <interceptor-ref name="defaultStack">
+                <param name="fileUpload.allowedExtensions">avi,rmvb,rm,asf,divx,mpg,mpeg,mpe,wmv,mp4,mkv,vob</param>
+            </interceptor-ref>
+            <result name="success" type="redirect">/single-courses.jsp?course_id=${cur_id}</result>
             <result name="failure">/admin-login.jsp</result>
         </action>
     </package>

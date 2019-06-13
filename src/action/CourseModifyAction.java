@@ -33,6 +33,7 @@ public class CourseModifyAction extends ActionSupport {
 
         flag = courseDao.modifyCourseImage(courseImageUrl,modify_id);
         if(flag == 1){
+            this.setCurrent_id(modify_id);
             forward = "success";
         }
 
@@ -48,6 +49,7 @@ public class CourseModifyAction extends ActionSupport {
 
         flag = courseDao.modifyCourseName(newCourseName,modify_id);
         if(flag == 1){
+            this.setCurrent_id(modify_id);
             forward = "success";
         }
 
@@ -61,10 +63,21 @@ public class CourseModifyAction extends ActionSupport {
 
         flag = courseDao.modifyCourseIntro(newCourseIntro,modify_id);
         if(flag == 1){
+            this.setCurrent_id(modify_id);
             forward = "success";
         }
 
         return forward;
+    }
+
+    public int current_id = 0;
+
+    public int getCurrent_id() {
+        return current_id;
+    }
+
+    public void setCurrent_id(int current_id) {
+        this.current_id = current_id;
     }
 
     public Course getCourse() {
