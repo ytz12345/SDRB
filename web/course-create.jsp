@@ -98,7 +98,7 @@
                         <div class="form-group">
                             <h1 class="col-sm-12 control">创建课程</h1>
                         </div>
-                        <form action="createCourse" method="post" enctype="multipart/form-data" style='background-color: white' class="form-horizontal col-sm-10" role="form">
+                        <form action="createCourse?teacher_id=<s:property value="#session.user.User_id"/>" method="post" enctype="multipart/form-data" style='background-color: white' class="form-horizontal col-sm-10" role="form">
 						    <div class="form-group">
 							    <label class="col-sm-4 control-label" style="padding-top: 15px">课程封面</label>
 							    <div class="col-sm-4">

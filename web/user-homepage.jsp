@@ -283,8 +283,10 @@
                 <div class="btn-group btn-tabs" id="mycoursecenter">
                     <a class="btn-item current" href="javascript:void(0);" tabindex="1">正在进行</a>
                     <a class="btn-item" href="javascript:void(0);" tabindex="2">即将开始</a>
-                    <a class="btn-item last" href="javascript:void(0);" tabindex="3">已结束</a>
-
+                    <a class="btn-item " href="javascript:void(0);" tabindex="3">已结束</a>
+                    <s:if test="#session.user.User_Identity == 2">
+                        <a class="btn-item" href="course-create.jsp" style="color: white">创建课程</a>
+                    </s:if>
                 </div>
                 <div class="search-box">
                     <div class="search">

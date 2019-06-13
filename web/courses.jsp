@@ -109,6 +109,7 @@
                                 {
                                     Course course = CourseArrayList.get(i);
                         %>
+
                         <div class="col-12 col-md-4 px-25">
                             <div class="course-content">
                                 <figure class="course-thumbnail">
@@ -143,6 +144,7 @@
                                 </div>
                             </div>
                         </div>
+                        
                         <%
                                 }
                             }

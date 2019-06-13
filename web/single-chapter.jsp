@@ -14,7 +14,7 @@
 <%@ page import="com.opensymphony.xwork2.ActionContext"%>
 <%@ page language="java" contentType="text/html; charset=utf-8" autoFlush="false" buffer="256kb"
          pageEncoding="utf-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
     <title>Hello World</title>
@@ -129,7 +129,8 @@
         <div class="row">
             <div class="col-12 offset-lg-1 col-lg-10">
                 <div class="featured-image">
-                    <video src="<%=chapter.getChapter_Video()%>" width="940" height="530" controls="controls">
+                    <video width="940" height="530" controls="controls">
+                        <source src="<%=chapter.getChapter_Video()%>" type="video/mp4" />
                     </video>
                     <!-- 修改为视频 -->
                 </div><!-- .featured-image -->

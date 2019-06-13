@@ -17,9 +17,9 @@
             <result name="failure">/login_failure.jsp</result>
         </action>
         <action name="createCourse" class="action.CourseAction" method="courseCreate">
-            <result name="success">/register-success.jsp</result>
-            <result name="error">/register-failure.jsp</result>
-            <result name="error_user">/register-failure_user.jsp</result>
+            <result name="success">/user-homepage.jsp</result>
+            <result name="error">/index.jsp</result>
+            <result name="error_user">/index.jsp</result>
         </action>
         <action name="leavecomment" class="action.LeaveCommentAction" method="LeaveComment">
             <result name="success">/comment_success.jsp?chapter_id=${comment.chapter_Chapter_id}&amp;user_id=${login_id}</result>
