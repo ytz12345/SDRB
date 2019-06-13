@@ -5,30 +5,35 @@ import java.sql.*;
 import db.DBConnection;
 import model.Course;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 /*进行数据库操作*/
 
 public class CourseDao {
-    public static int count = 1000;
 
-    public int save(Course Course) {
-        //向数据库中插入一个用户的方法
+    public int save(Course course, String imageUrl) {
+        //向数据库中插入一个课程的方法
         Connection con = null;
         PreparedStatement pstmt = null;
         ResultSet rs = null;
         con = DBConnection.getDBConnection();
         int row = 0;
-        String sql = "insert into Course(Course_Id, Course_Name, Course_Pass, Course_Intro, Course_Image, Course_Date, Course_Teacher) values(?,?,?,?,?,?,?)";
+        String sql = "insert into Course(Course_Name, Course_Pass, Course_Intro, Course_Image, Course_Date, Course_Teacher) values(?,?,?,?,?,?)";
         try {
-            count ++;
             pstmt = con.prepareStatement(sql);
-            pstmt.setInt(1, Course.getCourse_Id());
-            pstmt.setString(2, Course.getCourse_Name());
-            pstmt.setInt(3, Course.getCourse_Pass());
-            pstmt.setString(4, Course.getCourse_Intro());
-            pstmt.setString(5, Course.getCourse_Image());
-            pstmt.setDate(6, Course.getCourse_Date());
-            pstmt.setString(7, Course.getCourse_Teacher());
+            pstmt.setString(1, course.getCourse_Name());
+            pstmt.setInt(2, 0);
+            pstmt.setString(3, course.getCourse_Intro());
+            pstmt.setString(4, imageUrl);
+
+            Date date = new Date();//获得系统时间.
+            java.sql.Date sqlDate = new java.sql.Date(date.getTime());
+            pstmt.setDate(5, sqlDate);
+
+            pstmt.setString(6, course.getCourse_Teacher());
             row = pstmt.executeUpdate();
         }catch(Exception e) {
             e.printStackTrace();
@@ -37,6 +42,161 @@ public class CourseDao {
         }
         return row;
     }
+
+    public List<Course> displayCourses() {
+        //用户登录Action方法
+        List<Course> list1=new ArrayList<Course>();
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        con = DBConnection.getDBConnection();
+        Course course2 = null;
+        String sql = "select * from course";
+        String forward = null;
+        try {
+            pstmt = con.prepareStatement(sql);
+            rs = pstmt.executeQuery();
+            while (rs.next()) {
+                course2 = new Course();
+                course2.setCourse_Id(rs.getInt("Course_Id"));
+                course2.setCourse_Name(rs.getString("Course_Name"));
+                course2.setCourse_Teacher(rs.getString("Course_Teacher"));
+                course2.setCourse_Pass(rs.getInt("Course_Pass"));
+                course2.setCourse_Intro(rs.getString("Course_Intro"));
+                list1.add(course2);
+            }
+            forward="success";
+            System.out.println("success");
+        }catch(Exception e) {
+            forward = "failure";
+            e.printStackTrace();
+        }finally {
+            DBConnection.closeDB(con, pstmt, rs);
+        }
+        //注入
+
+        return list1;
+    }
+
+    public int modifyCourseImage(String newImage, int course_id){
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        con = DBConnection.getDBConnection();
+        int row = 0;
+        String sql = "update Course set Course_Image = ? where Course_Id = ?";
+        try {
+            pstmt = con.prepareStatement(sql);
+            pstmt.setString(1, newImage);
+            pstmt.setInt(2, course_id);
+            row = pstmt.executeUpdate();
+        }catch(Exception e) {
+            e.printStackTrace();
+        }finally {
+            DBConnection.closeDB(con, pstmt, rs);
+        }
+        return row;
+    }
+
+    public int modifyCourseName(String newCourseName, int course_id){
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        con = DBConnection.getDBConnection();
+        int row = 0;
+        String sql = "update Course set Course_Name = ? where Course_Id = ?";
+        try {
+            pstmt = con.prepareStatement(sql);
+            pstmt.setString(1, newCourseName);
+            pstmt.setInt(2, course_id);
+            row = pstmt.executeUpdate();
+        }catch(Exception e) {
+            e.printStackTrace();
+        }finally {
+            DBConnection.closeDB(con, pstmt, rs);
+        }
+        return row;
+    }
+
+    public int modifyCourseIntro(String newCourseIntro, int course_id){
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        con = DBConnection.getDBConnection();
+        int row = 0;
+        String sql = "update Course set Course_Intro = ? where Course_Id = ?";
+        try {
+            pstmt = con.prepareStatement(sql);
+            pstmt.setString(1, newCourseIntro);
+            pstmt.setInt(2, course_id);
+            row = pstmt.executeUpdate();
+        }catch(Exception e) {
+            e.printStackTrace();
+        }finally {
+            DBConnection.closeDB(con, pstmt, rs);
+        }
+        return row;
+    }
+
+    public int passCourse(int course_id){
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        con = DBConnection.getDBConnection();
+        int row = 0;
+        String sql = "update Course set Course_Pass = 1 where Course_Id = ?";
+        try {
+            pstmt = con.prepareStatement(sql);
+            pstmt.setInt(1, course_id);
+            row = pstmt.executeUpdate();
+        }catch(Exception e) {
+            e.printStackTrace();
+        }finally {
+            DBConnection.closeDB(con, pstmt, rs);
+        }
+        return row;
+    }
+
+    public int dontPassCourse(int course_id){
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        con = DBConnection.getDBConnection();
+        int row = 0;
+        String sql = "update Course set Course_Pass = 2 where Course_Id = ?";
+        try {
+            pstmt = con.prepareStatement(sql);
+            pstmt.setInt(1, course_id);
+            row = pstmt.executeUpdate();
+        }catch(Exception e) {
+            e.printStackTrace();
+        }finally {
+            DBConnection.closeDB(con, pstmt, rs);
+        }
+        return row;
+    }
+
+    public int deleteCourse(int course_id){
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        con = DBConnection.getDBConnection();
+        int row = 0;
+        String sql = "delete from Course where Course_Id = ?";
+        try {
+            pstmt = con.prepareStatement(sql);
+            pstmt.setInt(1, course_id);
+            row = pstmt.executeUpdate();
+        }catch(Exception e) {
+            e.printStackTrace();
+        }finally {
+            DBConnection.closeDB(con, pstmt, rs);
+        }
+        return row;
+    }
+
+
+
 
     public Course find(int Course_Id) {
         Connection con = null;

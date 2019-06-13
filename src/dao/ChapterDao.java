@@ -10,25 +10,21 @@ import model.Course;
 /*进行数据库操作*/
 
 public class ChapterDao {
-    public static int count = 1000;
 
-    public int save(Chapter Chapter) {
+    public int save(Chapter Chapter, String videoUrl, int course_id) {
         //向数据库中插入一个用户的方法
         Connection con = null;
         PreparedStatement pstmt = null;
         ResultSet rs = null;
         con = DBConnection.getDBConnection();
         int row = 0;
-        String sql = "insert into Chapter(Chapter_Id, Chapter_Num, Chapter_Name, Chapter_Video, Chapter_PPT, Course_Course_Id) values(?,?,?,?,?,?)";
+        String sql = "insert into Chapter(Chapter_Name, Chapter_Video, Course_Course_Id, Chapter_Num) values(?,?,?,?)";
         try {
-            count ++;
             pstmt = con.prepareStatement(sql);
-            pstmt.setInt(1, Chapter.getChapter_id());
-            pstmt.setInt(2, Chapter.getChapter_Num());
-            pstmt.setString(3, Chapter.getChapter_Name());
-            pstmt.setString(4, Chapter.getChapter_Video());
-            pstmt.setString(5, Chapter.getChapter_PPT());
-            pstmt.setInt(6, Chapter.getCourse_Course_Id());
+            pstmt.setString(1, Chapter.getChapter_Name());
+            pstmt.setString(2, videoUrl);
+            pstmt.setInt(3, course_id);
+            pstmt.setInt(4, Chapter.getChapter_Num());
             row = pstmt.executeUpdate();
         }catch(Exception e) {
             e.printStackTrace();

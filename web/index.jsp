@@ -47,7 +47,9 @@
                                     <li class="current-menu-item"><a href="index.jsp">Home</a></li>
                                     <li><a href="about.jsp">About</a></li>
                                     <li><a href="courses.jsp">Courses</a></li>
-                                    <li><a href="https://weibo.com/u/5966988917?is_all=1">weibo</a></li>
+                                    <!--<li><a href="https://weibo.com/u/5966988917?is_all=1">weibo</a></li>-->
+                                    <li><a href="user-homepage.jsp">weibo</a></li>
+
                                 </ul>
 
                                 <div class="hamburger-menu d-lg-none">

@@ -149,7 +149,7 @@
                         <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" id="2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="font-24 mdi mdi-comment-processing"></i>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right mailbox animated bounceInDown" aria-labelledby="2">
-                            <ul class="list-style-none">
+                            <ul class="courseList-style-none">
                                 <li>
                                     <div class="">
                                         <!-- Message -->
@@ -340,12 +340,22 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <s:iterator value="list" status="status">
+                                    <s:iterator value="list" var="ulist" status="status">
                                         <tr>
                                             <td><s:property value="User_id"/></td>
                                             <td><s:property value="User_Name"/></td>
                                             <td><s:property value="User_Passward"/></td>
-                                            <td><s:property value="User_Identity"/></td>
+
+                                            <s:if test="#ulist.User_Identity == 0">
+                                                <td>管理员</td>
+                                            </s:if>
+                                            <s:elseif test="#ulist.User_Identity == 1">
+                                                <td>学生</td>
+                                            </s:elseif>
+                                            <s:else>
+                                                <td>老师</td>
+                                            </s:else>
+
                                             <td><s:property value="User_Intro"/></td>
                                             <td><a href=del?u_id=<s:property value="User_id"/>>Delete</a></td>
                                         </tr>
