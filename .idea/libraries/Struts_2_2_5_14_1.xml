@@ -11,5 +11,8 @@
     </CLASSES>
     <JAVADOC />
     <SOURCES />
+    <excluded>
+      <root url="jar://$PROJECT_DIR$/../../apache-tomcat-9.0.19/lib/servlet-api.jar!/" />
+    </excluded>
   </library>
 </component>

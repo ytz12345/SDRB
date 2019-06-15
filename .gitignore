@@ -1,6 +1,9 @@
 web/WEB-INF/classes/*/*
 out/
 src/admin/DBadmin.java
+.idea/workspace.xml
+
+
 
 # .idea/
 .idea/workspace.xml
@@ -13,3 +16,5 @@ src/admin/DBadmin.java
 
 # for mac 
 .DS_Store
+
+
