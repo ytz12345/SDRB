@@ -1,11 +1,10 @@
-web/WEB-INF/classes/*/*
-out/
-src/admin/DBadmin.java
-.idea/workspace.xml
-
 # for idea/
-.idea/workspace.xml
-.idea/dataSources
+.idea/*.xml
+.idea/dataSources/*
+.idea/libraries/*
+out/
+web/WEB-INF/lib/*
+web/WEB-INF/classes/
 
 # for eclipse:
 .settings/
