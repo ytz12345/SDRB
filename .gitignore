@@ -1,7 +1,11 @@
 # for idea/
-.idea/*.xml
+.idea/dataSources.local.xml
+.idea/dataSources.xml
+.idea/deployment.xml
+.idea/vcs.xml
+.idea/webServers.xml
+.idea/workspace.xml
 .idea/dataSources/*
-.idea/libraries/*
 out/
 web/WEB-INF/lib/*
 web/WEB-INF/classes/
