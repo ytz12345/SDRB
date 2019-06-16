@@ -2,13 +2,11 @@ package dao;
 
 import java.sql.*;
 
-import db.DBConnection;
+import conn.DBConnection;
 import model.Course;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 /*进行数据库操作*/
 

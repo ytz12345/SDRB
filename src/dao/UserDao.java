@@ -2,7 +2,7 @@ package dao;
 
 import java.sql.*;
 
-import db.DBConnection;
+import conn.DBConnection;
 import model.User;
 
 /*进行数据库操作*/

@@ -2,11 +2,9 @@ package dao;
 
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.Comparator;
 
-import db.DBConnection;
+import conn.DBConnection;
 import model.Comment;
-import model.Course;
 
 /*进行数据库操作*/
 

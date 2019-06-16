@@ -1,7 +1,5 @@
 package action;
-import com.opensymphony.xwork2.ActionSupport;
-import db.DBConnection;
-import org.apache.struts2.interceptor.SessionAware;
+import conn.DBConnection;
 import dao.UserDao;
 import model.User;
 
@@ -10,7 +8,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 public class CTRL {
     private User user;

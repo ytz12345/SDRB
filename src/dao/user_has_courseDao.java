@@ -2,11 +2,7 @@ package dao;
 
 import java.sql.*;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import db.DBConnection;
-import model.Course;
+import conn.DBConnection;
 import model.user_has_course;
 
 /*进行数据库操作*/

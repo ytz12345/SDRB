@@ -7,1049 +7,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b15e984b-11a5-4ed0-9349-a21be6a92957" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/servlet-api.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/action/AdminLoginAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/action/CTRL.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/action/ChapterAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/action/CourseAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/action/CourseModifyAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/action/DeleteCommentAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/action/FindCoursesAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/action/LeaveCommentAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/action/SelectCourse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dao/ChapterDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dao/CommentDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dao/CourseDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dao/user_has_chapterDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dao/user_has_courseDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Chapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Comment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Course.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/user_has_chapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/user_has_course.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/admin-index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/action/AdminLoginAction.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/action/CTRL.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/action/ChapterAction.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/action/CourseAction.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/action/CourseModifyAction.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/action/DeleteCommentAction.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/action/FindCoursesAction.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/action/LeaveCommentAction.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/action/SelectCourse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/dao/ChapterDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/dao/CommentDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/dao/CourseDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/dao/user_has_chapterDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/dao/user_has_courseDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/model/Chapter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/model/Comment.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/model/Course.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/model/user_has_chapter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/model/user_has_course.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/course-management.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/test.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/admin-course.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/admin-login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/admin-user.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/extra-libs/DataTables/DataTables-1.10.16/css/dataTables.bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/extra-libs/DataTables/DataTables-1.10.16/css/dataTables.bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/extra-libs/DataTables/DataTables-1.10.16/css/dataTables.bootstrap4.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/extra-libs/DataTables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/extra-libs/DataTables/DataTables-1.10.16/css/dataTables.foundation.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/extra-libs/DataTables/DataTables-1.10.16/css/dataTables.foundation.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/extra-libs/DataTables/DataTables-1.10.16/css/dataTables.jqueryui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/extra-libs/DataTables/DataTables-1.10.16/css/dataTables.jqueryui.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/extra-libs/DataTables/DataTables-1.10.16/css/dataTables.semanticui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/extra-libs/DataTables/DataTables-1.10.16/css/dataTables.semanticui.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/extra-libs/DataTables/DataTables-1.10.16/css/jquery.dataTables.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/extra-libs/DataTables/DataTables-1.10.16/css/jquery.dataTables.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/extra-libs/DataTables/DataTables-1.10.16/images/sort_asc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/extra-libs/DataTables/DataTables-1.10.16/images/sort_asc_disabled.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/extra-libs/DataTables/DataTables-1.10.16/images/sort_both.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/extra-libs/DataTables/DataTables-1.10.16/images/sort_desc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/extra-libs/DataTables/DataTables-1.10.16/images/sort_desc_disabled.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/extra-libs/DataTables/DataTables-1.10.16/js/dataTables.bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/extra-libs/DataTables/DataTables-1.10.16/js/dataTables.bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/extra-libs/DataTables/DataTables-1.10.16/js/dataTables.bootstrap4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/extra-libs/DataTables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/extra-libs/DataTables/DataTables-1.10.16/js/dataTables.foundation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/extra-libs/DataTables/DataTables-1.10.16/js/dataTables.foundation.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/extra-libs/DataTables/DataTables-1.10.16/js/dataTables.jqueryui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/extra-libs/DataTables/DataTables-1.10.16/js/dataTables.jqueryui.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/extra-libs/DataTables/DataTables-1.10.16/js/dataTables.semanticui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/extra-libs/DataTables/DataTables-1.10.16/js/dataTables.semanticui.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/extra-libs/DataTables/DataTables-1.10.16/js/jquery.dataTables.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/extra-libs/DataTables/DataTables-1.10.16/js/jquery.dataTables.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/extra-libs/DataTables/datatables.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/extra-libs/DataTables/datatables.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/extra-libs/DataTables/datatables.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/extra-libs/DataTables/datatables.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/extra-libs/calendar/calendar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/extra-libs/gritter/jquery.gritter.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/extra-libs/gritter/jquery.gritter.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/extra-libs/multicheck/datatable-checkbox-init.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/extra-libs/multicheck/jquery.multicheck.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/extra-libs/multicheck/multicheck.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/extra-libs/sparkline/sparkline.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/images/background/img4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/images/background/img5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/images/background/img6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/images/big/Thumbs.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/images/big/auth-bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/images/big/img1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/images/big/img2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/images/big/img3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/images/big/img4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/images/big/img5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/images/big/img6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/images/custom-select.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/images/favicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/images/logo-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/images/logo-text.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/images/users/1-old.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/images/users/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/images/users/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/images/users/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/images/users/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/images/users/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/images/users/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/images/users/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/images/users/5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/images/users/6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/images/users/7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/images/users/8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/images/users/agent.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/images/users/agent2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/images/users/d1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/images/users/d2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/images/users/d3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/images/users/d4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/images/users/d5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/images/users/profile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/css/bootstrap-datepicker.standalone.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/css/bootstrap-datepicker3.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/css/bootstrap-datepicker3.standalone.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker-en-CA.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.ar-tn.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.ar.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.az.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.bg.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.bn.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.br.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.bs.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.ca.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.cs.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.cy.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.da.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.de.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.el.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.en-AU.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.en-CA.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.en-GB.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.en-IE.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.en-NZ.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.en-ZA.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.eo.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.es.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.et.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.eu.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.fa.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.fi.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.fo.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.fr-CH.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.fr.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.gl.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.he.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.hi.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.hr.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.hu.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.hy.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.id.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.is.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.it-CH.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.it.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.ja.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.ka.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.kh.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.kk.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.km.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.ko.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.kr.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.lt.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.lv.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.me.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.mk.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.mn.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.ms.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.nl-BE.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.nl.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.no.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.oc.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.pl.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.pt-BR.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.pt.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.ro.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.rs-latin.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.rs.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.ru.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.si.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.sk.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.sl.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.sq.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.sr-latin.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.sr.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.sv.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.sw.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.ta.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.tg.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.th.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.tk.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.tr.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.uk.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.uz-cyrl.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.uz-latn.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.vi.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.zh-CN.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.zh-TW.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap/dist/css/bootstrap-grid.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap/dist/css/bootstrap-reboot.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap/dist/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/bootstrap/dist/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/chart/chart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/chart/excanvas.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/chart/jquery.flot.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/chart/jquery.flot.pie.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/chart/jquery.flot.resize.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/chart/jquery.peity.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/chart/jquery.ui.custom.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/chart/matrix.charts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/chart/matrix.dashboard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/chart/matrix.interface.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/chart/turning-series.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/datatables/license.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/datatables/media/css/jquery.dataTables.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/datatables/media/images/Sorting icons.psd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/datatables/media/images/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/datatables/media/images/sort_asc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/datatables/media/images/sort_asc_disabled.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/datatables/media/images/sort_both.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/datatables/media/images/sort_desc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/datatables/media/images/sort_desc_disabled.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/datatables/media/js/jquery.dataTables.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot.tooltip/.bower.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot.tooltip/bower.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot.tooltip/js/excanvas.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot.tooltip/js/jquery.flot.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot.tooltip/js/jquery.flot.tooltip.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot.tooltip/js/jquery.flot.tooltip.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot.tooltip/js/jquery.flot.tooltip.source.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/.bower.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/API.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/CONTRIBUTING.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/FAQ.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/NEWS.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/PLUGINS.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/component.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/css/float-chart.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/ajax/data-eu-gdp-growth-1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/ajax/data-eu-gdp-growth-2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/ajax/data-eu-gdp-growth-3.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/ajax/data-eu-gdp-growth-4.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/ajax/data-eu-gdp-growth-5.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/ajax/data-eu-gdp-growth.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/ajax/data-japan-gdp-growth.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/ajax/data-usa-gdp-growth.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/ajax/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/annotating/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/axes-interacting/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/axes-multiple/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/axes-time-zones/date.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/axes-time-zones/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/axes-time-zones/tz/africa" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/axes-time-zones/tz/antarctica" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/axes-time-zones/tz/asia" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/axes-time-zones/tz/australasia" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/axes-time-zones/tz/backward" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/axes-time-zones/tz/etcetera" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/axes-time-zones/tz/europe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/axes-time-zones/tz/factory" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/axes-time-zones/tz/iso3166.tab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/axes-time-zones/tz/leapseconds" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/axes-time-zones/tz/northamerica" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/axes-time-zones/tz/pacificnew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/axes-time-zones/tz/solar87" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/axes-time-zones/tz/solar88" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/axes-time-zones/tz/solar89" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/axes-time-zones/tz/southamerica" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/axes-time-zones/tz/systemv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/axes-time-zones/tz/yearistype.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/axes-time-zones/tz/zone.tab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/axes-time/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/basic-options/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/basic-usage/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/canvas/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/categories/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/examples.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/image/hs-2004-27-a-large-web.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/image/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/interacting/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/navigate/arrow-down.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/navigate/arrow-left.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/navigate/arrow-right.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/navigate/arrow-up.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/navigate/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/percentiles/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/realtime/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/resize/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/selection/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/series-errorbars/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/series-pie/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/series-toggle/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/series-types/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/shared/jquery-ui/jquery-ui.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/stacking/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/symbols/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/threshold/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/tracking/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/visitors/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/examples/zooming/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/excanvas.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/excanvas.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/flot.jquery.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/jquery.colorhelpers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/jquery.flot.canvas.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/jquery.flot.categories.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/jquery.flot.crosshair.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/jquery.flot.errorbars.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/jquery.flot.fillbetween.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/jquery.flot.image.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/jquery.flot.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/jquery.flot.navigate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/jquery.flot.pie.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/jquery.flot.resize.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/jquery.flot.selection.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/jquery.flot.stack.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/jquery.flot.symbol.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/jquery.flot.threshold.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/jquery.flot.time.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/flot/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/fullcalendar.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/fullcalendar.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/fullcalendar.print.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/gcal.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale-all.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/af.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/ar-dz.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/ar-kw.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/ar-ly.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/ar-ma.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/ar-sa.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/ar-tn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/ar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/bg.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/bs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/ca.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/cs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/da.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/de-at.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/de-ch.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/de.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/el.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/en-au.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/en-ca.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/en-gb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/en-ie.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/en-nz.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/es-do.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/es-us.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/es.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/et.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/eu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/fa.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/fi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/fr-ca.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/fr-ch.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/fr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/gl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/he.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/hi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/hr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/hu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/id.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/is.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/it.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/ja.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/ka.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/kk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/ko.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/lb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/lt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/lv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/mk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/ms-my.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/ms.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/nb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/nl-be.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/nl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/nn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/pl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/pt-br.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/pt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/ro.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/ru.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/sk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/sl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/sq.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/sr-cyrl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/sr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/sv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/th.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/tr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/uk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/vi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/zh-cn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/fullcalendar/dist/locale/zh-tw.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/inputmask/dist/inputmask/bindings/inputmask.binding.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/inputmask/dist/inputmask/dependencyLibs/inputmask.dependencyLib.jqlite.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/inputmask/dist/inputmask/dependencyLibs/inputmask.dependencyLib.jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/inputmask/dist/inputmask/dependencyLibs/inputmask.dependencyLib.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/inputmask/dist/inputmask/global/document.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/inputmask/dist/inputmask/global/window.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/inputmask/dist/inputmask/inputmask.date.extensions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/inputmask/dist/inputmask/inputmask.extensions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/inputmask/dist/inputmask/inputmask.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/inputmask/dist/inputmask/inputmask.numeric.extensions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/inputmask/dist/inputmask/inputmask.phone.extensions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/inputmask/dist/inputmask/inputmask.regex.extensions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/inputmask/dist/inputmask/jquery.inputmask.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/inputmask/dist/inputmask/phone-codes/phone-be.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/inputmask/dist/inputmask/phone-codes/phone-nl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/inputmask/dist/inputmask/phone-codes/phone-ru.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/inputmask/dist/inputmask/phone-codes/phone-uk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/inputmask/dist/inputmask/phone-codes/phone.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/inputmask/dist/jquery.inputmask.bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/inputmask/dist/min/inputmask/bindings/inputmask.binding.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/inputmask/dist/min/inputmask/dependencyLibs/inputmask.dependencyLib.jqlite.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/inputmask/dist/min/inputmask/dependencyLibs/inputmask.dependencyLib.jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/inputmask/dist/min/inputmask/dependencyLibs/inputmask.dependencyLib.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/inputmask/dist/min/inputmask/global/document.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/inputmask/dist/min/inputmask/global/window.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/inputmask/dist/min/inputmask/inputmask.date.extensions.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/inputmask/dist/min/inputmask/inputmask.extensions.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/inputmask/dist/min/inputmask/inputmask.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/inputmask/dist/min/inputmask/inputmask.numeric.extensions.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/inputmask/dist/min/inputmask/inputmask.phone.extensions.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/inputmask/dist/min/inputmask/inputmask.regex.extensions.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/inputmask/dist/min/inputmask/jquery.inputmask.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/inputmask/dist/min/inputmask/phone-codes/phone-be.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/inputmask/dist/min/inputmask/phone-codes/phone-nl.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/inputmask/dist/min/inputmask/phone-codes/phone-ru.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/inputmask/dist/min/inputmask/phone-codes/phone-uk.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/inputmask/dist/min/inputmask/phone-codes/phone.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/inputmask/dist/min/jquery.inputmask.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-asColor/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-asColor/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-asColor/dist/jquery-asColor.es.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-asColor/dist/jquery-asColor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-asColor/dist/jquery-asColor.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-asColor/dist/jquery-asColor.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-asColor/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-asColor/src/asColor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-asColor/src/colorStrings.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-asColor/src/converter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-asColor/src/defaults.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-asColor/src/info.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-asColor/src/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-asColor/src/names.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-asColor/src/util.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-asColorPicker/dist/css/asColorPicker.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-asColorPicker/dist/images/alpha.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-asColorPicker/dist/images/hue.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-asColorPicker/dist/images/saturation.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-asColorPicker/dist/images/transparent.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-asColorPicker/dist/jquery-asColorPicker.es.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-asColorPicker/dist/jquery-asColorPicker.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-asGradient/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-asGradient/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-asGradient/dist/jquery-asGradient.es.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-asGradient/dist/jquery-asGradient.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-asGradient/dist/jquery-asGradient.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-asGradient/dist/jquery-asGradient.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-asGradient/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-asGradient/src/asGradient.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-asGradient/src/colorStop.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-asGradient/src/defaults.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-asGradient/src/gradientString.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-asGradient/src/gradientTypes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-asGradient/src/info.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-asGradient/src/keywordAngleMap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-asGradient/src/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-asGradient/src/regExpStrings.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-asGradient/src/util.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-minicolors/component.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-minicolors/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-minicolors/jquery.minicolors.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-minicolors/jquery.minicolors.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-minicolors/jquery.minicolors.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-minicolors/without-bootstrap.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-steps/LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-steps/build/jQuery.Steps.1.1.0.nupkg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-steps/build/jquery.steps-1.1.0.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-steps/build/jquery.steps.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-steps/jquery.steps.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-steps/lib/jquery-1.10.2.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-steps/lib/jquery-1.11.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-steps/lib/jquery-1.9.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-steps/lib/jquery.cookie-1.3.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-steps/lib/modernizr-2.6.2.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-steps/nuget/NuGet.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-steps/nuget/jQuery.Steps.nuspec" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-steps/steps.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-steps/steps.jquery.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/additional-methods.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/jquery.validate.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_ar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_az.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_bg.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_bn_BD.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_ca.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_cs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_da.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_de.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_el.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_es.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_es_AR.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_es_PE.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_et.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_eu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_fa.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_fi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_fr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_ge.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_gl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_he.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_hr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_hu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_hy_AM.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_id.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_is.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_it.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_ja.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_ka.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_kk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_ko.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_lt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_lv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_mk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_my.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_nl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_no.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_pl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_pt_BR.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_pt_PT.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_ro.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_ru.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_sd.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_si.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_sk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_sl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_sr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_sr_lat.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_sv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_th.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_tj.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_tr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_uk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_ur.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_vi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_zh.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/messages_zh_TW.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/methods_de.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/methods_es_CL.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/methods_fi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/methods_nl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery-validation/dist/localization/methods_pt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery.flot.tooltip/js/jquery.flot.tooltip.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery.flot.tooltip/js/jquery.flot.tooltip.source.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery/dist/core.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery/dist/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/jquery/dist/jquery.slim.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/magnific-popup/animation.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/magnific-popup/dist/jquery.magnific-popup.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/magnific-popup/dist/magnific-popup.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/magnific-popup/meg.init.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/ender.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/af.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/ar-dz.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/ar-kw.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/ar-ly.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/ar-ma.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/ar-sa.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/ar-tn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/ar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/az.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/be.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/bg.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/bm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/bn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/bo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/br.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/bs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/ca.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/cs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/cv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/cy.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/da.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/de-at.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/de-ch.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/de.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/dv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/el.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/en-au.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/en-ca.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/en-gb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/en-ie.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/en-il.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/en-nz.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/eo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/es-do.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/es-us.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/es.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/et.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/eu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/fa.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/fi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/fo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/fr-ca.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/fr-ch.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/fr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/fy.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/gd.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/gl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/gom-latn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/gu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/he.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/hi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/hr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/hu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/hy-am.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/id.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/is.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/it.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/ja.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/jv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/ka.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/kk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/km.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/kn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/ko.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/ky.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/lb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/lo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/lt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/lv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/me.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/mi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/mk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/ml.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/mn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/mr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/ms-my.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/ms.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/mt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/my.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/nb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/ne.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/nl-be.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/nl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/nn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/pa-in.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/pl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/pt-br.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/pt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/ro.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/ru.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/sd.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/se.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/si.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/sk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/sl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/sq.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/sr-cyrl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/sr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/ss.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/sv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/sw.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/ta.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/te.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/tet.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/tg.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/th.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/tl-ph.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/tlh.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/tr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/tzl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/tzm-latn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/tzm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/ug-cn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/uk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/ur.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/uz-latn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/uz.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/vi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/x-pseudo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/yo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/zh-cn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/zh-hk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/locale/zh-tw.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/min/locales.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/min/moment-with-locales.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/min/moment.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/moment.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/moment/package.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/perfect-scrollbar/dist/css/perfect-scrollbar.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/perfect-scrollbar/dist/js/perfect-scrollbar.jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/perfect-scrollbar/dist/js/perfect-scrollbar.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/perfect-scrollbar/dist/perfect-scrollbar.common.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/perfect-scrollbar/dist/perfect-scrollbar.esm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/perfect-scrollbar/dist/perfect-scrollbar.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/popper.js/dist/esm/popper-utils.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/popper.js/dist/esm/popper.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/popper.js/dist/popper-utils.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/popper.js/dist/popper.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/popper.js/dist/umd/popper-utils.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/popper.js/dist/umd/popper.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/quill/dist/quill.bubble.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/quill/dist/quill.core.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/quill/dist/quill.core.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/quill/dist/quill.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/quill/dist/quill.snow.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/css/select2.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/af.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/ar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/az.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/bg.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/bs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/build.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/ca.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/cs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/da.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/de.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/dsb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/el.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/en.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/es.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/et.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/eu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/fa.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/fi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/fr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/gl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/he.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/hi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/hr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/hsb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/hu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/hy.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/id.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/is.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/it.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/ja.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/km.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/ko.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/lt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/lv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/mk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/ms.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/nb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/nl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/pl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/ps.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/pt-BR.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/pt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/ro.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/ru.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/sk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/sl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/sr-Cyrl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/sr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/sv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/th.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/tk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/tr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/uk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/vi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/zh-CN.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/i18n/zh-TW.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/select2.full.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/select2/dist/js/select2.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/toastr/build/toastr.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/toastr/build/toastr.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/toastr/toastr-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/libs/toastr/toastr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/comment_failure.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/comment_success.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/course-create.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/d-view.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/elements.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/import.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/plugin.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/user-homepage.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/user-setting.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/view.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/delete-comment.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/delete_success.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/css/fa-brands.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/css/fa-brands.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/css/fa-regular.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/css/fa-regular.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/css/fa-solid.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/css/fa-solid.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/css/fontawesome-all.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/css/fontawesome-all.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/css/fontawesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/css/fontawesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/less/_animated.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/less/_bordered-pulled.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/less/_core.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/less/_fixed-width.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/less/_icons.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/less/_larger.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/less/_list.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/less/_mixins.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/less/_rotated-flipped.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/less/_screen-reader.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/less/_stacked.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/less/_variables.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/less/fa-brands.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/less/fa-regular.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/less/fa-solid.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/less/fontawesome.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/scss/_animated.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/scss/_bordered-pulled.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/scss/_core.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/scss/_fixed-width.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/scss/_icons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/scss/_larger.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/scss/_list.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/scss/_mixins.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/scss/_rotated-flipped.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/scss/_screen-reader.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/scss/_stacked.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/scss/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/scss/fa-brands.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/scss/fa-regular.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/scss/fa-solid.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/scss/fontawesome.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/webfonts/fa-brands-400.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/webfonts/fa-brands-400.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/webfonts/fa-brands-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/webfonts/fa-brands-400.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/webfonts/fa-brands-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/webfonts/fa-regular-400.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/webfonts/fa-regular-400.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/webfonts/fa-regular-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/webfonts/fa-regular-400.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/webfonts/fa-regular-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/webfonts/fa-solid-900.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/webfonts/fa-solid-900.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/webfonts/fa-solid-900.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/webfonts/fa-solid-900.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/font-awesome/webfonts/fa-solid-900.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/material-design-iconic-font/css/material-design-iconic-font.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/material-design-iconic-font/css/material-design-iconic-font.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/material-design-iconic-font/css/materialdesignicons.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/material-design-iconic-font/fonts/Material-Design-Iconic-Font.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/material-design-iconic-font/fonts/Material-Design-Iconic-Font.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/material-design-iconic-font/fonts/Material-Design-Iconic-Font.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/material-design-iconic-font/fonts/Material-Design-Iconic-Font.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/material-design-iconic-font/fonts/Material-Design-Iconic-Font.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/material-design-iconic-font/fonts/materialdesignicons-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/material-design-iconic-font/fonts/materialdesignicons-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/material-design-iconic-font/fonts/materialdesignicons-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/material-design-iconic-font/fonts/materialdesignicons-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/material-design-iconic-font/fonts/materialdesignicons-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/themify-icons/fonts/themify.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/themify-icons/fonts/themify.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/themify-icons/fonts/themify.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/themify-icons/fonts/themify.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/themify-icons/ie7/ie7.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/themify-icons/ie7/ie7.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/themify-icons/themify-icons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/themify-icons/themify-icons.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/css/weather-icons-core.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/css/weather-icons-variables.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/css/weather-icons-wind.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/css/weather-icons-wind.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/css/weather-icons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/css/weather-icons.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/fonts/weathericons-regular-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/fonts/weathericons-regular-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/fonts/weathericons-regular-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/fonts/weathericons-regular-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/fonts/weathericons-regular-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/less/css/variables-beaufort.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/less/css/variables-day.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/less/css/variables-direction.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/less/css/variables-misc.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/less/css/variables-moon.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/less/css/variables-neutral.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/less/css/variables-night.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/less/css/variables-time.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/less/css/variables-wind-names.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/less/icon-classes/classes-beaufort.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/less/icon-classes/classes-day.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/less/icon-classes/classes-direction.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/less/icon-classes/classes-misc.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/less/icon-classes/classes-moon-aliases.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/less/icon-classes/classes-moon.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/less/icon-classes/classes-neutral.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/less/icon-classes/classes-night.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/less/icon-classes/classes-time.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/less/icon-classes/classes-wind-aliases.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/less/icon-classes/classes-wind-degrees.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/less/icon-classes/classes-wind.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/less/icon-variables/variables-beaufort.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/less/icon-variables/variables-day.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/less/icon-variables/variables-direction.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/less/icon-variables/variables-misc.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/less/icon-variables/variables-moon.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/less/icon-variables/variables-neutral.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/less/icon-variables/variables-night.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/less/icon-variables/variables-time.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/less/icon-variables/variables-wind-names.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/less/mappings/wi-forecast-io.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/less/mappings/wi-owm.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/less/mappings/wi-wmo4680.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/less/mappings/wi-yahoo.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/less/weather-icons-classes.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/less/weather-icons-core.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/less/weather-icons-variables.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/less/weather-icons-wind.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/less/weather-icons-wind.min.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/less/weather-icons.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/less/weather-icons.min.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/sass/icon-classes/classes-beaufort.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/sass/icon-classes/classes-day.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/sass/icon-classes/classes-direction.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/sass/icon-classes/classes-misc.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/sass/icon-classes/classes-moon-aliases.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/sass/icon-classes/classes-moon.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/sass/icon-classes/classes-neutral.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/sass/icon-classes/classes-night.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/sass/icon-classes/classes-time.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/sass/icon-classes/classes-wind-aliases.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/sass/icon-classes/classes-wind-degrees.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/sass/icon-classes/classes-wind.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/sass/icon-variables/variables-beaufort.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/sass/icon-variables/variables-day.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/sass/icon-variables/variables-direction.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/sass/icon-variables/variables-misc.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/sass/icon-variables/variables-moon.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/sass/icon-variables/variables-neutral.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/sass/icon-variables/variables-night.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/sass/icon-variables/variables-time.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/sass/icon-variables/variables-wind-names.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/sass/mappings/wi-forecast-io.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/sass/mappings/wi-owm.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/sass/mappings/wi-wmo4680.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/sass/mappings/wi-yahoo.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/sass/weather-icons-classes.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/sass/weather-icons-core.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/sass/weather-icons-variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/sass/weather-icons-wind.min.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/sass/weather-icons-wind.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/sass/weather-icons.min.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/icons/weather-icons/sass/weather-icons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/css/style.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/js/app-style-switcher.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/js/custom.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/js/custom.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/js/jquery-ui.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/js/jquery.ui.touch-punch-improved.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/js/pages/calendar/cal-init.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/js/pages/chart/chart-init.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/js/pages/chart/chart-page-init.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/js/pages/dashboards/dashboard1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/js/pages/maps/map-google.init.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/js/pages/mask/mask.init.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/js/pages/sparkline/jquery.charts-sparkline.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/js/sidebarmenu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/js/waves.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/JZM.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/SPM14.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/XJP.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/ZYCSBL.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/ZYGBZG.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/ZYNCJZ.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/cxk.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/sprite-sidebar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/sprite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/user-homepage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/lefter.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/no_login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/selectedCourses.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/upload/images/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/upload/images/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/upload/images/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/upload/images/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/upload/images/5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/upload/images/6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/user-homepage.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/user-setting.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/SDRB_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/SDRB_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/838cc56b-3b3b-4aba-9867-2d4286c165c9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/838cc56b-3b3b-4aba-9867-2d4286c165c9.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Struts_2_2_5_14_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Struts_2_2_5_14_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/action/RegisterAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/RegisterAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/admin/DBadmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/admin/DBadmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/sdrb_chapter.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/sdrb_comment.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/sdrb_course.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/sdrb_user.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/sdrb_user_has_chapter.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/sdrb_user_has_course.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/action/CTRL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/CTRL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/action/FindCoursesAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/FindCoursesAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/ChapterDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/ChapterDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/CommentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/CommentDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/CourseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/CourseDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/db/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/DBConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/struts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/struts.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/action/RegisterAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/action/RegisterAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/user_has_chapterDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/user_has_chapterDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/user_has_courseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/user_has_courseDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/db/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/conn/DBConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/action/CTRL.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/action/CTRL.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/action/FindCoursesAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/action/FindCoursesAction.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/admin/DBadmin.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/admin/DBadmin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/dao/ChapterDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/dao/ChapterDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/dao/CommentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/dao/CommentDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/dao/CourseDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/dao/CourseDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/dao/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/db/DBConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/db/DBConnection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/struts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/struts.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/about.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/about.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/courses.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/courses.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/fonts/fontawesome-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/login_failure.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/login_failure.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/login_success.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/login_success.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/register-failure.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/register-failure.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/register-failure_user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/register-failure_user.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/register-success.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/register-success.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/register.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/single-chapter.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/single-chapter.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/single-courses.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/single-courses.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/dao/user_has_chapterDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/dao/user_has_chapterDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/dao/user_has_courseDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/dao/user_has_courseDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/db/DBConnection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/SPM14.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/cxk.mp4" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -1103,6 +90,36 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dao/CommentDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/dao/CourseDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-984">
+              <caret line="138" column="5" lean-forward="true" selection-start-line="138" selection-start-column="5" selection-end-line="138" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dao/user_has_chapterDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/action/CourseModifyAction.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="141">
@@ -1115,55 +132,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/single-chapter.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2489">
-              <caret line="131" column="61" selection-start-line="131" selection-start-column="61" selection-end-line="131" selection-end-column="61" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/admin/DBadmin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="45" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
+            <state relative-caret-position="114">
+              <caret line="6" column="79" selection-start-line="6" selection-start-column="79" selection-end-line="6" selection-end-column="79" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/single-courses.jsp">
+        <entry file="file://$PROJECT_DIR$/src/conn/DBConnection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5852">
-              <caret line="308" column="50" selection-start-line="308" selection-start-column="50" selection-end-line="308" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/course-create.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1729">
-              <caret line="91" selection-start-line="91" selection-end-line="91" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://838cc56b-3b3b-4aba-9867-2d4286c165c9/schema/sdrb/table/course">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state projectRestartId="646160d8-70b0-49d3-b558-2f6ee0122794">
-              <filtering />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/action/ChapterAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="28" column="81" selection-start-line="28" selection-start-column="81" selection-end-line="28" selection-end-column="81" />
+            <state relative-caret-position="86">
+              <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1172,10 +153,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/struts.xml">
+        <entry file="file://$PROJECT_DIR$/src/dao/UserDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1691">
-              <caret line="89" column="30" selection-start-line="89" selection-start-column="30" selection-end-line="89" selection-end-column="30" />
+            <state relative-caret-position="323">
+              <caret line="26" column="18" lean-forward="true" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/webServers.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -1211,8 +213,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/blog.jsp" />
-        <option value="$PROJECT_DIR$/web/footer.jsp" />
         <option value="$PROJECT_DIR$/web/single-post.jsp" />
         <option value="$PROJECT_DIR$/web/login.jsp" />
         <option value="$PROJECT_DIR$/web/register.jsp" />
@@ -1262,6 +262,8 @@
         <option value="$PROJECT_DIR$/web/single-chapter.jsp" />
         <option value="$PROJECT_DIR$/src/action/ChapterAction.java" />
         <option value="$PROJECT_DIR$/src/admin/DBadmin.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/conn/DBConnection.java" />
       </list>
     </option>
   </component>
@@ -1273,9 +275,10 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="812" />
+    <option name="x" value="528" />
+    <option name="y" value="97" />
+    <option name="width" value="1386" />
+    <option name="height" value="788" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -1302,75 +305,7 @@
               <item name="SDRB" type="b2602c69:ProjectViewProjectNode" />
               <item name="SDRB" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="action" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SDRB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SDRB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SDRB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SDRB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SDRB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SDRB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SDRB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SDRB" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SDRB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SDRB" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SDRB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SDRB" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SDRB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SDRB" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-              <item name="action" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SDRB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SDRB" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SDRB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SDRB" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SDRB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SDRB" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -1387,7 +322,12 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="ToolWindowRun.ShowToolbar" value="false" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -1397,7 +337,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -1493,6 +433,76 @@
         <option name="BuildArtifacts" enabled="true" />
       </method>
     </configuration>
+    <configuration name="remote tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote" APPLICATION_SERVER_NAME="Tomcat 9.0.19" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="HOST" value="47.93.11.203" />
+      <option name="LOCAL" value="false" />
+      <option name="UPDATING_POLICY" value="hot-swap-classes" />
+      <deployment>
+        <artifact name="SDRB:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/SDRB_war_exploded" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <data>
+          <option name="targets">
+            <list>
+              <WatchedTargetModelImpl>
+                <option name="name" value="CONTEXT_XML" />
+                <option name="transportStagingTarget">
+                  <TransportTarget>
+                    <option name="id" value="73b0c4e0-bc9d-4e41-bebc-5c67a576bb72" />
+                    <id>73b0c4e0-bc9d-4e41-bebc-5c67a576bb72</id>
+                  </TransportTarget>
+                </option>
+                <option name="watchedLocalPath" value="" />
+                <watched-path />
+                <name>CONTEXT_XML</name>
+                <transport-target>
+                  <TransportTarget>
+                    <option name="id" value="73b0c4e0-bc9d-4e41-bebc-5c67a576bb72" />
+                    <id>73b0c4e0-bc9d-4e41-bebc-5c67a576bb72</id>
+                  </TransportTarget>
+                </transport-target>
+              </WatchedTargetModelImpl>
+              <StagingTargetModelImpl>
+                <option name="name" value="STAGING" />
+                <option name="stagingRemotePath" value="/usr/local/apache-tomcat-9.0.16/webapps" />
+                <option name="transportStagingTarget">
+                  <TransportTarget>
+                    <option name="id" value="c3f60025-07aa-41b9-a409-89e5dfde86ae" />
+                    <id>c3f60025-07aa-41b9-a409-89e5dfde86ae</id>
+                  </TransportTarget>
+                </option>
+                <staging-path>/usr/local/apache-tomcat-9.0.16/webapps</staging-path>
+                <name>STAGING</name>
+                <transport-target>
+                  <TransportTarget>
+                    <option name="id" value="c3f60025-07aa-41b9-a409-89e5dfde86ae" />
+                    <id>c3f60025-07aa-41b9-a409-89e5dfde86ae</id>
+                  </TransportTarget>
+                </transport-target>
+              </StagingTargetModelImpl>
+            </list>
+          </option>
+          <option name="transportHostId" value="672c1c2c-0ded-4362-bf90-9683d0916434" />
+          <host-id>672c1c2c-0ded-4362-bf90-9683d0916434</host-id>
+        </data>
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="TOMCAT_LOCALHOST_LOG_ID" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="15833" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="SDRB:war exploded" />
+        </option>
+      </method>
+    </configuration>
     <configuration name="tomcat9" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.19" ALTERNATIVE_JRE_ENABLED="false">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/SDRB_war_exploded" />
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
@@ -1571,6 +581,7 @@
     </configuration>
     <list>
       <item itemvalue="Tomcat Server.tomcat9" />
+      <item itemvalue="Tomcat Server.remote tomcat" />
       <item itemvalue="Tomcat Server.index.jsp" />
     </list>
     <recent_temporary>
@@ -1607,15 +618,16 @@
       <workItem from="1559806371686" duration="3539000" />
       <workItem from="1560152814498" duration="9334000" />
       <workItem from="1560233448208" duration="28863000" />
-      <workItem from="1560614572799" duration="112000" />
+      <workItem from="1560614572799" duration="9660000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127919000" />
+    <option name="totallyTimeSpent" value="137467000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49561402" visible="true" weight="0.20953101" />
       <window_info id="Structure" order="1" sideWeight="0.502193" side_tool="true" weight="0.2496318" />
@@ -1625,10 +637,11 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" sideWeight="0.50438595" side_tool="true" weight="0.2533137" />
       <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="File Transfer" weight="0.33076924" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.15277778" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.24153847" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.48153847" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -1636,18 +649,19 @@
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.3263889" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32222223" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32153845" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="14" />
       <window_info anchor="bottom" id="Database Console" order="15" weight="0.32923076" />
+      <window_info anchor="right" id="Remote Host" weight="0.33055976" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24964234" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Maven" order="3" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.19288956" />
+      <window_info anchor="right" id="Database" order="6" weight="0.1923077" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
@@ -1660,17 +674,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.idea/artifacts/SDRB_war_exploded.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="97" selection-start-line="18" selection-start-column="97" selection-end-line="18" selection-end-column="97" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/dataSources/de78d056-fa82-4fb3-91f9-e2c0ba7c62ce.xml" />
-    <entry file="file://$PROJECT_DIR$/.idea/libraries/javassist_javassist_3_12_1_GA.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/libraries/Struts_2_2_5_14_1.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1705,26 +708,6 @@
       </provider>
     </entry>
     <entry file="das://de78d056-fa82-4fb3-91f9-e2c0ba7c62ce/schema/sdrb/table/chapter" />
-    <entry file="file://$PROJECT_DIR$/src/db/DBConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1863,13 +846,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/user_has_chapterDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/admin-user.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2">
@@ -1928,17 +904,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/CourseDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="138" column="5" lean-forward="true" selection-start-line="138" selection-start-column="5" selection-end-line="138" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1430#1438#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/Chapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1969,13 +934,6 @@
           <filtering>
             <filter text="" />
           </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/ChapterDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
@@ -2035,10 +993,75 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/webServers.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/admin/DBadmin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="45" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
+        <state relative-caret-position="114">
+          <caret line="6" column="79" selection-start-line="6" selection-start-column="79" selection-end-line="6" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/conn/DBConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="26" column="18" lean-forward="true" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/ChapterDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/CommentDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/user_has_chapterDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/CourseDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-984">
+          <caret line="138" column="5" lean-forward="true" selection-start-line="138" selection-start-column="5" selection-end-line="138" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2053,6 +1076,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.7284483" />
               </list>
             </option>
           </splitter-proportions>

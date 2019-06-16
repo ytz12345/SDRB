@@ -3,9 +3,8 @@ package dao;
 import java.sql.*;
 import java.util.ArrayList;
 
-import db.DBConnection;
+import conn.DBConnection;
 import model.Chapter;
-import model.Course;
 
 /*进行数据库操作*/
 

@@ -1,9 +1,6 @@
 package action;
-import dao.UserDao;
-import dao.user_has_courseDao;
-import db.DBConnection;
+import conn.DBConnection;
 import model.Course;
-import model.User;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
