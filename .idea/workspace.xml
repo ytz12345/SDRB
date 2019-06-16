@@ -7,36 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b15e984b-11a5-4ed0-9349-a21be6a92957" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/sdrb_chapter.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/sdrb_comment.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/sdrb_course.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/sdrb_user.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/sdrb_user_has_chapter.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/sdrb_user_has_course.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/action/CTRL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/CTRL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/action/FindCoursesAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/FindCoursesAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/ChapterDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/ChapterDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/CommentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/CommentDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/CourseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/CourseDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/user_has_chapterDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/user_has_chapterDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/user_has_courseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/user_has_courseDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/db/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/conn/DBConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/action/CTRL.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/action/CTRL.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/action/FindCoursesAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/action/FindCoursesAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/admin/DBadmin.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/admin/DBadmin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/dao/ChapterDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/dao/ChapterDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/dao/CommentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/dao/CommentDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/dao/CourseDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/dao/CourseDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/dao/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/dao/user_has_chapterDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/dao/user_has_chapterDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/dao/user_has_courseDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/dao/user_has_courseDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/db/DBConnection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/SPM14.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/cxk.mp4" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -102,7 +73,7 @@
         <entry file="file://$PROJECT_DIR$/src/dao/CourseDao.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-984">
-              <caret line="138" column="5" lean-forward="true" selection-start-line="138" selection-start-column="5" selection-end-line="138" selection-end-column="5" />
+              <caret line="138" column="5" selection-start-line="138" selection-start-column="5" selection-end-line="138" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -156,7 +127,7 @@
         <entry file="file://$PROJECT_DIR$/src/dao/UserDao.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
-              <caret line="26" column="18" lean-forward="true" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+              <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -275,8 +246,8 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="528" />
-    <option name="y" value="97" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1386" />
     <option name="height" value="788" />
   </component>
@@ -295,17 +266,6 @@
             <path>
               <item name="SDRB" type="b2602c69:ProjectViewProjectNode" />
               <item name="SDRB" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SDRB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SDRB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SDRB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SDRB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -330,7 +290,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="F:/test" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -618,16 +578,15 @@
       <workItem from="1559806371686" duration="3539000" />
       <workItem from="1560152814498" duration="9334000" />
       <workItem from="1560233448208" duration="28863000" />
-      <workItem from="1560614572799" duration="9660000" />
+      <workItem from="1560614572799" duration="10030000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137467000" />
+    <option name="totallyTimeSpent" value="137837000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49561402" visible="true" weight="0.20953101" />
       <window_info id="Structure" order="1" sideWeight="0.502193" side_tool="true" weight="0.2496318" />
@@ -1027,7 +986,7 @@
     <entry file="file://$PROJECT_DIR$/src/dao/UserDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="26" column="18" lean-forward="true" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+          <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1058,7 +1017,7 @@
     <entry file="file://$PROJECT_DIR$/src/dao/CourseDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-984">
-          <caret line="138" column="5" lean-forward="true" selection-start-line="138" selection-start-column="5" selection-end-line="138" selection-end-column="5" />
+          <caret line="138" column="5" selection-start-line="138" selection-start-column="5" selection-end-line="138" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1076,7 +1035,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.7284483" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>

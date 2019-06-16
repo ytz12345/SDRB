@@ -3,9 +3,7 @@ out/
 src/admin/DBadmin.java
 .idea/workspace.xml
 
-
-
-# .idea/
+# for idea/
 .idea/workspace.xml
 .idea/dataSources
 
