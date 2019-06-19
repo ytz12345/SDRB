@@ -8,7 +8,7 @@ public class SelectCourse extends ActionSupport{
         private String str;
         public String execute() throws Exception {
             //传递搜索参数
-            System.out.println("str" + str);
+            //System.out.println("str" + str);
             String forward = "success";
             return forward;
         }

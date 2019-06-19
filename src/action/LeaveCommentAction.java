@@ -9,7 +9,7 @@ public class LeaveCommentAction {
     private CommentDao commentDao = new CommentDao();
 
     public String LeaveComment()throws Exception{
-        System.out.println("尝试留言");
+        //System.out.println("尝试留言");
         String forward = "failure";//数据库存数据时出错标记值
         if(comment.getUser_User_id()==0) forward = "no_login";
         int flag = 0;

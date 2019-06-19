@@ -29,7 +29,7 @@ public class CTRL {
         con = DBConnection.getDBConnection();
         User user2 = null;
         String sql = "select * from user";
-        System.out.println("///");
+        //System.out.println("///");
         String forward = null;
         try {
             pstmt = con.prepareStatement(sql);
@@ -44,7 +44,7 @@ public class CTRL {
                 list1.add(user2);
             }
             forward="success";
-            System.out.println("success");
+            //System.out.println("success");
         }catch(Exception e) {
             forward = "failure";
             e.printStackTrace();

@@ -31,8 +31,8 @@ public class FindCoursesAction {
         try{
             pstmt = con.prepareStatement(sql);
             pstmt.setInt(1, u2_id);
-            System.out.println("printing user id ... ");
-            System.out.println(u2_id);
+            //System.out.println("printing user id ... ");
+            //System.out.println(u2_id);
             rs = pstmt.executeQuery();
             while (rs.next()) {
                 temp_course = new Course();

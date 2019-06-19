@@ -10,7 +10,7 @@ public class DeleteCommentAction {
     private CommentDao commentDao = new CommentDao();
 
     public String DeleteComment()throws Exception{
-        System.out.println("删除留言");
+        ///System.out.println("删除留言");
         int flag = 0;
         commentDao.delete(comment_id);
         String forward = "success";//成功注册标记值
